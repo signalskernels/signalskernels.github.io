@@ -659,7 +659,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/website-background-modified.png);
+  background-image: url(../images/website-background-1.png);
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -667,7 +667,7 @@ Banner Style
 }
 
 .main-banner .item-1 {
-  background-image: url(../images/HARIS-background-1.png);
+  background-image: url(../images/HARIS-background-3.png);
 }
 
 .main-banner .item-2 {
@@ -1951,9 +1951,9 @@ body {
 .nav li .submenu {
   display: none;
   position: absolute;
-  top: 100%;
+  /* top: 100%; */
   left: 0;
-  background: #33333328;
+  background: #000000;
   list-style: none;
   margin: 0;
   padding: 0;
