@@ -1713,17 +1713,18 @@ Footer Style
 */
 
 footer {
-  margin-top: 150px;
+  margin-top: 40px;
   position: relative;
   background-color: #000000;
   vertical-align: middle;
-  min-height: 150px;
+  min-height: 40px;
   border-radius: 150px 150px 0px 0px;
 }
 
 footer p {
   text-align: center;
-  line-height: 150px;
+  line-height: 40px;
+  vertical-align: middle;
   color: #fff;
   font-weight: 400;
 }
@@ -1750,6 +1751,25 @@ footer::before {
   height: 119px;
   content: "";
   z-index: 2;
+}
+
+.footer-section {
+  display: inline-block;
+  margin: 0 10px; /* space between sections */
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    /* min-height: 80px; */
+    border-radius: 20px 20px 0px 0px;
+  }
+  footer p {
+    line-height: 20px; /* or whatever smaller value you want */
+  }
+  .footer-section {
+    display: block;
+    margin: 10px 0; /* vertical spacing on mobile */
+  }
 }
 
 /* 
