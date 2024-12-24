@@ -958,7 +958,7 @@ About Style
 }
 
 .accordion {
-  /* margin-top: -40px; */
+  margin-top: 10px;
   margin-bottom: -40px;
   background-color: #000000;
   border-radius: 40px;
