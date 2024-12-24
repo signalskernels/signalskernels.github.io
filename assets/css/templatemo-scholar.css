@@ -190,7 +190,7 @@ body {
 
 .section {
   padding-top: 30px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .section-heading {
@@ -518,7 +518,7 @@ Header Style
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #000000;
+  background-color: #ffffff;
   display: block;
   position: absolute;
   width: 30px;
@@ -940,7 +940,7 @@ About Style
 .about-us {
   position: relative;
   padding: 0px;
-  margin-top: 130px;
+  margin-top: 60px;
 }
 
 .about-us:before {
@@ -1033,9 +1033,9 @@ Courses Style
 --------------------------------------------- 
 */
 
-.courses {
+/* .courses {
   margin-top: 60px;
-}
+} */
 
 .event_filter {
   text-align: center;
