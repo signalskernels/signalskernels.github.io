@@ -46,6 +46,34 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
+
+    <style>
+      .typing-effect {
+        font-size: 2rem;
+        white-space: nowrap;             /* Prevent text from wrapping */
+        overflow: hidden;               /* Hide text while it's typing out */
+        border-right: 2px solid #fff;   /* White blinking cursor */
+        animation: 
+          typing 4s steps(25, end) forwards, /* 25 characters total */
+          blink 0.8s step-end infinite alternate;
+      }
+    
+      @keyframes typing {
+        from {
+          width: 0ch;
+        }
+        to {
+          width: 22ch; /* Matches the exact number of characters (no trailing space) */
+        }
+      }
+    
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+    
   </head>
 
   <body>
@@ -115,9 +143,27 @@
 
     <!-- ***** Header Area End ***** -->
 
-    <div class="haris-banner" id="top">
+    <div class="main-banner" id="top">
       <div class="container">
-        <img src="assets/images/HARIS-banner.png" alt="HARIS" />
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="owl-carousel owl-banner">
+              <div class="item item-4">
+                <div class="header-text">
+                  <span class="haris"
+                    ><img
+                      src="assets/images/HARIS-logo.png"
+                      alt="HARIS Logo"
+                      style="width: 75px"
+                    />HARIS</span
+                  >
+                  <h2 class="typing-effect">Where Smart Meets Secure!</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
