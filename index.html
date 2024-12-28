@@ -527,12 +527,17 @@
                 custom AI solutions. Let’s turn your signals into a powerful
                 kernel of intelligence.
               </p>
-              <p>
-                Contact us:
-                <a href="mailto:contact@signalskernels.com"
-                  >contact@signalskernels.com</a
-                >
-              </p>
+              <p>Contact us: <span id="email-link"></span></p>
+              <script>
+                (function () {
+                  var user = "contact";
+                  var domain = "signalskernels";
+                  var tld = "com";
+                  var linkText = user + "@" + domain + "." + tld;
+                  document.getElementById("email-link").innerHTML =
+                    '<a href="mailto:' + linkText + '">' + linkText + "</a>";
+                })();
+              </script>
             </div>
           </div>
           <div class="col-lg-6">
@@ -614,10 +619,17 @@
               >
             </span>
             <span class="footer-section">
-              Contact us:
-              <a href="mailto:contact@signalskernels.com"
-                >contact@signalskernels.com</a
-              >
+              <p>Contact us: <span id="email-link"></span></p>
+              <script>
+                (function () {
+                  var user = "contact";
+                  var domain = "signalskernels";
+                  var tld = "com";
+                  var linkText = user + "@" + domain + "." + tld;
+                  document.getElementById("email-link").innerHTML =
+                    '<a href="mailto:' + linkText + '">' + linkText + "</a>";
+                })();
+              </script>
             </span>
           </p>
         </div>
