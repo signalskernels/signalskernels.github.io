@@ -46,6 +46,8 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
   </head>
 
@@ -341,86 +343,31 @@
       </div>
     </div>
 
-    <!-- Major Threats -->
-
-    <!-- <section class="section courses" id="threats">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <div class="section-heading">
-            <h5>Major Threats</h5>
-            <h2>Proactive Monitoring of Critical Threat Vectors</h2>
-            <p>Our system is designed to detect and alert on the most pressing security threats, ensuring you’re always prepared.</p>
-          </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img
+          src="assets/gif/gun_detection_gif_720.gif"
+          alt="Hazards detection"
+        />
+        </div>
+        <div class="swiper-slide"><img
+          src="assets/gif/building_fire_gif_720.gif"
+          alt="Fire detection"
+        />
         </div>
       </div>
-      
-      <div class="row event_box">
-        
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <img src="assets/images/haris-icons/active-shooter.png" alt="Active Shooter Situations">
-            </div>
-            <div class="down-content">
-              <h4>Active Shooter Situations</h4>
-              <p>Immediate detection and rapid alerting ensure critical response time is minimized.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <img src="assets/images/haris-icons/hate-crime.png" alt="Hate Crimes and Harassment">
-            </div>
-            <div class="down-content">
-              <h4>Hate Crimes & Harassment</h4>
-              <p>Identify problematic behavior early to prevent escalation and maintain a safe environment.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <img src="assets/images/haris-icons/vandalism.png" alt="Vandalism and Arson">
-            </div>
-            <div class="down-content">
-              <h4>Vandalism & Arson</h4>
-              <p>Spot suspicious activities around your property and deter criminal damage before it occurs.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <img src="assets/images/haris-icons/theft.png" alt="Theft and Burglary">
-            </div>
-            <div class="down-content">
-              <h4>Theft & Burglary</h4>
-              <p>Real-time alerts on unauthorized access and movement help prevent losses.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-          <div class="events_item">
-            <div class="thumb">
-              <img src="assets/images/haris-icons/suspecious-activity.png" alt="Suspicious Activities">
-            </div>
-            <div class="down-content">
-              <h4>Suspicious Activities & Packages</h4>
-              <p>Quickly identify unusual packages or movements that could pose a security risk.</p>
-            </div>
-          </div>
-        </div>
-
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="autoplay-progress">
+        <svg viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20"></circle>
+        </svg>
+        <span></span>
       </div>
     </div>
-  </section> -->
-
+    
     <!-- Major Threats -->
     <section class="section courses" id="threats">
       <div class="container">
@@ -774,5 +721,33 @@
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/custom.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          }
+        }
+      });
+    </script>
   </body>
 </html>
