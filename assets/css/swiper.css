@@ -1,5 +1,5 @@
 .swiper {
-  width: 60%;
+  width: 70%;
   height: 50%;
 }
 
@@ -16,7 +16,7 @@
   align-items: center;
   align-content: center;
   display: block;
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: cover;
 }
@@ -50,4 +50,11 @@
   stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 768px) {
+  .swiper {
+    width: 90%;
+    height: 70%;
+  }
 }

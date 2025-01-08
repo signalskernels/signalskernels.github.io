@@ -380,6 +380,7 @@ Header Style
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   display: inline-block;
+  width: 17%;
 }
 
 .header-area .main-nav .logo h1 {
@@ -650,6 +651,7 @@ Header Style
     position: absolute;
     left: 30px;
     top: 0px;
+    width: 30%;
   }
   .background-header .main-nav .logo {
     top: 0px;
@@ -1717,13 +1719,13 @@ footer {
   position: relative;
   background-color: #000000;
   vertical-align: middle;
-  min-height: 40px;
-  border-radius: 150px 150px 0px 0px;
+  min-height: 50px;
+  border-radius: 23px 23px 0px 0px;
 }
 
 footer p {
   text-align: center;
-  line-height: 40px;
+  line-height: 50px;
   vertical-align: middle;
   color: #fff;
   font-weight: 400;
@@ -1761,14 +1763,15 @@ footer::before {
 @media screen and (max-width: 768px) {
   footer {
     /* min-height: 80px; */
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 23px 23px 0px 0px;
+    min-height: 30px;
   }
   footer p {
-    line-height: 20px; /* or whatever smaller value you want */
+    line-height: 30px; /* or whatever smaller value you want */
   }
   .footer-section {
     display: block;
-    margin: 10px 0; /* vertical spacing on mobile */
+    margin: 0px 0; /* vertical spacing on mobile */
   }
 }
 
@@ -1814,6 +1817,7 @@ body {
   }
   .header-area .main-nav .logo {
     border-right: none;
+    width: 30%;
   }
   .main-banner {
     padding-top: 100px;
@@ -1888,7 +1892,7 @@ body {
     color: #fff;
   }
   .courses {
-    margin-top: 100px;
+    margin-top: 10px;
   }
   .event_filter ul li {
     display: block;
