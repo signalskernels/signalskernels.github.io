@@ -25,8 +25,22 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="prefetch" href="haris.html" as="document" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/intelligence-background-1.png"
+    />
 
     <title>Signals | Kernels</title>
+    <meta
+      name="description"
+      content="Signals | Kernels turns raw multimodal data into actionable intelligence: NLP, computer vision, audio analytics, and intelligent security monitoring."
+    />
+    <meta name="theme-color" content="#000000" />
 
     <link
       rel="icon"
@@ -49,6 +63,7 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#services">Skip to content</a>
     <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
       <div class="preloader-inner">
@@ -73,10 +88,11 @@
                 <img
                   src="assets/images/Sgnals_Kernels_Logo_v2_small_white.png"
                   alt="Signals | Kernels Logo"
+                  loading="eager"
                 />
               </a>
               <!-- ***** Logo End ***** -->
-              <ul class="nav">
+              <ul class="nav" id="primary-navigation">
                 <li class="scroll-to-section">
                   <a href="#top" class="active">Home</a>
                 </li>
@@ -90,7 +106,13 @@
                   <a href="#contact">Contact</a>
                 </li>
               </ul>
-              <a class="menu-trigger">
+              <a
+                class="menu-trigger"
+                role="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+              >
                 <span>Menu</span>
               </a>
             </nav>
@@ -164,6 +186,8 @@
                       src="assets/images/HARIS-logo.png"
                       alt="HARIS Logo"
                       style="width: 75px"
+                      loading="lazy"
+                      decoding="async"
                     />HARIS</span
                   >
                   <h2>Security Made Effective and Affordable</h2>
@@ -175,7 +199,7 @@
                   <div class="buttons">
                     <div class="main-button">
                       <a href="haris.html">More Info</a>
-                      <a href="#">Request Demo</a>
+                      <a href="#contact">Request Demo</a>
                     </div>
                     <!-- <div class="icon-button">
                       <a href="#"><i class="fa fa-play"></i> What's Scholar?</a>
@@ -208,7 +232,12 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img src="assets/images/NLP.png" alt="NLP Solutions" />
+                <img
+                  src="assets/images/NLP.png"
+                  alt="NLP Solutions"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div class="main-content">
                 <h4>NLP Solutions</h4>
@@ -229,6 +258,8 @@
                 <img
                   src="assets/images/vision.png"
                   alt="Vision and Visual Reasoning"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="main-content">
@@ -249,6 +280,8 @@
                 <img
                   src="assets/images/audio.png"
                   alt="Audio & Multimodal Analysis"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="main-content">
@@ -269,6 +302,8 @@
                 <img
                   src="assets/images/security.png"
                   alt="Intelligent Security Monitoring"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="main-content">
@@ -290,6 +325,8 @@
                 <img
                   src="assets/images/ai-2.png"
                   alt="Advanced AI & ML Applications"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="main-content">
@@ -542,36 +579,62 @@
                 <input type="hidden" name="utf8" value="✓" />
 
                 <div class="row">
+                  <!-- Honeypot field to reduce spam -->
+                  <div
+                    style="
+                      position: absolute;
+                      left: -9999px;
+                      width: 1px;
+                      height: 1px;
+                      overflow: hidden;
+                    "
+                  >
+                    <label for="website">Website</label>
+                    <input
+                      type="text"
+                      id="website"
+                      name="website"
+                      tabindex="-1"
+                      autocomplete="off"
+                    />
+                  </div>
                   <div class="col-lg-12">
                     <fieldset>
+                      <label class="visually-hidden" for="name">Name</label>
                       <input
                         type="text"
                         name="name"
                         id="name"
                         placeholder="Your Name..."
-                        autocomplete="on"
+                        autocomplete="name"
                         required
                       />
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
+                      <label class="visually-hidden" for="email">Email</label>
                       <input
-                        type="text"
+                        type="email"
                         name="email"
                         id="email"
-                        pattern="[^ @]*@[^ @]*"
                         placeholder="Your E-mail..."
-                        required=""
+                        autocomplete="email"
+                        inputmode="email"
+                        required
                       />
                     </fieldset>
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
+                      <label class="visually-hidden" for="message"
+                        >Message</label
+                      >
                       <textarea
                         name="message"
                         id="message"
                         placeholder="Your Message"
+                        rows="5"
                       ></textarea>
                     </fieldset>
                   </div>
