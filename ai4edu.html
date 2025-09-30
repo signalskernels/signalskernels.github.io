@@ -31,8 +31,53 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-    <title>HARIS - Security Made Effective and Affordable</title>
+    <title>AI4Edu - AI-Powered Education Solutions</title>
+
+    <!-- Custom CSS for smaller icons and banner background -->
+    <style>
+      .services .service-item .icon {
+        width: 140px !important;
+        height: 140px !important;
+        line-height: 140px !important;
+        top: -70px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      .services .service-item .icon .material-icons {
+        line-height: 1 !important;
+      }
+      
+      .main-banner .item.item-4 {
+        background-image: url('assets/images/ai4edu_banner_signals_kernels.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        position: relative !important;
+      }
+      
+      .main-banner .item.item-4::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6) !important;
+        z-index: 1;
+      }
+      
+      .main-banner .header-text {
+        position: relative !important;
+        z-index: 2 !important;
+      }
+    </style>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -83,18 +128,17 @@
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
                 <li class="scroll-to-section">
-                  <a href="index.html" class="active">Home</a>
+                  <a href="index.html">Home</a>
                 </li>
                 <li><a href="haris.html">HARIS</a></li>
-                <li><a href="ai4edu.html">AI4Edu</a></li>
                 <li class="scroll-to-section">
-                  <a href="#features">Features</a>
+                  <a href="#features" class="active">Use Cases</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="#threats">Major Threats</a>
+                  <a href="#benefits">Benefits</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="#data-protection">Data Protection</a>
+                  <a href="#data-protection">Ethics</a>
                 </li>
                 <li class="scroll-to-section">
                   <a href="#contact">Contact</a>
@@ -119,14 +163,8 @@
             <div class="owl-carousel owl-banner">
               <div class="item item-4">
                 <div class="header-text">
-                  <span class="haris"
-                    ><img
-                      src="assets/images/HARIS-logo.png"
-                      alt="HARIS Logo"
-                      style="width: 75px"
-                    />HARIS</span
-                  >
-                  <h2 class="typing-effect">Where Smart Meets Secure!</h2>
+                  <span class="haris">AI4Edu</span>
+                  <h2>Unlocking the Future of Learning!</h2>
                   </div>
                 </div>
               </div>
@@ -141,200 +179,156 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="section-heading">
-              <h5>Key Features</h5>
-              <h2>AI-Driven Capabilities for Enhanced Security</h2>
+              <h5>AI in Education Use Cases</h5>
+              <h2>Empowering Educators and Inspiring Students</h2>
             </div>
           </div>
         </div>
         <div class="row">
-          <!-- Motion Detection -->
+          <!-- Personalized Learning -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images//haris-icons/motion-detection-white.png"
-                  alt="Motion detection"
-                />
+                <span class="material-icons" style="font-size: 72px; color: white;">
+                  person_search
+                </span>
               </div>
               <div class="main-content">
-                <h4>Motion Detection</h4>
+                <h4>Personalized Learning Paths</h4>
                 <p>
-                  Detects movement to identify potential security breaches and
-                  employs advanced algorithms to minimize false alarms.
+                  Tailors educational content to individual student needs, adapting pace and style to maximize comprehension and engagement.
                 </p>
                 <ul>
                   <li>
-                    <strong>Intelligent Motion Sensing:</strong> Customizable
-                    schedules for after-hours.
+                    <strong>Adaptive Assessments:</strong> Identifies knowledge gaps and strengths in real-time.
                   </li>
                   <li>
-                    <strong>Smart Notifications:</strong> Real-time alerts with
-                    configurable priority.
+                    <strong>Customized Curricula:</strong> Generates unique learning journeys for every student.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Intrusion Detection -->
+          <!-- Intelligent Tutoring -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/intrusion-detection-v1-white.png"
-                  alt="Intrusion detection"
-                />
+                <span class="material-icons" style="font-size: 72px; color: white;">
+                  psychology
+                </span>
               </div>
               <div class="main-content">
-                <h4>Intrusion Detection</h4>
+                <h4>Intelligent Tutoring Systems</h4>
                 <p>
-                  Detects unauthorized access to restricted areas with
-                  intelligent algorithms that distinguish between normal and
-                  suspicious activities.
+                  Provides students with 24/7 one-on-one support, offering instant feedback, hints, and step-by-step guidance on complex subjects.
                 </p>
                 <ul>
                   <li>
-                    <strong>Advanced Intrusion Monitoring:</strong> Identifies
-                    unusual entry points.
+                    <strong>Immediate Feedback:</strong> Helps students correct mistakes as they happen.
                   </li>
                   <li>
-                    <strong>Directional Awareness:</strong> Tailored responses
-                    based on movement direction.
+                    <strong>Scaffolded Support:</strong> Offers just enough help to keep students progressing.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Gun Detection -->
+          <!-- Automated Grading -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/gun-detection-white.png"
-                  alt="Gun detection"
-                />
+                <span class="material-icons" style="font-size: 72px; color: white;">
+                  grading
+                </span>
               </div>
               <div class="main-content">
-                <h4>Gun Detection</h4>
+                <h4>Automated Grading</h4>
                 <p>
-                  Identifies visible firearms within seconds, even before they
-                  approach the building, enabling swift, proactive threat
-                  mitigation.
+                  Frees up valuable teacher time by automatically grading assignments and providing insightful analytics on student performance.
                 </p>
                 <ul>
                   <li>
-                    <strong>Rapid Weapon Identification:</strong> Instant alerts
-                    with context, images, and location.
+                    <strong>Rapid Evaluation:</strong> Grades everything from multiple-choice to short essays.
                   </li>
                   <li>
-                    <strong>Immediate Response:</strong> Preventative measures
-                    before the threat reaches the premises.
+                    <strong>Performance Analytics:</strong> Identifies class-wide trends and areas for improvement.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- License Plate Logging -->
+          <!-- Content Creation -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/license-plate-detection-white.png"
-                  alt="License plate logging"
-                />
+                <span class="material-icons" style="font-size: 72px; color: white;">
+                  auto_stories
+                </span>
               </div>
               <div class="main-content">
-                <h4>License Plate Logging</h4>
+                <h4>Automated Content Generation</h4>
                 <p>
-                  Instantly detects and reads license plates without specialized
-                  cameras, enabling efficient vehicle tracking and analysis.
+                  Assists educators in creating diverse and engaging learning materials, from lesson plans and study guides to quiz questions.
                 </p>
                 <ul>
                   <li>
-                    <strong>Real-Time Identification:</strong> Works with
-                    existing cameras.
+                    <strong>Lesson Plan Assistance:</strong> Generates outlines and activities based on learning objectives.
                   </li>
                   <li>
-                    <strong>Comprehensive Dashboards:</strong> Filter, search,
-                    and report vehicle movements for security audits.
+                    <strong>Dynamic Quizzes:</strong> Creates varied question sets to prevent cheating and test knowledge.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Visitors Logging -->
+          <!-- Accessibility -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/human-logging-v2-white.png"
-                  alt="Visitors logging"
-                />
+                <span class="material-icons" style="font-size: 72px; color: white;">
+                  accessibility
+                </span>
               </div>
               <div class="main-content">
-                <h4>Visitors Logging</h4>
+                <h4>Enhanced Accessibility</h4>
                 <p>
-                  Logs individuals entering the premises without attaching
-                  personal identities, preserving privacy while enhancing
-                  security.
+                  Makes learning accessible to all students by providing tools like real-time transcription, translation, and text-to-speech.
                 </p>
                 <ul>
                   <li>
-                    <strong>Anonymous Visitor Recording:</strong> No personal
-                    data stored.
+                    <strong>Real-Time Transcription:</strong> Converts spoken lectures into text for hearing-impaired students.
                   </li>
                   <li>
-                    <strong>Secure & Encrypted Data:</strong> FISMA-compliant,
-                    encrypted on-premises storage.
-                  </li>
-                  <li>
-                    <strong>Wide Coverage Detection:</strong> Operates on
-                    entrance doors and parking lots.
-                  </li>
-                  <li>
-                    <strong>Comprehensive Dashboards:</strong> Easy access to
-                    footage of logged visitors.
+                    <strong>Multilingual Support:</strong> Translates materials to support non-native speakers.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Hazards Detection -->
+          <!-- Admin Operations -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/building_hazards_v3-white.png"
-                  alt="Hazards detection"
-                />
+                <span class="material-icons" style="font-size: 72px; color: white;">
+                  admin_panel_settings
+                </span>
               </div>
               <div class="main-content">
-                <h4>Hazards Detection</h4>
+                <h4>Streamlined Administration</h4>
                 <p>
-                  Delivers instant notifications as soon as danger is detected,
-                  enabling prompt emergency response and minimizing harm.
+                  Optimizes school operations by automating tasks like scheduling, resource allocation, and admissions inquiries.
                 </p>
                 <ul>
                   <li>
-                    <strong>Real-Time Hazard Identification:</strong>
-                    Continuously scans for a wide range of threats—fires, smoke,
-                    explosions, water leaks, structural damage, flooding, roof
-                    collapse, burst pipes, and falling debris—to ensure early
-                    and accurate detection.
+                    <strong>Smart Scheduling:</strong> Creates efficient timetables that minimize conflicts.
                   </li>
                   <li>
-                    <strong>Comprehensive Monitoring:</strong> Provides visual
-                    evidence, precise locations, and origin points of hazards
-                    for informed decision-making.
-                  </li>
-                  <li>
-                    <strong>Proactive Risk Management:</strong> Enhances overall
-                    safety and operational resilience through rapid hazard
-                    awareness and timely preventative measures.
+                    <strong>Admissions Chatbots:</strong> Answers prospective student questions 24/7.
                   </li>
                 </ul>
               </div>
@@ -344,64 +338,37 @@
       </div>
     </div>
 
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img
-          src="assets/gif/gun_detection_gif_720.gif"
-          alt="Hazards detection"
-        />
-        </div>
-        <div class="swiper-slide"><img
-          src="assets/gif/building_fire_gif_720.gif"
-          alt="Fire detection"
-        />
-        </div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-      <div class="autoplay-progress">
-        <svg viewBox="0 0 48 48">
-          <circle cx="24" cy="24" r="20"></circle>
-        </svg>
-        <span></span>
-      </div>
-    </div>
+   
     
-    <!-- Major Threats -->
-    <section class="section courses" id="threats">
+    <!-- Key Benefits -->
+    <section class="section courses" id="benefits">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="section-heading">
-              <h5>Major Threats</h5>
-              <h2>Proactive Monitoring of Critical Threat Vectors</h2>
+              <h5>Key Benefits</h5>
+              <h2>Transforming Education for Every Stakeholder</h2>
               <p>
-                Our system is designed to detect and alert on the most pressing
-                security threats, ensuring you're always prepared.
+                Our AI solutions are designed to deliver tangible benefits to students, teachers, and administrators.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Responsive columns: 1 on XS, 2 on SM, 3 on MD, 5 on LG -->
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 event_box justify-content-center"
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 event_box justify-content-center"
         >
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/active-shooter.png"
-                  alt="Active Shooter"
-                />
+                <span class="material-icons" style="font-size: 64px; color: #f5a425;">
+                  school
+                </span>
               </div>
               <div class="down-content">
-                <h4>Active Shooter Situations</h4>
+                <h4>For Students</h4>
                 <p>
-                  Immediate detection and rapid alerting ensure critical
-                  response time is minimized.
+                  Fosters deeper engagement and better learning outcomes through personalized support.
                 </p>
               </div>
             </div>
@@ -410,16 +377,14 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/hate-crime.png"
-                  alt="Hate Crimes & Harassment"
-                />
+                <span class="material-icons" style="font-size: 64px; color: #f5a425;">
+                  person_4
+                </span>
               </div>
               <div class="down-content">
-                <h4>Hate Crimes & Harassment</h4>
+                <h4>For Teachers</h4>
                 <p>
-                  Identify problematic behavior early to prevent escalation and
-                  maintain a safe environment.
+                  Reduces administrative burden, allowing more time for impactful teaching and mentorship.
                 </p>
               </div>
             </div>
@@ -428,51 +393,14 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/vandalism.png"
-                  alt="Vandalism & Arson"
-                />
+                <span class="material-icons" style="font-size: 64px; color: #f5a425;">
+                  manage_accounts
+                </span>
               </div>
               <div class="down-content">
-                <h4>Vandalism & Arson</h4>
+                <h4>For Administrators</h4>
                 <p>
-                  Spot suspicious activities and deter criminal damage before it
-                  occurs.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col event_outer">
-            <div class="events_item text-center">
-              <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/theft.png"
-                  alt="Theft & Burglary"
-                />
-              </div>
-              <div class="down-content">
-                <h4>Theft & Burglary</h4>
-                <p>
-                  Real-time alerts on unauthorized access help prevent losses.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col event_outer">
-            <div class="events_item text-center">
-              <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/suspecious-activity.png"
-                  alt="Suspicious Activities"
-                />
-              </div>
-              <div class="down-content">
-                <h4>Suspicious Activities & Packages</h4>
-                <p>
-                  Identify unusual packages or movements that could pose a
-                  security risk.
+                  Improves operational efficiency and provides data-driven insights for strategic decisions.
                 </p>
               </div>
             </div>
@@ -481,123 +409,114 @@
       </div>
     </section>
 
-    <!-- Data Protection -->
+    <!-- Ethical Considerations -->
     <div class="section about-us" id="data-protection">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 align-self-center">
             <div class="section-heading">
-              <h5>Data Protection</h5>
-              <h2>Keeping Your Data Secure & Compliant</h2>
+              <h5>Ethical Considerations</h5>
+              <h2>Responsible AI for Education</h2>
               <p>
-                Our system is designed with robust security measures, strict
-                access controls, and compliance with federal standards to
-                safeguard your data.
+                We are committed to the ethical deployment of AI, ensuring fairness, privacy, and security are at the core of our solutions.
               </p>
             </div>
           </div>
           <div class="col-lg-6 offset-lg-1">
             <div class="accordion" id="accordionDataProtection">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingEncryption">
+                <h2 class="accordion-header" id="headingPrivacy">
                   <button
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseEncryption"
+                    data-bs-target="#collapsePrivacy"
                     aria-expanded="true"
-                    aria-controls="collapseEncryption"
+                    aria-controls="collapsePrivacy"
                   >
-                    Data Encryption
+                    Student Data Privacy
                   </button>
                 </h2>
                 <div
-                  id="collapseEncryption"
+                  id="collapsePrivacy"
                   class="accordion-collapse collapse show"
-                  aria-labelledby="headingEncryption"
+                  aria-labelledby="headingPrivacy"
                   data-bs-parent="#accordionDataProtection"
                 >
                   <div class="accordion-body">
-                    We encrypt all data at rest and in transit using
-                    industry-standard protocols, protecting sensitive
-                    information from unauthorized access and breaches.
+                    We adhere to the strictest data protection standards (like FERPA and GDPR) to safeguard sensitive student information, using anonymization and encryption.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingAccess">
+                <h2 class="accordion-header" id="headingBias">
                   <button
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseAccess"
+                    data-bs-target="#collapseBias"
                     aria-expanded="false"
-                    aria-controls="collapseAccess"
+                    aria-controls="collapseBias"
                   >
-                    Access Controls
+                    Algorithmic Fairness & Bias Mitigation
                   </button>
                 </h2>
                 <div
-                  id="collapseAccess"
+                  id="collapseBias"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingAccess"
+                  aria-labelledby="headingBias"
                   data-bs-parent="#accordionDataProtection"
                 >
                   <div class="accordion-body">
-                    Multi-factor authentication and defined user roles ensure
-                    only authorized personnel can access sensitive data.
+                    Our models are continuously audited to identify and eliminate biases, ensuring equitable outcomes for all students, regardless of their background.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingCompliance">
+                <h2 class="accordion-header" id="headingTransparency">
                   <button
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseCompliance"
+                    data-bs-target="#collapseTransparency"
                     aria-expanded="false"
-                    aria-controls="collapseCompliance"
+                    aria-controls="collapseTransparency"
                   >
-                    Compliance with FISMA Standards
+                    Transparency and Explainability
                   </button>
                 </h2>
                 <div
-                  id="collapseCompliance"
+                  id="collapseTransparency"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingCompliance"
+                  aria-labelledby="headingTransparency"
                   data-bs-parent="#accordionDataProtection"
                 >
                   <div class="accordion-body">
-                    Our system aligns with federal security guidelines to meet
-                    FISMA compliance, ensuring robust information security
-                    management.
+                    We provide clear explanations for how our AI systems make recommendations, empowering educators to make informed decisions.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingBackup">
+                <h2 class="accordion-header" id="headingHuman">
                   <button
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseBackup"
+                    data-bs-target="#collapseHuman"
                     aria-expanded="false"
-                    aria-controls="collapseBackup"
+                    aria-controls="collapseHuman"
                   >
-                    Disaster Recovery & Backups
+                    Keeping Humans in the Loop
                   </button>
                 </h2>
                 <div
-                  id="collapseBackup"
+                  id="collapseHuman"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingBackup"
+                  aria-labelledby="headingHuman"
                   data-bs-parent="#accordionDataProtection"
                 >
                   <div class="accordion-body">
-                    We perform regular, encrypted backups to prevent data loss
-                    and ensure quick restoration of services in the event of a
-                    disaster.
+                    Our tools are designed to augment, not replace, the invaluable role of teachers. Educators always have the final say in the educational process.
                   </div>
                 </div>
               </div>
@@ -615,10 +534,7 @@
               <h5>Contact Us</h5>
               <h2>Become Our Partner</h2>
               <p>
-                Ready to transform raw data into actionable insight? Reach out
-                to us for a consultation, demo, or to learn more about our
-                custom AI solutions. Let's turn your signals into a powerful
-                kernel of intelligence.
+                Ready to transform the learning experience at your institution? Reach out to us for a consultation or demo of AI4Edu. Let's build the future of education together.
               </p>
             </div>
           </div>
