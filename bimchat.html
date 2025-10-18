@@ -48,10 +48,13 @@
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        background-color: #000;
+        border-radius: 50%;
       }
       
       .services .service-item .icon .material-icons {
         line-height: 1 !important;
+        color: white !important;
       }
       
       .services .service-item ul li {
@@ -81,6 +84,38 @@
       .main-banner .header-text {
         position: relative !important;
         z-index: 2 !important;
+      }
+      
+      /* Mobile icon positioning fix */
+      @media (max-width: 992px) {
+        .services .service-item .icon {
+          position: relative !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          transform: none !important;
+          margin: 0 auto 20px auto !important;
+        }
+        
+        .services .service-item {
+          margin-top: 30px !important;
+          padding-top: 0 !important;
+        }
+        
+        .services .service-item .main-content {
+          padding-top: 20px !important;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .services .service-item .icon {
+          width: 120px !important;
+          height: 120px !important;
+        }
+        
+        .services .service-item .icon .material-icons {
+          font-size: 60px !important;
+        }
       }
     </style>
 
@@ -133,11 +168,16 @@
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
                 <li class="scroll-to-section">
-                  <a href="index.html" class="active">Home</a>
+                  <a href="index.html">Home</a>
                 </li>
-                <li><a href="haris.html">HARIS</a></li>
-                <li><a href="bimchat.html">BIMChat™</a></li>
-                <li><a href="ai4edu.html">AI4Edu</a></li>
+                <li class="has-sub">
+                  <a href="javascript:void(0)">Products</a>
+                  <ul class="sub-menu">
+                    <li><a href="haris.html">HARIS</a></li>
+                    <li><a href="bimchat.html">BIMChat™</a></li>
+                    <li><a href="ai4edu.html">AI4Edu</a></li>
+                  </ul>
+                </li>
                 <li class="scroll-to-section">
                   <a href="#features">Features</a>
                 </li>
@@ -199,7 +239,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <span class="material-icons" style="font-size: 80px; color: #f5a425;">chat</span>
+                <span class="material-icons" style="font-size: 72px;">chat</span>
               </div>
               <div class="main-content">
                 <h4>Natural Language Interaction</h4>
@@ -222,7 +262,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <span class="material-icons" style="font-size: 80px; color: #f5a425;">view_in_ar</span>
+                <span class="material-icons" style="font-size: 72px;">view_in_ar</span>
               </div>
               <div class="main-content">
                 <h4>Deep BIM Intelligence</h4>
@@ -245,7 +285,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <span class="material-icons" style="font-size: 80px; color: #f5a425;">group</span>
+                <span class="material-icons" style="font-size: 72px;">group</span>
               </div>
               <div class="main-content">
                 <h4>Democratized Data Access</h4>
@@ -268,7 +308,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <span class="material-icons" style="font-size: 80px; color: #f5a425;">insights</span>
+                <span class="material-icons" style="font-size: 72px;">insights</span>
               </div>
               <div class="main-content">
                 <h4>Actionable Insights</h4>
@@ -291,7 +331,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <span class="material-icons" style="font-size: 80px; color: #f5a425;">calculate</span>
+                <span class="material-icons" style="font-size: 72px;">calculate</span>
               </div>
               <div class="main-content">
                 <h4>Intelligent Quantity Take-Offs</h4>
@@ -314,7 +354,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <span class="material-icons" style="font-size: 80px; color: #f5a425;">verified</span>
+                <span class="material-icons" style="font-size: 72px;">verified</span>
               </div>
               <div class="main-content">
                 <h4>Quality Control & Validation</h4>
@@ -355,7 +395,7 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <span class="material-icons" style="font-size: 60px; color: #f5a425;">engineering</span>
+                <span class="material-icons" style="font-size: 60px; color: #fff;">engineering</span>
               </div>
               <div class="down-content">
                 <h4>Site Engineers</h4>
@@ -369,7 +409,7 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <span class="material-icons" style="font-size: 60px; color: #f5a425;">request_quote</span>
+                <span class="material-icons" style="font-size: 60px; color: #fff;">request_quote</span>
               </div>
               <div class="down-content">
                 <h4>Quantity Surveyors</h4>
@@ -383,7 +423,7 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <span class="material-icons" style="font-size: 60px; color: #f5a425;">event_note</span>
+                <span class="material-icons" style="font-size: 60px; color: #fff;">event_note</span>
               </div>
               <div class="down-content">
                 <h4>Planners & Schedulers</h4>
@@ -397,7 +437,7 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <span class="material-icons" style="font-size: 60px; color: #f5a425;">task_alt</span>
+                <span class="material-icons" style="font-size: 60px; color: #fff;">task_alt</span>
               </div>
               <div class="down-content">
                 <h4>QA/QC Engineers</h4>
@@ -411,7 +451,7 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <span class="material-icons" style="font-size: 60px; color: #f5a425;">manage_accounts</span>
+                <span class="material-icons" style="font-size: 60px; color: #fff;">manage_accounts</span>
               </div>
               <div class="down-content">
                 <h4>BIM Coordinators</h4>
