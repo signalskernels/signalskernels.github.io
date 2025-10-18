@@ -31,8 +31,58 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-    <title>HARIS - Security Made Effective and Affordable</title>
+    <title>BIMChat™ - Conversational Intelligence for BIM</title>
+
+    <!-- Custom CSS for Material Icons and banner background -->
+    <style>
+      .services .service-item .icon {
+        width: 140px !important;
+        height: 140px !important;
+        line-height: 140px !important;
+        top: -70px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      .services .service-item .icon .material-icons {
+        line-height: 1 !important;
+      }
+      
+      .services .service-item ul li {
+        margin: 15px 0 !important;
+        line-height: 1.6 !important;
+      }
+      
+      .main-banner .item.item-4 {
+        background-image: url('assets/images/bimchat_banner.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        position: relative !important;
+      }
+      
+      .main-banner .item.item-4::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6) !important;
+        z-index: 1;
+      }
+      
+      .main-banner .header-text {
+        position: relative !important;
+        z-index: 2 !important;
+      }
+    </style>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -92,10 +142,10 @@
                   <a href="#features">Features</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="#threats">Major Threats</a>
+                  <a href="#use-cases">Use Cases</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="#data-protection">Data Protection</a>
+                  <a href="#benefits">Benefits</a>
                 </li>
                 <li class="scroll-to-section">
                   <a href="#contact">Contact</a>
@@ -120,14 +170,11 @@
             <div class="owl-carousel owl-banner">
               <div class="item item-4">
                 <div class="header-text">
-                  <span class="haris"
-                    ><img
-                      src="assets/images/HARIS-logo.png"
-                      alt="HARIS Logo"
-                      style="width: 75px"
-                    />HARIS</span
-                  >
-                  <h2 class="typing-effect">Where Smart Meets Secure!</h2>
+                  <span class="haris">BIMChat™</span>
+                  <h2>Your Building Information Model, Now a Conversation</h2>
+                  <p>
+                    Powered by state-of-the-art Large Language Models, BIMChat™ transforms complex 3D assets into living sources of insight you can simply talk to.
+                  </p>
                   </div>
                 </div>
               </div>
@@ -143,199 +190,143 @@
           <div class="col-lg-12 text-center">
             <div class="section-heading">
               <h5>Key Features</h5>
-              <h2>AI-Driven Capabilities for Enhanced Security</h2>
+              <h2>AI-Powered Conversational BIM Intelligence</h2>
             </div>
           </div>
         </div>
         <div class="row">
-          <!-- Motion Detection -->
+          <!-- Natural Language Interaction -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images//haris-icons/motion-detection-white.png"
-                  alt="Motion detection"
-                />
+                <span class="material-icons" style="font-size: 80px; color: #f5a425;">chat</span>
               </div>
               <div class="main-content">
-                <h4>Motion Detection</h4>
+                <h4>Natural Language Interaction</h4>
                 <p>
-                  Detects movement to identify potential security breaches and
-                  employs advanced algorithms to minimize false alarms.
+                  Ask questions in plain English and receive instant, context-aware answers—no deep BIM expertise required.
                 </p>
                 <ul>
                   <li>
-                    <strong>Intelligent Motion Sensing:</strong> Customizable
-                    schedules for after-hours.
+                    <strong>Intuitive Queries:</strong> "Show me all fire-rated walls on Level 3" or "What's the completion percentage of MEP works?"
                   </li>
                   <li>
-                    <strong>Smart Notifications:</strong> Real-time alerts with
-                    configurable priority.
+                    <strong>Instant Responses:</strong> Get immediate answers without navigating complex GUIs or understanding technical jargon.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Intrusion Detection -->
+          <!-- Deep BIM Intelligence -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/intrusion-detection-v1-white.png"
-                  alt="Intrusion detection"
-                />
+                <span class="material-icons" style="font-size: 80px; color: #f5a425;">view_in_ar</span>
               </div>
               <div class="main-content">
-                <h4>Intrusion Detection</h4>
+                <h4>Deep BIM Intelligence</h4>
                 <p>
-                  Detects unauthorized access to restricted areas with
-                  intelligent algorithms that distinguish between normal and
-                  suspicious activities.
+                  Parses model geometry, properties, and metadata, synthesizing them into concise responses and automated reports.
                 </p>
                 <ul>
                   <li>
-                    <strong>Advanced Intrusion Monitoring:</strong> Identifies
-                    unusual entry points.
+                    <strong>Comprehensive Analysis:</strong> Understands 3D geometry, element relationships, and hierarchical structures.
                   </li>
                   <li>
-                    <strong>Directional Awareness:</strong> Tailored responses
-                    based on movement direction.
+                    <strong>Visual Insights:</strong> Generates visual call-outs, highlights, and color-coded elements directly in the model.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Gun Detection -->
+          <!-- Democratized Data Access -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/gun-detection-white.png"
-                  alt="Gun detection"
-                />
+                <span class="material-icons" style="font-size: 80px; color: #f5a425;">group</span>
               </div>
               <div class="main-content">
-                <h4>Gun Detection</h4>
+                <h4>Democratized Data Access</h4>
                 <p>
-                  Identifies visible firearms within seconds, even before they
-                  approach the building, enabling swift, proactive threat
-                  mitigation.
+                  Every stakeholder can explore, verify, and act on BIM data—from architects to facility managers.
                 </p>
                 <ul>
                   <li>
-                    <strong>Rapid Weapon Identification:</strong> Instant alerts
-                    with context, images, and location.
+                    <strong>Universal Access:</strong> Site engineers, quantity surveyors, planners, and QA/QC teams all benefit.
                   </li>
                   <li>
-                    <strong>Immediate Response:</strong> Preventative measures
-                    before the threat reaches the premises.
+                    <strong>No Training Required:</strong> Intuitive interface eliminates the steep learning curve of traditional BIM tools.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- License Plate Logging -->
+          <!-- Actionable Insights -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/license-plate-detection-white.png"
-                  alt="License plate logging"
-                />
+                <span class="material-icons" style="font-size: 80px; color: #f5a425;">insights</span>
               </div>
               <div class="main-content">
-                <h4>License Plate Logging</h4>
+                <h4>Actionable Insights</h4>
                 <p>
-                  Instantly detects and reads license plates without specialized
-                  cameras, enabling efficient vehicle tracking and analysis.
+                  Generate clash summaries, quantity take-offs, compliance checks, and more through conversational workflows.
                 </p>
                 <ul>
                   <li>
-                    <strong>Real-Time Identification:</strong> Works with
-                    existing cameras.
+                    <strong>Automated Reports:</strong> Instant quantity summaries, BOQ breakdowns, and progress tracking.
                   </li>
                   <li>
-                    <strong>Comprehensive Dashboards:</strong> Filter, search,
-                    and report vehicle movements for security audits.
+                    <strong>Smart Coordination:</strong> Identify missing data, flag non-conforming elements, and accelerate decision-making.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Visitors Logging -->
+          <!-- Quantity Take-Offs -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/human-logging-v2-white.png"
-                  alt="Visitors logging"
-                />
+                <span class="material-icons" style="font-size: 80px; color: #f5a425;">calculate</span>
               </div>
               <div class="main-content">
-                <h4>Visitors Logging</h4>
+                <h4>Intelligent Quantity Take-Offs</h4>
                 <p>
-                  Logs individuals entering the premises without attaching
-                  personal identities, preserving privacy while enhancing
-                  security.
+                  Extract normalized quantities per BOQ group with automated unit conversions and clean subtotals.
                 </p>
                 <ul>
                   <li>
-                    <strong>Anonymous Visitor Recording:</strong> No personal
-                    data stored.
+                    <strong>Flexible Reporting:</strong> Get detailed item-level lists or normalized summaries based on your needs.
                   </li>
                   <li>
-                    <strong>Secure & Encrypted Data:</strong> FISMA-compliant,
-                    encrypted on-premises storage.
-                  </li>
-                  <li>
-                    <strong>Wide Coverage Detection:</strong> Operates on
-                    entrance doors and parking lots.
-                  </li>
-                  <li>
-                    <strong>Comprehensive Dashboards:</strong> Easy access to
-                    footage of logged visitors.
+                    <strong>BOQ Integration:</strong> Seamlessly organize quantities by Bill of Quantities codes and categories.
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Hazards Detection -->
+          <!-- Quality Control -->
           <div class="col-lg-4 col-md-6">
             <div class="service-item">
               <div class="icon">
-                <img
-                  src="assets/images/haris-icons/building_hazards_v3-white.png"
-                  alt="Hazards detection"
-                />
+                <span class="material-icons" style="font-size: 80px; color: #f5a425;">verified</span>
               </div>
               <div class="main-content">
-                <h4>Hazards Detection</h4>
+                <h4>Quality Control & Validation</h4>
                 <p>
-                  Delivers instant notifications as soon as danger is detected,
-                  enabling prompt emergency response and minimizing harm.
+                  Ensure model integrity and metadata completeness with intelligent validation and gap detection.
                 </p>
                 <ul>
                   <li>
-                    <strong>Real-Time Hazard Identification:</strong>
-                    Continuously scans for a wide range of threats—fires, smoke,
-                    explosions, water leaks, structural damage, flooding, roof
-                    collapse, burst pipes, and falling debris—to ensure early
-                    and accurate detection.
+                    <strong>Missing Data Detection:</strong> Identify elements lacking zone, level, or system information.
                   </li>
                   <li>
-                    <strong>Comprehensive Monitoring:</strong> Provides visual
-                    evidence, precise locations, and origin points of hazards
-                    for informed decision-making.
-                  </li>
-                  <li>
-                    <strong>Proactive Risk Management:</strong> Enhances overall
-                    safety and operational resilience through rapid hazard
-                    awareness and timely preventative measures.
+                    <strong>Conformity Checks:</strong> Validate that installed elements match specifications and standards.
                   </li>
                 </ul>
               </div>
@@ -345,64 +336,31 @@
       </div>
     </div>
 
-    <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img
-          src="assets/gif/gun_detection_gif_720.gif"
-          alt="Hazards detection"
-        />
-        </div>
-        <div class="swiper-slide"><img
-          src="assets/gif/building_fire_gif_720.gif"
-          alt="Fire detection"
-        />
-        </div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-      <div class="autoplay-progress">
-        <svg viewBox="0 0 48 48">
-          <circle cx="24" cy="24" r="20"></circle>
-        </svg>
-        <span></span>
-      </div>
-    </div>
-    
-    <!-- Major Threats -->
-    <section class="section courses" id="threats">
+    <!-- Use Cases Section -->
+    <section class="section courses" id="use-cases">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="section-heading">
-              <h5>Major Threats</h5>
-              <h2>Proactive Monitoring of Critical Threat Vectors</h2>
+              <h5>Use Cases</h5>
+              <h2>Who Benefits from BIMChat™?</h2>
               <p>
-                Our system is designed to detect and alert on the most pressing
-                security threats, ensuring you're always prepared.
+                BIMChat™ serves every stakeholder across the Architecture, Engineering, and Construction (AEC) lifecycle.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Responsive columns: 1 on XS, 2 on SM, 3 on MD, 5 on LG -->
-        <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 event_box justify-content-center"
-        >
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 event_box justify-content-center">
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/active-shooter.png"
-                  alt="Active Shooter"
-                />
+                <span class="material-icons" style="font-size: 60px; color: #f5a425;">engineering</span>
               </div>
               <div class="down-content">
-                <h4>Active Shooter Situations</h4>
+                <h4>Site Engineers</h4>
                 <p>
-                  Immediate detection and rapid alerting ensure critical
-                  response time is minimized.
+                  "Which façade panels are still in transit?" Monitor site progress, check element status, and verify installation sequencing.
                 </p>
               </div>
             </div>
@@ -411,16 +369,12 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/hate-crime.png"
-                  alt="Hate Crimes & Harassment"
-                />
+                <span class="material-icons" style="font-size: 60px; color: #f5a425;">request_quote</span>
               </div>
               <div class="down-content">
-                <h4>Hate Crimes & Harassment</h4>
+                <h4>Quantity Surveyors</h4>
                 <p>
-                  Identify problematic behavior early to prevent escalation and
-                  maintain a safe environment.
+                  "Give me normalized quantities per BOQ for Level 5 finishes." Extract quantities, cost groupings, and variance analyses.
                 </p>
               </div>
             </div>
@@ -429,16 +383,12 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/vandalism.png"
-                  alt="Vandalism & Arson"
-                />
+                <span class="material-icons" style="font-size: 60px; color: #f5a425;">event_note</span>
               </div>
               <div class="down-content">
-                <h4>Vandalism & Arson</h4>
+                <h4>Planners & Schedulers</h4>
                 <p>
-                  Spot suspicious activities and deter criminal damage before it
-                  occurs.
+                  "What's the completion percentage of MEP works by WBS?" Track scope readiness by WBS, discipline, or location.
                 </p>
               </div>
             </div>
@@ -447,15 +397,12 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/theft.png"
-                  alt="Theft & Burglary"
-                />
+                <span class="material-icons" style="font-size: 60px; color: #f5a425;">task_alt</span>
               </div>
               <div class="down-content">
-                <h4>Theft & Burglary</h4>
+                <h4>QA/QC Engineers</h4>
                 <p>
-                  Real-time alerts on unauthorized access help prevent losses.
+                  "List all installed doors missing fire-rating data." Validate conformity between installed and specified elements.
                 </p>
               </div>
             </div>
@@ -464,16 +411,12 @@
           <div class="col event_outer">
             <div class="events_item text-center">
               <div class="thumb">
-                <img
-                  src="assets/images/haris-icons/suspecious-activity.png"
-                  alt="Suspicious Activities"
-                />
+                <span class="material-icons" style="font-size: 60px; color: #f5a425;">manage_accounts</span>
               </div>
               <div class="down-content">
-                <h4>Suspicious Activities & Packages</h4>
+                <h4>BIM Coordinators</h4>
                 <p>
-                  Identify unusual packages or movements that could pose a
-                  security risk.
+                  "Highlight elements that lack zone information." Ensure model integrity and metadata completeness.
                 </p>
               </div>
             </div>
@@ -482,123 +425,114 @@
       </div>
     </section>
 
-    <!-- Data Protection -->
-    <div class="section about-us" id="data-protection">
+    <!-- Benefits Section -->
+    <div class="section about-us" id="benefits">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 align-self-center">
             <div class="section-heading">
-              <h5>Data Protection</h5>
-              <h2>Keeping Your Data Secure & Compliant</h2>
+              <h5>Benefits</h5>
+              <h2>Why Choose BIMChat™?</h2>
               <p>
-                Our system is designed with robust security measures, strict
-                access controls, and compliance with federal standards to
-                safeguard your data.
+                BIMChat™ represents a paradigm shift in how stakeholders interact with Building Information Models. Your building now "speaks back," making previously siloed information transparent, searchable, and immediately useful.
               </p>
             </div>
           </div>
           <div class="col-lg-6 offset-lg-1">
-            <div class="accordion" id="accordionDataProtection">
+            <div class="accordion" id="accordionBenefits">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingEncryption">
+                <h2 class="accordion-header" id="headingEfficiency">
                   <button
                     class="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseEncryption"
+                    data-bs-target="#collapseEfficiency"
                     aria-expanded="true"
-                    aria-controls="collapseEncryption"
+                    aria-controls="collapseEfficiency"
                   >
-                    Data Encryption
+                    Enhanced Efficiency
                   </button>
                 </h2>
                 <div
-                  id="collapseEncryption"
+                  id="collapseEfficiency"
                   class="accordion-collapse collapse show"
-                  aria-labelledby="headingEncryption"
-                  data-bs-parent="#accordionDataProtection"
+                  aria-labelledby="headingEfficiency"
+                  data-bs-parent="#accordionBenefits"
                 >
                   <div class="accordion-body">
-                    We encrypt all data at rest and in transit using
-                    industry-standard protocols, protecting sensitive
-                    information from unauthorized access and breaches.
+                    Reduce time spent navigating complex BIM software. Get instant answers to questions that would typically require extensive manual searching and data extraction.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingAccess">
+                <h2 class="accordion-header" id="headingCollaboration">
                   <button
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseAccess"
+                    data-bs-target="#collapseCollaboration"
                     aria-expanded="false"
-                    aria-controls="collapseAccess"
+                    aria-controls="collapseCollaboration"
                   >
-                    Access Controls
+                    Improved Collaboration
                   </button>
                 </h2>
                 <div
-                  id="collapseAccess"
+                  id="collapseCollaboration"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingAccess"
-                  data-bs-parent="#accordionDataProtection"
+                  aria-labelledby="headingCollaboration"
+                  data-bs-parent="#accordionBenefits"
                 >
                   <div class="accordion-body">
-                    Multi-factor authentication and defined user roles ensure
-                    only authorized personnel can access sensitive data.
+                    Enable seamless communication across disciplines. Everyone—from site engineers to facility managers—can access the same information in a way that makes sense to them.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingCompliance">
+                <h2 class="accordion-header" id="headingAccuracy">
                   <button
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseCompliance"
+                    data-bs-target="#collapseAccuracy"
                     aria-expanded="false"
-                    aria-controls="collapseCompliance"
+                    aria-controls="collapseAccuracy"
                   >
-                    Compliance with FISMA Standards
+                    Increased Accuracy
                   </button>
                 </h2>
                 <div
-                  id="collapseCompliance"
+                  id="collapseAccuracy"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingCompliance"
-                  data-bs-parent="#accordionDataProtection"
+                  aria-labelledby="headingAccuracy"
+                  data-bs-parent="#accordionBenefits"
                 >
                   <div class="accordion-body">
-                    Our system aligns with federal security guidelines to meet
-                    FISMA compliance, ensuring robust information security
-                    management.
+                    Eliminate human error in data extraction and quantity calculations. BIMChat™ ensures precise, consistent results every time, with full traceability back to source elements.
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingBackup">
+                <h2 class="accordion-header" id="headingInsights">
                   <button
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapseBackup"
+                    data-bs-target="#collapseInsights"
                     aria-expanded="false"
-                    aria-controls="collapseBackup"
+                    aria-controls="collapseInsights"
                   >
-                    Disaster Recovery & Backups
+                    Real-Time Insights
                   </button>
                 </h2>
                 <div
-                  id="collapseBackup"
+                  id="collapseInsights"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingBackup"
-                  data-bs-parent="#accordionDataProtection"
+                  aria-labelledby="headingInsights"
+                  data-bs-parent="#accordionBenefits"
                 >
                   <div class="accordion-body">
-                    We perform regular, encrypted backups to prevent data loss
-                    and ensure quick restoration of services in the event of a
-                    disaster.
+                    Make informed decisions faster. BIMChat™ provides instant visibility into project status, progress tracking, and compliance issues—enabling proactive rather than reactive management.
                   </div>
                 </div>
               </div>
@@ -614,12 +548,9 @@
           <div class="col-lg-6 align-self-center">
             <div class="section-heading" style="margin-bottom: 20px;">
               <h5>Contact Us</h5>
-              <h2>Become Our Partner</h2>
+              <h2>Experience BIMChat™</h2>
               <p>
-                Ready to transform raw data into actionable insight? Reach out
-                to us for a consultation, demo, or to learn more about our
-                custom AI solutions. Let's turn your signals into a powerful
-                kernel of intelligence.
+                Ready to transform how your team interacts with BIM data? Contact us for a personalized demo and discover how BIMChat™ can revolutionize your project workflows.
               </p>
             </div>
           </div>
@@ -709,33 +640,5 @@
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/custom.js"></script>
-    <!-- Initialize Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const progressCircle = document.querySelector(".autoplay-progress svg");
-      const progressContent = document.querySelector(".autoplay-progress span");
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        },
-        on: {
-          autoplayTimeLeft(s, time, progress) {
-            progressCircle.style.setProperty("--progress", 1 - progress);
-            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-          }
-        }
-      });
-    </script>
   </body>
 </html>
