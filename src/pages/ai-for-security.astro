@@ -1,0 +1,194 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'AI for Security — Effective and Affordable Protection',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="AI for Security"
+    title="Security Made Effective and Affordable"
+    subtitle="AI-driven proactive monitoring with 24/7 oversight and smart alerts focused on critical incidents. Enhance situational awareness and prevent escalation with our intelligent security solutions."
+    actions={[
+      { variant: 'primary', text: 'Request a Demo', href: '/contact', icon: 'tabler:mail' },
+      { text: 'Learn More', href: '#capabilities' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Security monitoring systems',
+    }}
+  />
+
+  <!-- Features Widget: Key Capabilities *************** -->
+
+  <Features
+    id="capabilities"
+    tagline="Key Capabilities"
+    title="Intelligent Threat Detection & Response"
+    subtitle="Our AI-powered security system provides comprehensive monitoring across multiple threat vectors, minimizing false alarms and enabling swift response."
+    items={[
+      {
+        title: 'Motion & Intrusion Detection',
+        description:
+          'Intelligent algorithms detect unauthorized access and suspicious movements while minimizing false alarms. Built to distinguish genuine threats from routine activity.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Gun Detection',
+        description:
+          'Rapid identification of visible firearms enables swift, proactive threat mitigation. Our system alerts security personnel in real-time for immediate response.',
+        icon: 'tabler:crosshair',
+      },
+      {
+        title: 'License Plate & Visitor Logging',
+        description:
+          'Efficient tracking of vehicles and anonymous logging of visitors, preserving privacy while enhancing security awareness and access control.',
+        icon: 'tabler:car',
+      },
+      {
+        title: 'Hazards Detection',
+        description:
+          'Real-time identification of fire, smoke, water leaks, and structural damage. Early detection enables rapid response and minimizes potential losses.',
+        icon: 'tabler:flame',
+      },
+      {
+        title: '24/7 AI-Driven Monitoring',
+        description:
+          'Continuous intelligent oversight that never sleeps. Our system maintains vigilant watch with smart escalation protocols for critical incidents.',
+        icon: 'tabler:clock-24',
+      },
+      {
+        title: 'Smart Alert Management',
+        description:
+          'Intelligent filtering reduces alert fatigue by focusing on genuine threats and anomalies, ensuring security teams can act decisively when it matters most.',
+        icon: 'tabler:bell-ringing',
+      },
+    ]}
+  />
+
+  <!-- Content Widget: Threats Addressed **************** -->
+
+  <Content
+    isReversed
+    tagline="Protection"
+    title="Threats We Address"
+    items={[
+      {
+        title: 'Active Shooter Situations',
+        description: 'Rapid firearm detection and automated alert protocols for immediate threat response.',
+      },
+      {
+        title: 'Hate Crimes & Harassment',
+        description: 'Behavioral analysis and pattern recognition to identify and prevent escalating situations.',
+      },
+      {
+        title: 'Vandalism & Arson',
+        description: 'Environmental monitoring to detect destructive activities before significant damage occurs.',
+      },
+      {
+        title: 'Theft & Burglary',
+        description: 'Intelligent intrusion detection with perimeter monitoring and unauthorized access alerts.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Security operations center',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Comprehensive Coverage</h3>
+      From physical threats to environmental hazards, our system provides multi-layered protection.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget: How It Works ****************** -->
+
+  <Steps
+    title="How Our Security System Works"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Deploy Cameras</span>',
+        description: 'Install or integrate with your existing CCTV and sensor infrastructure. Our system works with standard retail cameras — no specialized hardware needed.',
+        icon: 'tabler:camera',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">AI Analysis</span>',
+        description: 'Our AI engine continuously analyzes video feeds, detecting objects, people, vehicles, and anomalies in real-time using advanced computer vision models.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Smart Alerts</span>',
+        description: 'When a threat is detected, smart alerts are sent to security personnel with contextual information, severity classification, and recommended response actions.',
+        icon: 'tabler:bell',
+      },
+      {
+        title: 'Continuous Protection',
+        description: 'The system learns and adapts over time, continuously improving detection accuracy and reducing false positives.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551808525-51a94da548ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Security technology workflow',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Security Solution FAQs"
+    tagline="Questions"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What cameras do I need?',
+        description:
+          'Our system works with standard retail IP cameras. No specialized security cameras required — we work with your existing infrastructure.',
+      },
+      {
+        title: 'How are you compliant with data protection?',
+        description:
+          'We are fully compliant with FISMA standards, utilizing robust encryption and strict access controls. Visitor logging is anonymized to preserve privacy.',
+      },
+      {
+        title: 'Can this integrate with my existing security system?',
+        description:
+          'Yes. Our AI layer is designed to complement your existing security setup. We integrate with standard CCTV systems, access controls, and alarm systems.',
+      },
+      {
+        title: 'What about false alarms?',
+        description:
+          'Our smart alert management system uses advanced AI to minimize false positives. The system continuously learns from feedback to improve accuracy over time.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request a Demo',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Protect What Matters"
+    subtitle="See our AI-powered security system in action. Request a personalized demo to learn how we can enhance your security operations."
+  />
+</Layout>

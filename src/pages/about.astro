@@ -1,0 +1,201 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About Us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About Us"
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Abstract data visualization',
+    }}
+  >
+    <Fragment slot="title">
+      Turning Chaos <br class="hidden xl:inline" />
+      <span class="text-accent dark:text-white">into Insight</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Signals | Kernels is a cutting-edge technology company dedicated to transforming raw, chaotic data streams into
+      coherent, actionable intelligence. We bridge the gap between complexity and insight by harnessing the "signals" of
+      the world and processing them through our advanced "kernels" — the computational heart of our AI systems.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Who We Are"
+    stats={[
+      { title: 'Founded', amount: '2023' },
+      { title: 'Headquarters', amount: 'Chicago' },
+      { title: 'Focus Areas', amount: '3' },
+      { title: 'AI Modalities', amount: '5+' },
+    ]}
+  />
+
+  <!-- Content Widget: Our Essence **************** -->
+
+  <Content
+    isReversed
+    tagline="Our Essence"
+    title="Why 'Signals' and 'Kernels'?"
+    items={[
+      {
+        title: 'Signals',
+        description:
+          'The raw information flowing nonstop from countless sources — data streams, text, images, video, audio, and sensor data. Our world is awash in signals that hold the key to insights, innovations, and improved decision-making.',
+      },
+      {
+        title: 'Kernels',
+        description:
+          'In machine learning, kernels transform complex data into spaces where hidden patterns emerge. Similarly, an OS kernel orchestrates all processes. Our solutions serve as the essential kernel of intelligence — enabling efficient learning, growth, and adaptability.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Neural network abstract visualization',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        The Heart of Your Intelligence
+      </h3>
+      We start from the chaotic signals of the world and channel them into a structured intelligence core, much like a kernel
+      that powers every function of an operating system.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget: Mission **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Guiding Through Complexity',
+        description:
+          'We uncover hidden patterns, anticipate needs, and deliver secure, scalable solutions that enable clients to stay one step ahead — confident, informed, and ready for the future.',
+      },
+      {
+        title: 'Making AI Accessible',
+        description:
+          'We make AI widely accessible and approachable by building custom solutions that work for businesses of any size — from small startups to large enterprises — without prohibitive investments.',
+      },
+      {
+        title: 'Bridging Research & Practice',
+        description:
+          'We combine cutting-edge research with creative problem-solving, turning academic breakthroughs into deployable solutions that create tangible value.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Team collaboration',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Mission</h3>
+      To guide organizations through the complexity of modern data landscapes.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps2 Widget: Values ****************** -->
+
+  <Steps2
+    title="Our Values"
+    subtitle="The principles that drive every solution we build and every partnership we forge."
+    items={[
+      {
+        title: 'Clarity',
+        description:
+          'Illuminating hidden patterns in messy data so you can see clearly and act decisively.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Integrity',
+        description:
+          'Ensuring trust, security, and robustness in our solutions — your data deserves the highest standards.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Ingenuity',
+        description:
+          'Combining cutting-edge research with creative problem-solving for smarter, faster outcomes.',
+        icon: 'tabler:sparkles',
+      },
+    ]}
+  />
+
+  <Steps2
+    isReversed={true}
+    items={[
+      {
+        title: 'Resilience',
+        description:
+          'Building scalable, adaptable systems that evolve with your needs and stand the test of time.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Affordability',
+        description:
+          'Offering cost-effective intelligence solutions without compromising quality or innovation.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Scalability & Empowerment',
+        description:
+          'Designing solutions that grow with you, empowering confident decision-making at every stage.',
+        icon: 'tabler:trending-up',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget: Location ************** -->
+
+  <Features2
+    title="Our Location"
+    tagline="Find Us"
+    columns={1}
+    items={[
+      {
+        title: 'Chicago, IL, USA',
+        description: 'Headquartered in the heart of the Midwest, serving clients worldwide.',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in Touch',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Let's Build Something Together"
+    subtitle="Whether you're a small business looking to pilot your first AI solution or a large enterprise seeking custom intelligence systems, we're here to help."
+  />
+</Layout>
