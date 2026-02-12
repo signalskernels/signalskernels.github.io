@@ -6,6 +6,10 @@ export const headerData = {
       text: 'Focus Areas',
       links: [
         {
+          text: 'AI for Government',
+          href: getPermalink('/ai-for-government'),
+        },
+        {
           text: 'AI for Security',
           href: getPermalink('/ai-for-security'),
         },
@@ -40,6 +44,7 @@ export const footerData = {
     {
       title: 'Focus Areas',
       links: [
+        { text: 'AI for Government', href: getPermalink('/ai-for-government') },
         { text: 'AI for Security', href: getPermalink('/ai-for-security') },
         { text: 'AI for BIM', href: getPermalink('/ai-for-bim') },
         { text: 'AI for Education', href: getPermalink('/ai-for-education') },
@@ -56,6 +61,7 @@ export const footerData = {
     {
       title: 'Capabilities',
       links: [
+        { text: 'GovTech & Process Automation', href: getPermalink('/ai-for-government') },
         { text: 'NLP Solutions', href: getPermalink('/services') },
         { text: 'Computer Vision', href: getPermalink('/services') },
         { text: 'Audio & Multimodal', href: getPermalink('/services') },

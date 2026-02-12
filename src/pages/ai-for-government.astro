@@ -1,0 +1,281 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'AI for Government — Sovereign AI for Operational Efficiency',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="AI for Government"
+    title="Operational Efficiency & Service Delivery via Applied AI"
+    subtitle="We don't rent you software — we build you an asset. Our sovereign AI solutions modernize agency workflows, reduce backlogs, and improve public perception through measurable results. Backed by US-standard engineering with native MENA expertise, we deploy AI that is secure, compliant, and culturally fluent."
+    actions={[
+      { variant: 'primary', text: 'Request a Briefing', href: '/contact', icon: 'tabler:mail' },
+      { text: 'Explore Capabilities', href: '#pillars' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Government building with modern technology integration',
+    }}
+  />
+
+  <!-- Features Widget: Four Pillars *************** -->
+
+  <Features
+    id="pillars"
+    tagline="Four Pillars of GovTech AI"
+    title="From Reactive Administration to Proactive Governance"
+    subtitle="A practical framework for high-impact AI initiatives aligned with national digital transformation goals across the MENA region."
+    items={[
+      {
+        title: 'Intelligent Process Automation',
+        description:
+          'Streamline bureaucracy through "Human-in-the-Loop" cognitive verification. NLP and OCR engines extract data from deeds, contracts, and scanned forms — then cross-reference against laws and databases to validate eligibility instantly.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Predictive Analytics & Resource Optimization',
+        description:
+          'Leverage historical data to simulate future scenarios before capital is spent. Impact forecasting, conflict detection between agencies, and "Dig Once" coordination to maximize ROI and minimize disruption.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Real-Time Oversight & Revenue Protection',
+        description:
+          'Move from reactive spot-checks to autonomous anomaly detection. Computer vision for infrastructure monitoring, pattern recognition for fraud detection, and semantic search for legislative coherence.',
+        icon: 'tabler:eye-check',
+      },
+      {
+        title: 'Human Capital Development',
+        description:
+          'Personalized education at national scale. Adaptive learning platforms adjust curriculum in real-time, while admin automation frees educators to mentor — ensuring no student is left behind.',
+        icon: 'tabler:school',
+      },
+    ]}
+  />
+
+  <!-- Content Widget: Strategic Use Cases **************** -->
+
+  <Content
+    isReversed
+    tagline="Use Cases"
+    title="Strategic Applications Across Government"
+    items={[
+      {
+        title: 'Document Intelligence & Straight-Through Processing',
+        description:
+          'AI auditors validate sale contracts, deeds, and permits against digital ledgers — approving high-confidence applications instantly while routing complex exceptions to human officers. Processing times drop from months to days.',
+      },
+      {
+        title: 'Urban Planning & Infrastructure Coordination',
+        description:
+          'Analyze schedules from water, electricity, and municipal authorities. Detect overlap (e.g., two agencies excavating the same street within 3 months) and merge schedules, saving millions in repaving costs.',
+      },
+      {
+        title: 'Revenue Protection & Valuation Integrity',
+        description:
+          'AI compares transaction prices against valuation heatmaps. Sales falling outside standard deviation are auto-flagged for audit — preventing tax evasion via under-declaration in real-time.',
+      },
+      {
+        title: 'Service Quality Monitoring',
+        description:
+          'NLP engines monitor citizen feedback on government apps and social channels, detecting spikes in complaints (e.g., "OTP not arriving") for rapid technical resolution before issues escalate.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Data analytics dashboard for government',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Measurable Impact, Real-World Results
+      </h3>
+      From land registration to procurement optimization, our use cases are designed for immediate operational value across MENA government agencies.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget: More Use Cases **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Public Works Pre-Validation',
+        description:
+          'Engineers submit CAD drawings and the AI pre-verifies plans against national building codes (fire exits, setbacks), issuing a compliance report immediately for final engineering review.',
+      },
+      {
+        title: 'Procurement Optimization',
+        description:
+          'An AI layer automates the RFP-to-Bid cycle — suggesting category codes for new tenders, scanning vendor bids to verify local content requirements, and cutting the tender-to-award timeline.',
+      },
+      {
+        title: 'Traffic Impact Simulation',
+        description:
+          'Before altering signal timing on major arteries, the system simulates downstream impact to ensure gridlock is not simply displaced to neighboring districts.',
+      },
+      {
+        title: 'Legislative Coherence',
+        description:
+          'A semantic engine trained on the official gazette retrieves previous regulations to flag contradictions when drafting new amendments, ensuring legal certainty.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Modern city infrastructure',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Smarter City Operations
+      </h3>
+      Infrastructure intelligence that prevents problems before they happen — from road maintenance to legal drafting.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget: Deployment Model ****************** -->
+
+  <Steps
+    title="How We Deploy for Government"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Assess & Align</span>',
+        description:
+          'We map your agency\'s workflows, data landscape, and national digital transformation goals. We identify high-impact areas where AI delivers immediate operational efficiency.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Design Sovereign Architecture</span>',
+        description:
+          'We design solutions that respect data sovereignty — on-premise for sensitive ministries (air-gapped capability) or within the secure government cloud perimeter. Your data never leaves your control.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Build & Integrate</span>',
+        description:
+          'We use a "Wrapper Strategy" to connect securely to legacy databases (Oracle, Mainframes) via APIs — no disruptive "rip and replace." AI reads and validates data without touching core infrastructure.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Train & Transfer Ownership',
+        description:
+          'Through our Civil Servant AI Academy, we certify ministry staff as "AI Administrators." We don\'t believe in indefinite SaaS lock-in — we build assets you own and ensure long-term independence.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Government AI deployment process',
+    }}
+  />
+
+  <!-- Features2 Widget: Compliance & Security ************** -->
+
+  <Features2
+    title="Compliance, Security & Ethics"
+    subtitle="Every deployment is built on a foundation of trust, privacy, and national data sovereignty."
+    tagline="Technical Assurance"
+    columns={2}
+    items={[
+      {
+        title: 'Privacy-by-Design',
+        description:
+          'Anonymized aggregation for monitoring, automated PII redaction before all processing. Full compliance with regional data protection laws.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Hybrid-Cloud Sovereignty',
+        description:
+          'On-premise for sensitive ministries (Interior, Defense). Government cloud for public-facing agencies. Data never leaves the nation.',
+        icon: 'tabler:cloud-lock',
+      },
+      {
+        title: 'Non-Invasive Legacy Integration',
+        description:
+          'Our "Wrapper Strategy" connects to existing databases via secure APIs. No rip-and-replace. No disruption to core infrastructure.',
+        icon: 'tabler:api',
+      },
+      {
+        title: 'Civil Servant AI Academy',
+        description:
+          'Technology transfer is central to our partnership. We train and certify ministry staff to manage AI systems, ensuring the government retains ownership of the intelligence long-term.',
+        icon: 'tabler:users-group',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Government AI — Questions & Answers"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'How do you ensure data sovereignty?',
+        description:
+          'We offer full on-premise deployment (air-gapped capability) for sensitive agencies and government cloud deployment for public-facing agencies. Your data never leaves your sovereign perimeter.',
+      },
+      {
+        title: 'Can you integrate with our existing legacy systems?',
+        description:
+          'Yes. Our "Wrapper Strategy" connects securely via APIs to read and validate data from Oracle databases, mainframes, and other legacy infrastructure without disrupting core operations.',
+      },
+      {
+        title: 'Does AI replace civil servants?',
+        description:
+          'No. Our "Human-in-the-Loop" model assists civil servants, not replaces them. AI handles routine processing and validation while complex decisions and exceptions are routed to human officers.',
+      },
+      {
+        title: 'What compliance standards do you meet?',
+        description:
+          'We adhere to Privacy-by-Design architecture with automated PII redaction. We are committed to compliance with GDPR, regional data protection laws, and government-specific security requirements.',
+      },
+      {
+        title: 'Do we own the solution after deployment?',
+        description:
+          'Absolutely. We don\'t believe in indefinite SaaS lock-in. We build assets you own. Our Civil Servant AI Academy trains your team to manage and evolve the systems independently.',
+      },
+      {
+        title: 'What makes your approach suited for the MENA region?',
+        description:
+          'We combine US-standard engineering from our Chicago headquarters with native Middle Eastern roots. Our solutions are Arabic-native — we don\'t just translate, we understand cultural context and regional nuance.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request a Briefing',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Modernize Your Agency with Sovereign AI"
+    subtitle="Move from reactive administration to proactive governance. Contact us for a confidential briefing on how AI can transform your agency's operations."
+  />
+</Layout>

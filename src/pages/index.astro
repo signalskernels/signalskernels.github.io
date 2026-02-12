@@ -10,6 +10,8 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import heroImage from '~/assets/images/hero-ai-kernels.png';
+
 const metadata = {
   title: 'Signals | Kernels — From Raw Signals to the Beating Heart of Intelligence',
   ignoreTitleTemplate: true,
@@ -29,7 +31,11 @@ const metadata = {
       },
       { text: 'Get in Touch', href: '/contact' },
     ]}
-    image={{ src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80', alt: 'AI Intelligence Abstract Visualization' }}
+    image={{
+      src: heroImage,
+      alt: 'AI Intelligence Abstract Visualization',
+      class: 'mx-auto rounded-md w-full melting-hero-image',
+    }}
   >
     <Fragment slot="title">
       From Raw Signals to the <br class="hidden xl:inline" />
@@ -38,16 +44,16 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">Signals | Kernels</span> transforms chaotic data streams — text, images, audio, and more — into a coherent core of actionable intelligence.</span
+        <span class="font-semibold">Signals | Kernels</span> doesn't rent you software — we build you an asset. Custom, sovereign AI solutions that you own, running on your infrastructure.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AI-Powered Intelligence Solutions.</span>
-      We empower organizations to navigate uncertainties, anticipate changes, and leverage data for strategic advantage.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Applied AI. Custom Built. Sovereign.</span>
+      We combine US-standard engineering with native MENA expertise to deliver intelligence that is secure, compliant, and culturally fluent.
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="Our Philosophy:" description="Accessibility · Affordability · Ingenuity · Resilience" />
+  <Note title="Our Philosophy:" description="Sovereignty · Accessibility · Affordability · Ingenuity · Resilience" />
 
   <!-- Features Widget *************** -->
 
@@ -88,10 +94,10 @@ const metadata = {
         icon: 'tabler:brain',
       },
       {
-        title: 'Custom Solutions',
+        title: 'GovTech & Process Automation',
         description:
-          'Tailored AI-enabled systems designed specifically for your unique needs, challenges, and existing infrastructure — from startups to enterprises.',
-        icon: 'tabler:settings-automation',
+          'Intelligent process automation for government agencies — straight-through processing, predictive analytics, revenue protection, and sovereign AI deployment.',
+        icon: 'tabler:building-community',
       },
     ]}
   />
@@ -104,19 +110,19 @@ const metadata = {
     title="Democratizing AI with Deep Technical Expertise"
     items={[
       {
-        title: 'Retail Hardware Compatible',
+        title: 'Arabic-Native AI',
         description:
-          'Our systems run efficiently on standard retail hardware — no expensive specialized equipment required. We make AI accessible without prohibitive infrastructure investments.',
+          'We don\'t just translate — we understand. Our solutions are native to the Middle East, handling linguistic and cultural nuance better than generic global models.',
       },
       {
-        title: 'Deep Technical Expertise',
+        title: 'Sovereignty & Security (No SaaS Lock-in)',
         description:
-          'Delivering high-performance AI on constrained hardware demands creative architectural design and advanced optimization. We excel at maximizing efficiency without compromising accuracy.',
+          'We build on your infrastructure. Whether it\'s an air-gapped government server or a private enterprise cloud, your data never leaves your perimeter. You own the asset.',
       },
       {
-        title: 'Affordable & Approachable',
+        title: 'US Engineering, Regional Soul',
         description:
-          'We make AI affordable, approachable, and feasible for organizations of all sizes — ensuring cutting-edge technology isn\'t limited to enterprises with massive budgets.',
+          'Headquartered in Chicago, we bring world-class US engineering standards to solve regional challenges. Our proprietary optimization runs high-end AI on accessible hardware.',
       },
     ]}
     image={{
@@ -125,8 +131,8 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built for real-world impact</h3>
-      We bridge the gap between cutting-edge AI research and practical, deployable solutions that create tangible value.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built for Real-World Impact</h3>
+      We don't rent you software — we build you an asset. Custom, sovereign AI that runs on your infrastructure and stays under your control.
     </Fragment>
 
     <Fragment slot="bg">
@@ -212,7 +218,7 @@ const metadata = {
   <Stats
     stats={[
       { title: 'Founded', amount: '2023' },
-      { title: 'Focus Areas', amount: '3' },
+      { title: 'Focus Areas', amount: '4' },
       { title: 'AI Modalities', amount: '5+' },
       { title: 'Client Satisfaction', amount: '100%' },
     ]}
@@ -280,3 +286,14 @@ const metadata = {
     </Fragment>
   </CallToAction>
 </Layout>
+
+<style>
+  .melting-hero-image {
+    mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%),
+      linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%),
+      linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-composite: source-in;
+  }
+</style>

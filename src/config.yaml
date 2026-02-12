@@ -9,7 +9,7 @@ metadata:
   title:
     default: Signals | Kernels
     template: '%s — Signals | Kernels'
-  description: 'Signals | Kernels transforms raw multimodal data into actionable intelligence through NLP, computer vision, audio analytics, and AI-powered solutions.'
+  description: 'Signals | Kernels builds custom, sovereign AI solutions you own — Arabic-native intelligence for government, enterprise, and education across the MENA region. US-engineered, regionally fluent.'
   robots:
     index: true
     follow: true
