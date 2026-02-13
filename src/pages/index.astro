@@ -288,12 +288,8 @@ const metadata = {
 </Layout>
 
 <style>
-  .melting-hero-image {
-    mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%),
-      linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    mask-composite: intersect;
-    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%),
-      linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    -webkit-mask-composite: source-in;
+  :global(.melting-hero-image) {
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
   }
 </style>
