@@ -6,6 +6,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import peopleReplacement from '~/assets/images/people-replacement.png';
 import keyDifferentiators from '~/assets/images/key-differentiators.png';
+import servicesHero from '~/assets/images/services-hero.png';
 
 const metadata = {
   title: 'Services',
@@ -21,8 +22,9 @@ const metadata = {
     subtitle="We specialize in turning raw data into structured insights across multiple modalities. Our solutions are engineered to run on standard hardware, making advanced AI accessible and affordable for organizations of all sizes."
     actions={[{ variant: 'primary', text: 'Request a Consultation', href: '/contact', icon: 'tabler:mail' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Team working on AI solutions',
+      src: servicesHero,
+      alt: 'Abstract visualization of AI algorithms and digital landscape',
+      class: 'mx-auto rounded-md w-full melting-hero-image',
     }}
   />
 
@@ -190,3 +192,10 @@ const metadata = {
     subtitle="Whether you need a custom AI solution or want to explore how our capabilities can transform your operations, we're here to help."
   />
 </Layout>
+
+<style>
+  :global(.melting-hero-image) {
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+</style>

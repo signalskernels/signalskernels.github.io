@@ -6,6 +6,10 @@ import Content from '~/components/widgets/Content.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Note from '~/components/widgets/Note.astro';
+import educationHero from '~/assets/images/education-hero.png';
+import educationTeacher from '~/assets/images/education-teacher.png';
+import educationStudent from '~/assets/images/education-student.png';
+import educationProcess from '~/assets/images/education-process.png';
 
 const metadata = {
   title: 'AI for Education — Unlocking the Future of Learning',
@@ -24,8 +28,9 @@ const metadata = {
       { text: 'Explore Capabilities', href: '#capabilities' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Students learning in a modern classroom',
+      src: educationHero,
+      alt: 'Abstract digital learning environment showing connected knowledge nodes',
+      class: 'mx-auto rounded-md w-full melting-hero-image',
     }}
   />
 
@@ -104,8 +109,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Educator in classroom',
+      src: educationTeacher,
+      alt: 'Educator using AI dashboard',
     }}
   >
     <Fragment slot="content">
@@ -140,8 +145,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Students engaged in learning',
+      src: educationStudent,
+      alt: 'Abstract visualization of personalized adaptive learning knowledge graph',
     }}
   >
     <Fragment slot="content">
@@ -181,8 +186,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Educational implementation process',
+      src: educationProcess,
+      alt: 'Educational implementation roadmap',
     }}
   />
 
@@ -201,3 +206,10 @@ const metadata = {
     subtitle="Discover how AI can personalize learning, empower educators, and improve outcomes at your institution. Let's start with a conversation."
   />
 </Layout>
+
+<style>
+  :global(.melting-hero-image) {
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+</style>

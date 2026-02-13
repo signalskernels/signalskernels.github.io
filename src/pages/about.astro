@@ -6,6 +6,9 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import aboutHero from '~/assets/images/about-hero.png';
+import aboutEssence from '~/assets/images/about-essence.png';
+import aboutMission from '~/assets/images/about-mission.png';
 
 const metadata = {
   title: 'About Us',
@@ -18,8 +21,9 @@ const metadata = {
   <Hero
     tagline="About Us"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Abstract data visualization',
+      src: aboutHero,
+      alt: 'Abstract data visualization turning chaos into structure',
+      class: 'mx-auto rounded-md w-full melting-hero-image',
     }}
   >
     <Fragment slot="title">
@@ -63,7 +67,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      src: aboutEssence,
       alt: 'Neural network abstract visualization',
     }}
   >
@@ -102,8 +106,8 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Team collaboration',
+      src: aboutMission,
+      alt: 'Global team collaboration map',
     }}
   >
     <Fragment slot="content">
@@ -203,3 +207,10 @@ const metadata = {
     subtitle="Whether you're a small business looking to pilot your first AI solution or a large enterprise seeking custom intelligence systems, we're here to help."
   />
 </Layout>
+
+<style>
+  :global(.melting-hero-image) {
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+</style>
