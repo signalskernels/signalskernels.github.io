@@ -10,7 +10,8 @@ import Features2 from '~/components/widgets/Features2.astro';
 import govHero from '~/assets/images/gov-hero.png';
 import govDashboard from '~/assets/images/gov-dashboard.png';
 import govCity from '~/assets/images/gov-city.png';
-import govDeployment from '~/assets/images/gov-deployment.png';
+import govDeployment from '~/assets/images/step-gov-deploy-alt.png';
+import Image from '~/components/common/Image.astro';
 
 const metadata = {
   title: 'AI for Government — Sovereign AI for Operational Efficiency',
@@ -188,11 +189,16 @@ const metadata = {
         icon: 'tabler:certificate',
       },
     ]}
-    image={{
-      src: govDeployment,
-      alt: 'Secure data integration and digital transformation process',
-    }}
-  />
+    ]}
+  >
+    <Fragment slot="image">
+      <Image
+        src={govDeployment}
+        alt="Secure data integration and digital transformation process"
+        class="w-full rounded-md shadow-lg bg-gray-400 dark:bg-slate-700"
+      />
+    </Fragment>
+  </Steps>
 
   <!-- Features2 Widget: Compliance & Security ************** -->
 
