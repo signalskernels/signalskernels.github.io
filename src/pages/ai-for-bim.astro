@@ -1,0 +1,206 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import bimHero from '~/assets/images/bim-hero.png';
+import bimProfessionals from '~/assets/images/bim-professionals.png';
+import bimWorkflow from '~/assets/images/bim-chat-interaction-v2.png';
+
+const metadata = {
+  title: 'AI for BIM — Your Building Model, Now a Conversation',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="AI for BIM"
+    title="Your Building Information Model, Now a Conversation"
+    subtitle="We revolutionize the AEC industry by allowing stakeholders to simply 'talk' to their complex 3D models. Ask questions in plain English and get instant answers, visual call-outs, and automated insights."
+    actions={[
+      { variant: 'primary', text: 'Request a Demo', href: '/contact', icon: 'tabler:mail' },
+      { text: 'Explore Capabilities', href: '#capabilities' },
+    ]}
+    image={{
+      src: bimHero,
+      alt: 'Digital twin of a modern building with data overlay',
+      class: 'mx-auto rounded-md w-full melting-hero-image',
+    }}
+  />
+
+  <!-- Features Widget: Key Capabilities *************** -->
+
+  <Features
+    id="capabilities"
+    tagline="Key Capabilities"
+    title="Deep BIM Intelligence"
+    subtitle="Our AI understands the full complexity of your building information models, from 3D geometry to rich metadata, delivering instant insights through natural conversation."
+    items={[
+      {
+        title: 'Natural Language Interaction',
+        description:
+          'Ask questions in plain English — "Show me fire-rated walls on Level 3" or "What\'s the total area of conference rooms?" — and get instant, accurate answers.',
+        icon: 'tabler:message-chatbot',
+      },
+      {
+        title: '3D Model Intelligence',
+        description:
+          'Deep analysis of 3D geometry and metadata to generate visual call-outs, spatial insights, and contextual understanding of your building models.',
+        icon: 'tabler:3d-cube-sphere',
+      },
+      {
+        title: 'Intelligent Quantity Take-Offs',
+        description:
+          'Automated extraction of normalized quantities with BOQ integration. Get accurate material counts, area calculations, and cost estimates instantly.',
+        icon: 'tabler:calculator',
+      },
+      {
+        title: 'Quality Control & Validation',
+        description:
+          'Automated checks for missing data, specification conformity, and model completeness. Catch errors before they become costly problems on site.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Multi-Discipline Coordination',
+        description:
+          'Cross-reference architectural, structural, and MEP models to identify conflicts, coordination issues, and design inconsistencies automatically.',
+        icon: 'tabler:layers-intersect',
+      },
+      {
+        title: 'Visual Reporting',
+        description:
+          'Generate visual reports with highlighted elements, color-coded call-outs, and annotated model views that make complex data immediately understandable.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <!-- Content Widget: Beneficiaries **************** -->
+
+  <Content
+    isReversed
+    tagline="Who Benefits"
+    title="Built for AEC Professionals"
+    items={[
+      {
+        title: 'Site Engineers',
+        description: 'Quick access to model information on-site without navigating complex BIM software interfaces.',
+      },
+      {
+        title: 'Quantity Surveyors',
+        description: 'Automated quantity extraction and BOQ generation that saves hours of manual measurement work.',
+      },
+      {
+        title: 'Planners & Coordinators',
+        description: 'Rapid cross-discipline coordination checks and conflict detection for smoother project execution.',
+      },
+      {
+        title: 'QA/QC Engineers',
+        description: 'Automated specification compliance checks and missing data identification across the entire model.',
+      },
+    ]}
+    image={{
+      src: bimProfessionals,
+      alt: 'Construction professionals using digital tools',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Empowering Every Stakeholder</h3>
+      From the office to the construction site, our AI makes BIM data accessible to everyone on the project team.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget: How It Works ****************** -->
+
+  <Steps
+    title="How BIM Chat Works"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Upload Your Model</span>',
+        description: 'Import your IFC, Revit, or other BIM model formats. Our system processes the full 3D geometry and all associated metadata.',
+        icon: 'tabler:upload',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Ask Questions</span>',
+        description: 'Simply type or speak your questions in natural language. No need to learn complex query syntax or navigate through menus.',
+        icon: 'tabler:message-2',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Get Instant Insights</span>',
+        description: 'Receive precise answers, highlighted model views, quantity reports, and visual call-outs — all generated in seconds.',
+        icon: 'tabler:sparkles',
+      },
+      {
+        title: 'Iterate & Explore',
+        description: 'Continue the conversation to drill deeper. Ask follow-up questions, request different views, or generate comprehensive reports.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+    image={{
+      src: bimWorkflow,
+      alt: 'BIM workflow diagram',
+    }}
+    imageClass="inset-0 object-contain object-center w-full rounded-md shadow-lg md:absolute md:h-full bg-black"
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="BIM Solution FAQs"
+    tagline="Questions"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What BIM file formats do you support?',
+        description:
+          'We support IFC (Industry Foundation Classes) as our primary format, with additional support for Revit models and other common BIM formats.',
+      },
+      {
+        title: 'How accurate are the quantity take-offs?',
+        description:
+          'Our automated quantity extraction is based on the actual model geometry and metadata, providing high accuracy. Results are normalized and can be directly integrated with BOQ systems.',
+      },
+      {
+        title: 'Can this replace our BIM software?',
+        description:
+          'Our tool complements your existing BIM software rather than replacing it. It provides an AI-powered interface for querying, analyzing, and validating your models, making information accessible to non-BIM specialists.',
+      },
+      {
+        title: 'Is my model data secure?',
+        description:
+          'Absolutely. We take data security seriously with robust encryption, strict access controls, and options for on-premise deployment to keep sensitive project data within your network.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule a Demo',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Transform How You Interact with BIM"
+    subtitle="See how natural language AI can revolutionize your BIM workflows. Request a personalized demo with your own models."
+  />
+</Layout>
+
+<style>
+  :global(.melting-hero-image) {
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+</style>

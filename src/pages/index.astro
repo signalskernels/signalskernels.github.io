@@ -1,0 +1,298 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import heroImage from '~/assets/images/hero-ai-kernels.png';
+import peopleReplacement from '~/assets/images/why-choose-us-v3.png';
+import keyDifferentiators from '~/assets/images/key-differentiators-daylight.png';
+import howWeWork from '~/assets/images/how-we-work-daylight.png';
+
+const metadata = {
+  title: 'Signals | Kernels — From Raw Signals to the Beating Heart of Intelligence',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Services',
+        href: '/services',
+        icon: 'tabler:arrow-right',
+      },
+      { text: 'Get in Touch', href: '/contact' },
+    ]}
+    image={{
+      src: heroImage,
+      alt: 'AI Intelligence Abstract Visualization',
+      class: 'mx-auto rounded-md w-full melting-hero-image',
+    }}
+  >
+    <Fragment slot="title">
+      From Raw Signals to the <br class="hidden xl:inline" />
+      <span class="text-accent dark:text-white">Beating Heart</span> of Intelligence
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Signals | Kernels</span> doesn't rent you software — we build you an asset. Custom, sovereign AI solutions that you own, running on your infrastructure.</span
+      >
+      <span class="block mb-1 sm:hidden font-bold text-gray-600">Applied AI. Custom Built. Sovereign.</span>
+      We combine US-standard engineering with native MENA expertise to deliver intelligence that is secure, compliant, and culturally fluent.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Our Philosophy:" description="Sovereignty · Accessibility · Affordability · Ingenuity · Resilience" />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="capabilities"
+    tagline="Capabilities"
+    title="Our AI-Powered Solutions"
+    subtitle="We specialize in turning raw data into structured insights across multiple modalities, making advanced AI accessible for organizations of all sizes."
+    items={[
+      {
+        title: 'NLP Solutions',
+        description:
+          'Transform raw text into structured understanding. From automated support to data-driven strategies, we refine unstructured language into actionable insights.',
+        icon: 'tabler:message-chatbot',
+      },
+      {
+        title: 'Vision & Visual Reasoning',
+        description:
+          'Advanced computer vision to interpret images, video, and spatial data — detecting objects, understanding scenes, and enabling visual anomaly detection.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Audio & Multimodal Analysis',
+        description:
+          'Process and analyze sound, voice, and combined audiovisual data to extract meaningful patterns and reveal hidden insights.',
+        icon: 'tabler:headphones',
+      },
+      {
+        title: 'Intelligent Security Monitoring',
+        description:
+          'Integrate vision, NLP, and AI to detect anomalies, threats, and vulnerabilities in real-time — ensuring robust protection for systems and people.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Advanced AI & ML Applications',
+        description:
+          'Deep learning, kernel methods, and state-of-the-art algorithms applied to complex datasets to accelerate innovation and drive sustainable growth.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'GovTech & Process Automation',
+        description:
+          'Intelligent process automation for government agencies — straight-through processing, predictive analytics, revenue protection, and sovereign AI deployment.',
+        icon: 'tabler:building-community',
+      },
+    ]}
+  />
+
+  <!-- Content Widget: Why Choose Us **************** -->
+
+  <Content
+    isReversed
+    tagline="Why Choose Us"
+    title="Democratizing AI with Deep Technical Expertise"
+    items={[
+      {
+        title: 'Arabic-Native AI',
+        description:
+          'We don\'t just translate — we understand. Our solutions are native to the Middle East, handling linguistic and cultural nuance better than generic global models.',
+      },
+      {
+        title: 'Sovereignty & Security (No SaaS Lock-in)',
+        description:
+          'We build on your infrastructure. Whether it\'s an air-gapped government server or a private enterprise cloud, your data never leaves your perimeter. You own the asset.',
+      },
+      {
+        title: 'US Engineering, Regional Soul',
+        description:
+          'Headquartered in Chicago, we bring world-class US engineering standards to solve regional challenges. Our proprietary optimization runs high-end AI on accessible hardware.',
+      },
+    ]}
+    image={{
+      src: peopleReplacement,
+      alt: 'Team working on technology solutions',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Built for Real-World Impact</h3>
+      We don't rent you software — we build you an asset. Custom, sovereign AI that runs on your infrastructure and stays under your control.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget: Key Differentiators **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Hardware Flexibility',
+        description: 'Deploy on existing retail hardware or scale up to specialized infrastructure as your needs grow.',
+      },
+      {
+        title: 'End-to-End Customization',
+        description:
+          'From scoping to deployment and ongoing support, every aspect is tailored to your requirements.',
+      },
+      {
+        title: 'Industry Expertise',
+        description:
+          'Deep domain knowledge in Security, BIM/AEC, and Education sectors, with solutions that address real-world challenges.',
+      },
+      {
+        title: 'Scalable Solutions',
+        description:
+          'Start small with pilot programs and grow as your needs evolve — from proof-of-concept to enterprise-wide deployments.',
+      },
+    ]}
+    image={{
+      src: keyDifferentiators,
+      alt: 'Modern office workspace',
+    }}
+  >
+    <Fragment slot="content">Our key differentiators set us apart in delivering real-world AI solutions.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="How We Work With You"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Consult & Discover</span>',
+        description:
+          'We begin by understanding your unique challenges, data landscape, and business objectives. Through collaborative workshops, we identify where AI can deliver the most impact.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Analyze & Design</span>',
+        description:
+          'Our team analyzes your data streams and designs a custom solution architecture. We prototype rapidly to validate our approach before full-scale development.',
+        icon: 'tabler:chart-dots-3',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Build & Optimize</span>',
+        description:
+          'We engineer your solution with a focus on performance, efficiency, and reliability. Our systems are optimized to run on your existing infrastructure — no expensive hardware upgrades needed.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Deploy & Support',
+        description:
+          'Seamless deployment with comprehensive training and ongoing support. We monitor performance and continuously fine-tune to ensure maximum value.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: howWeWork,
+      alt: 'Process workflow illustration',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Founded', amount: '2023' },
+      { title: 'Focus Areas', amount: '4' },
+      { title: 'AI Modalities', amount: '5+' },
+      { title: 'Client Satisfaction', amount: '100%' },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Learn more about how Signals | Kernels can transform your organization's data into actionable intelligence."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What types of data can you process?',
+        description:
+          'We work with virtually any data modality — text, images, video, audio, sensor data, and more. Our multimodal capabilities allow us to fuse signals from multiple sources for richer, more accurate intelligence.',
+      },
+      {
+        title: 'Do I need expensive hardware to use your solutions?',
+        description:
+          'No! Our solutions are specifically engineered to run on standard retail hardware. We optimize for efficiency so you don\'t need to invest in specialized infrastructure. However, we can scale to leverage advanced hardware when needed.',
+      },
+      {
+        title: 'How do you ensure the security of our data?',
+        description:
+          'We take data security seriously. Our solutions are fully compliant with industry standards including FISMA, and we utilize robust encryption and strict access controls throughout our systems.',
+      },
+      {
+        title: 'Can you build a custom solution for my specific industry?',
+        description:
+          'Absolutely. While we have deep expertise in Security, BIM/AEC, and Education, our core AI capabilities are adaptable to virtually any industry. We build tailored solutions designed for your unique needs and challenges.',
+      },
+      {
+        title: 'How long does a typical project take?',
+        description:
+          'Project timelines vary based on complexity and scope. A proof-of-concept can typically be delivered in weeks, while full-scale enterprise deployments may take a few months. We work iteratively to deliver value at every stage.',
+      },
+      {
+        title: 'What makes Signals | Kernels different from other AI companies?',
+        description:
+          'Our unique combination of deep technical expertise, commitment to running on retail hardware, and focus on affordability sets us apart. We don\'t just deliver AI — we make it accessible, practical, and tailored to your reality.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Transform&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Your Data?</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Let us turn your raw signals into a powerful kernel of intelligence. <br class="hidden md:inline" />Reach out to explore how we can help.
+    </Fragment>
+  </CallToAction>
+</Layout>
+
+<style>
+  :global(.melting-hero-image) {
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+</style>

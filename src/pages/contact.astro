@@ -1,0 +1,71 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Get in Touch" subtitle="Have a project in mind or want to learn more about what we build? Drop us a line — we'd love to hear about the problem you're solving." />
+
+  <ContactUs
+    id="form"
+    title="Drop us a message!"
+    subtitle="We'd love to hear about your challenges and explore how our AI solutions can help. Our team typically responds within 24 business hours."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+        autocomplete: 'name',
+        placeholder: 'Your Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        autocomplete: 'email',
+        placeholder: 'Your Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+      placeholder: 'Tell us about your project or challenge...',
+      rows: 5,
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Get in Touch"
+    items={[
+      {
+        title: 'Email',
+        description: 'Contact us through our website form above',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'LinkedIn',
+        description: '<a href="https://www.linkedin.com/company/signals-kernels" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener">linkedin.com/company/signals-kernels</a>',
+        icon: 'tabler:brand-linkedin',
+      },
+      {
+        title: 'Location',
+        description: 'Chicago, IL, USA',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

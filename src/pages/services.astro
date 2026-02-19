@@ -1,0 +1,201 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import peopleReplacement from '~/assets/images/what-sets-us-apart.png';
+import industryExpertise from '~/assets/images/industry-expertise.png';
+import servicesHero from '~/assets/images/services-hero.png';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Services"
+    title="AI-Powered Capabilities"
+    subtitle="We specialize in turning raw data into structured insights across multiple modalities. Our solutions are engineered to run on standard hardware, making advanced AI accessible and affordable for organizations of all sizes."
+    actions={[{ variant: 'primary', text: 'Explore Our Work', href: '/services#capabilities', icon: 'tabler:arrow-right' }]}
+    image={{
+      src: servicesHero,
+      alt: 'Abstract visualization of AI algorithms and digital landscape',
+      class: 'mx-auto rounded-md w-full melting-hero-image',
+    }}
+  />
+
+  <!-- Features2 Widget: Core Services ************** -->
+
+  <Features2
+    title="Our Core AI Services"
+    subtitle="From text analysis to security monitoring, we deliver intelligent solutions that create measurable impact."
+    tagline="What We Do"
+    columns={3}
+    items={[
+      {
+        title: 'NLP Solutions',
+        description:
+          'Transform raw text into structured understanding for automated support, data-driven strategies, and communication insights. We process documents, conversations, and feedback at scale.',
+        icon: 'tabler:message-chatbot',
+      },
+      {
+        title: 'Vision & Visual Reasoning',
+        description:
+          'Advanced computer vision for interpreting images, video, and spatial data. Object detection, scene understanding, anomaly recognition, and intelligent visual analysis.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Audio & Multimodal Analysis',
+        description:
+          'Process sound, voice, and combined audiovisual data streams. We extract meaningful patterns to enhance communication strategies and reveal hidden insights.',
+        icon: 'tabler:headphones',
+      },
+      {
+        title: 'Intelligent Security Monitoring',
+        description:
+          'Integrating vision, NLP, and AI to detect anomalies, threats, and vulnerabilities in continuous data streams — ensuring robust protection for systems and people.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Advanced AI & ML Applications',
+        description:
+          'Deep learning, kernel methods, and state-of-the-art algorithms applied to complex datasets. Accelerate innovation, guide better decisions, and drive sustainable growth.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'GovTech & Process Automation',
+        description:
+          'Sovereign AI for government agencies — intelligent process automation, predictive analytics, revenue protection, and human capital development. Built on your infrastructure.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Custom AI Solutions',
+        description:
+          'Tailored AI-enabled systems built specifically for your unique needs, challenges, and existing infrastructure. From proof-of-concept to enterprise-wide deployment.',
+        icon: 'tabler:settings-automation',
+      },
+    ]}
+  />
+
+  <!-- Content Widget: Key Differentiators **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Hardware Flexibility',
+        description:
+          'Deploy on existing retail hardware or scale up to specialized infrastructure. No expensive equipment required.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Cost-Effective Implementation',
+        description:
+          'No prohibitive upfront investments. Start small, prove value, and scale at your own pace.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Scalable Solutions',
+        description:
+          'From pilot programs to enterprise-wide deployments, our solutions grow as your needs evolve.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Data Sovereignty & Compliance',
+        description:
+          'On-premise, air-gapped, or government cloud deployment. Privacy-by-Design architecture with automated PII redaction. Your data never leaves your perimeter.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'End-to-End Customization',
+        description:
+          'From scoping to deployment and ongoing support, we tailor every aspect to your specific requirements.',
+        icon: 'tabler:adjustments',
+      },
+    ]}
+    image={{
+      src: peopleReplacement,
+      alt: 'Abstract visualization of AI capabilities converging',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">What Sets Us Apart</h3>
+      We combine deep technical expertise with a mission to democratize AI — making powerful intelligence accessible to organizations of all sizes.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget: Industry Expertise **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Government & Public Sector',
+        description:
+          'Sovereign AI for operational efficiency — intelligent document processing, urban planning analytics, revenue protection, and citizen service optimization across the MENA region.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'Security & Surveillance',
+        description:
+          'AI-driven proactive monitoring with gun detection, intrusion detection, license plate recognition, and hazards identification.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'BIM & AEC',
+        description:
+          'Natural language interaction with building information models, automated quantity take-offs, and intelligent quality control.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Education',
+        description:
+          'Personalized learning, intelligent tutoring, automated grading, and enhanced accessibility for students of all backgrounds.',
+        icon: 'tabler:school',
+      },
+    ]}
+    image={{
+      src: industryExpertise,
+      alt: 'Industry expertise visualization',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Industry Expertise</h3>
+      Deep domain knowledge across key sectors, with solutions that address real-world challenges.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get in Touch',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Ready to Get Started?"
+    subtitle="Whether you need a custom AI solution or want to explore how our capabilities can transform your operations — let's talk."
+  />
+</Layout>
+
+<style>
+  :global(.melting-hero-image) {
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+</style>

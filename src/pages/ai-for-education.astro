@@ -1,0 +1,215 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Note from '~/components/widgets/Note.astro';
+import educationHero from '~/assets/images/education-hero.png';
+import educationTeacher from '~/assets/images/education-teacher.png';
+import educationOutcomes from '~/assets/images/education-outcomes.png';
+import educationInstitution from '~/assets/images/education-institution.png';
+
+const metadata = {
+  title: 'AI for Education — Unlocking the Future of Learning',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="AI for Education"
+    title="Unlocking the Future of Learning"
+    subtitle="AI-powered solutions that empower educators and inspire students by personalizing the learning experience, providing intelligent tutoring, and streamlining administration."
+    actions={[
+      { variant: 'primary', text: 'Request a Demo', href: '/contact', icon: 'tabler:mail' },
+      { text: 'Explore Capabilities', href: '#capabilities' },
+    ]}
+    image={{
+      src: educationHero,
+      alt: 'Abstract digital learning environment showing connected knowledge nodes',
+      class: 'mx-auto rounded-md w-full melting-hero-image',
+    }}
+  />
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Ethical Commitment:" description="FERPA/GDPR Compliant · Algorithmic Fairness · Transparency · AI Augments, Not Replaces" />
+
+  <!-- Features Widget: Key Capabilities *************** -->
+
+  <Features
+    id="capabilities"
+    tagline="Key Capabilities"
+    title="Intelligent Learning Solutions"
+    subtitle="From personalized curricula to automated grading, our AI solutions enhance every aspect of the educational experience while maintaining the essential human element."
+    items={[
+      {
+        title: 'Personalized Learning',
+        description:
+          'Adaptive assessments and customized curricula tailored to individual student needs, learning styles, and pace. Every student gets the attention they deserve.',
+        icon: 'tabler:user-check',
+      },
+      {
+        title: 'Intelligent Tutoring',
+        description:
+          '24/7 AI-powered tutoring support with immediate feedback and scaffolded guidance. Students get help exactly when they need it, at their own pace.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Automated Grading',
+        description:
+          'AI-assisted grading tools that reduce administrative burden while maintaining consistency and fairness. Free up educators to focus on what matters — teaching.',
+        icon: 'tabler:checkbox',
+      },
+      {
+        title: 'Content Generation',
+        description:
+          'Intelligent tools for creating engaging, curriculum-aligned learning materials, quizzes, and exercises tailored to specific learning objectives.',
+        icon: 'tabler:file-text',
+      },
+      {
+        title: 'Enhanced Accessibility',
+        description:
+          'Real-time transcription, translation, and adaptive interfaces that make learning inclusive for students of all abilities and backgrounds.',
+        icon: 'tabler:accessible',
+      },
+      {
+        title: 'Streamlined Administration',
+        description:
+          'Smart scheduling, admissions chatbots, and automated workflows that reduce administrative overhead and improve operational efficiency.',
+        icon: 'tabler:calendar-event',
+      },
+    ]}
+  />
+
+  <!-- Content Widget: For Educators **************** -->
+
+  <Content
+    isReversed
+    tagline="For Educators"
+    title="Empowering Teachers, Not Replacing Them"
+    items={[
+      {
+        title: 'Data-Driven Insights',
+        description:
+          'Understand student progress at a glance with AI-generated analytics. Identify struggling students early and intervene with targeted support.',
+      },
+      {
+        title: 'Reduced Administrative Load',
+        description:
+          'Automate time-consuming tasks like grading, attendance tracking, and scheduling so educators can focus on inspiring and mentoring students.',
+      },
+      {
+        title: 'Curriculum Optimization',
+        description:
+          'AI analyzes learning outcomes to suggest curriculum improvements, identify gaps, and recommend supplementary materials.',
+      },
+    ]}
+    image={{
+      src: educationTeacher,
+      alt: 'Educator using AI dashboard',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Technology That Supports Teaching</h3>
+      We believe AI should augment the human element in education, not replace it.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget: For Students **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Learn at Your Own Pace',
+        description:
+          'Adaptive learning paths adjust to each student\'s speed and style, ensuring no one is left behind or held back.',
+      },
+      {
+        title: 'Instant Help, Any Time',
+        description:
+          'AI-powered tutoring available 24/7 means students can get help with homework, review concepts, or prepare for exams whenever they need it.',
+      },
+      {
+        title: 'Engaging & Interactive',
+        description:
+          'AI-generated interactive content, gamification elements, and adaptive quizzes make learning more engaging and effective.',
+      },
+    ]}
+    image={{
+      src: educationOutcomes,
+      alt: 'Abstract visualization of personalized adaptive learning knowledge graph',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Better Learning Outcomes</h3>
+      Every student deserves a personalized educational experience.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget: Implementation ****************** -->
+
+  <Steps
+    title="Bring AI to Your Institution"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Assessment</span>',
+        description: 'We evaluate your institution\'s needs, existing systems, and goals to design a tailored AI strategy that aligns with your educational mission.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Pilot Program</span>',
+        description: 'Start small with a focused pilot in select classrooms or departments. Gather data, measure impact, and refine the approach based on real feedback.',
+        icon: 'tabler:test-pipe',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Scale & Train</span>',
+        description: 'Expand the solution institution-wide with comprehensive training for educators and administrators. Ongoing support ensures a smooth transition.',
+        icon: 'tabler:growth',
+      },
+      {
+        title: 'Continuous Improvement',
+        description: 'Regular updates, performance monitoring, and iterative refinement ensure the solution continues to deliver maximum educational value.',
+        icon: 'tabler:refresh',
+      },
+    ]}
+    image={{
+      src: educationInstitution,
+      alt: 'Educational implementation roadmap',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Learn More',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Transform Your Educational Experience"
+    subtitle="Discover how AI can personalize learning, empower educators, and improve outcomes at your institution. Let's start with a conversation."
+  />
+</Layout>
+
+<style>
+  :global(.melting-hero-image) {
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+</style>
