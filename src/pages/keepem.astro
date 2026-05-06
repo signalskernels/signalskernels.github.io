@@ -10,7 +10,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
-  title: 'KEEPEM for Business — Capture in the Field. Decide in the Dashboard.',
+  title: 'KEEPEM for Business — Service-as-Software for Document Operations',
 };
 ---
 
@@ -25,12 +25,12 @@ const metadata = {
        ===================================================================== -->
 
   <Hero
-    tagline="KEEPEM for Business · The Agentic Document Platform"
-    title="Capture in the field. <span class='text-accent'>Decide</span> in the dashboard."
-    subtitle="A document AI that lives on your team's phones and on your cloud — at the same time. Receipts, invoices, IDs, contracts, delivery slips: captured the moment they print, understood without manual tagging, synced to your back office in real time. Plug it into your point of sale, your accounting stack, your ERP, your BI — or run the whole thing in your own perimeter."
+    tagline="KEEPEM · Service-as-Software for Document Operations"
+    title="Don't buy software. <span class='text-accent'>Hire the agent.</span>"
+    subtitle="For 25 years B2B software meant tools that helped a person work faster. KEEPEM is something different. It's an autonomous agent that reads, classifies, reconciles, summarizes, and reports — running on the phones in your team's pockets and the dashboards on your CFO's screen. Capture lives on the edge. The agent runs locally. The work gets done. You're not licensing a product — you're hiring the AP clerk, the analyst, and the auditor as one always-on system."
     actions={[
       { variant: 'primary', text: 'Book a Demo', href: '/contact', icon: 'tabler:mail' },
-      { text: 'See How It Works', href: '#duality' },
+      { text: 'See How It Works', href: '#paradigm' },
     ]}
   >
     <Fragment slot="image">
@@ -105,10 +105,145 @@ const metadata = {
 
   <Stats
     stats={[
-      { amount: 'Real-time', title: 'Capture to ledger sync', icon: 'tabler:bolt' },
-      { amount: 'Offline-first', title: 'Works the moment a receipt prints', icon: 'tabler:wifi-off' },
-      { amount: 'Your data', title: 'Stays in your perimeter', icon: 'tabler:shield-lock' },
-      { amount: '1 hour', title: 'From pilot kickoff to first dashboard', icon: 'tabler:clock-bolt' },
+      { amount: '$0', title: 'Marginal AI cost per query', icon: 'tabler:coin-off' },
+      { amount: '0 ms', title: 'Cloud round-trip on the agent', icon: 'tabler:bolt' },
+      { amount: 'Offline', title: 'Works in the basement, the field, in flight', icon: 'tabler:wifi-off' },
+      { amount: 'Sovereign', title: 'Data physically cannot leak through the LLM', icon: 'tabler:shield-lock' },
+    ]}
+  />
+
+  <!-- Paradigm Shift — SaaS → Service-as-Software ********************* -->
+
+  <Content
+    id="paradigm"
+    tagline="The Paradigm Shift"
+    title="From Software-as-a-Service to <span class='text-accent'>Service-as-Software</span>"
+    items={[
+      {
+        title: 'The old contract: software helps people work faster.',
+        description:
+          'You bought tools. Your team operated them. The price was per-seat, the value was per-hour-saved. Document software meant scanners, OCR engines, and forms — and an army of clerks to feed them.',
+      },
+      {
+        title: 'The new contract: software does the work.',
+        description:
+          'KEEPEM closes the loop. The agent reads the receipt, classifies it, reconciles it against the PO, flags the anomaly, summarizes the day, posts to the ledger, alerts the controller. The clerk is no longer in the loop for the routine 80% — only the exceptions surface for human judgement.',
+      },
+      {
+        title: 'The economics shift.',
+        description:
+          'Stop paying per seat for a tool that needs an operator. Start paying for outcomes the agent delivers — reconciled books, real-time spend, audit-ready trails, anomalies caught before payment. The seat-based pricing of the SaaS era is on borrowed time. Outcome-based pricing is what a digital workforce looks like.',
+      },
+      {
+        title: 'The value shift.',
+        description:
+          "KEEPEM closes hundreds of open tickets in your AP queue overnight, not next month after a new hire ramps. It scales linearly with documents, not headcount. And it doesn't go on PTO, doesn't fat-finger a vendor name, doesn't lose a receipt at month-end.",
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Software That Sells Work, Not Seats
+      </h3>
+      The thesis everyone in venture is talking about — Foundation Capital's "Service-as-Software," Sarah Tavel's "sell the work, not the software" — KEEPEM is what it looks like in production for document-heavy operations. Not a chat wrapper. Not a copilot. An autonomous agent that owns the workflow.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="paradigm-comparison">
+        <div class="paradigm-card paradigm-old">
+          <span class="paradigm-eyebrow">SaaS · 2000–2025</span>
+          <h4>Software-as-a-Service</h4>
+          <ul>
+            <li>You buy <strong>tools</strong>.</li>
+            <li>Humans <strong>operate</strong> them.</li>
+            <li>Price per <strong>seat</strong>.</li>
+            <li>Value per <strong>hour saved</strong>.</li>
+            <li>Output: <strong>faster clerks</strong>.</li>
+          </ul>
+        </div>
+        <div class="paradigm-arrow" aria-hidden="true">→</div>
+        <div class="paradigm-card paradigm-new">
+          <span class="paradigm-eyebrow">SaS · 2026 →</span>
+          <h4>Service-as-Software</h4>
+          <ul>
+            <li>You buy <strong>work</strong>.</li>
+            <li>Agents <strong>execute</strong> it.</li>
+            <li>Price per <strong>outcome</strong>.</li>
+            <li>Value per <strong>workflow closed</strong>.</li>
+            <li>Output: <strong>finished tickets</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Skills — workflows the agent performs autonomously ************** -->
+
+  <Features
+    id="skills"
+    tagline="The Agent's Job Description"
+    title="What KEEPEM Does — On Its Own"
+    subtitle="Not a chatbot. Not a search box. An autonomous agent that plans, queries, reasons across documents, and acts. Each capability below is a workflow your team used to run by hand. Now the agent owns it — and finishes it before your morning coffee."
+    columns={3}
+    items={[
+      {
+        title: 'Vendor reconciliation, autonomously',
+        description:
+          'The agent matches every invoice against POs, delivery slips, and POS receipts. Discrepancies are routed to AP with the supporting documents already attached. The 80% that match perfectly never need a human eye.',
+        icon: 'tabler:scale',
+      },
+      {
+        title: 'Spend, on demand',
+        description:
+          '"How did this Tuesday compare to last Tuesday across the south region?" The agent decomposes the question, queries the corpus, computes the answer, and cites the underlying scans. The CFO\'s Slack thread is now a one-line query.',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: 'Anomaly hunting, around the clock',
+        description:
+          'Duplicate invoice numbers. Price spikes versus the prior delivery. Vendor account changes. Rounded totals that don\'t sum. The agent surfaces every anomaly the moment a document is captured — before the cheque clears.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Compliance lookups',
+        description:
+          '"Find every contract expiring in the next 90 days." "Pull every HR form from Q4." "Show me anything with a PII flag." The agent knows the corpus, knows the policy, and assembles the answer with audit-grade citations.',
+        icon: 'tabler:file-search',
+      },
+      {
+        title: 'Period-over-period close',
+        description:
+          'The agent prepares your monthly close pack: trial-balance prep, top-vendor moves, anomaly flags, supporting scans. What used to take a week of tickets is now a single review meeting on Monday morning.',
+        icon: 'tabler:report-analytics',
+      },
+      {
+        title: 'Custom workflows you author once',
+        description:
+          'Write a skill: "every Friday at 5pm, summarize the week\'s spend by manager and email the CFO. Flag any line over $5k. Route to approval." The agent runs it forever — or until you change it. No clerk required.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Receipt-to-ledger, end to end',
+        description:
+          'Cashier scans. Agent extracts. Agent maps to GL account, cost center, tax code, project. Agent posts to QuickBooks / NetSuite / SAP. Agent files the scan in your archive. The whole journey, no human touch — except review.',
+        icon: 'tabler:transfer-in',
+      },
+      {
+        title: 'Plain-English search across everything',
+        description:
+          '"Coffee receipts from Atlanta-3 last quarter under $50 paid on the fleet card." Plain English, every document instantly retrievable, with the original scan one tap away. No tagging. No filing. The agent already filed it.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Voice-first capture for the field',
+        description:
+          '"Spent forty-five at the gas station, fleet card, route 12." The agent extracts the amount, vendor type, payment method, and job assignment — and the expense is in the system before the truck pulls out of the lot.',
+        icon: 'tabler:microphone',
+      },
     ]}
   />
 
@@ -180,49 +315,62 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Capabilities — in user language ********************************* -->
+  <!-- On-Device Wins — economics, sovereignty, latency, lock-in ******* -->
 
-  <Features
-    id="capabilities"
-    tagline="What Your Team Gets"
-    title="From Paper Pile to Real-Time Insight"
-    subtitle="The day-to-day promise: nobody on your team types data from a receipt ever again, and finance never waits for a manager to upload a folder of photos."
+  <Features2
+    id="on-device"
+    tagline="Why On-Device Wins"
+    title="On-Device Isn't a Privacy Checkbox. It's a New Economics."
+    subtitle="Most agentic platforms run on cloud frontier models. That means a per-query meter clicking every time the agent thinks. At your scale, that meter becomes your second-largest cost line. KEEPEM runs the agent on the phones in your team's pockets — and the math changes everything."
+    columns={2}
     items={[
       {
-        title: 'Capture without thinking',
+        title: 'Zero marginal AI cost',
         description:
-          'Open the app, point at the document, done. Multi-page scans, camera or gallery import, voice notes for expenses without a paper trail. The app does the work — your team keeps moving.',
-        icon: 'tabler:scan',
+          'Every scan, every question, every workflow run — flat license, no per-token meter. Whether the agent answers ten questions a day or ten thousand, your bill doesn\'t move. At 10,000 receipts a day across 50 stores, that\'s the difference between a six-figure annual API bill and zero.',
+        icon: 'tabler:coin-off',
       },
       {
-        title: 'Understood automatically',
+        title: 'No round-trip latency',
         description:
-          'Vendor, date, totals, tax, line items, payment terms, expiry dates — extracted the moment the document is captured. No tags to pick, no folders to file into. Wrong field? One tap to fix.',
-        icon: 'tabler:wand',
+          'No network call. No cold-start on someone else\'s server. The agent answers as fast as the phone can think — typically under a second. Your CFO asks the question and the chart appears before they finish their sentence.',
+        icon: 'tabler:bolt',
       },
       {
-        title: 'Search like you talk',
+        title: 'Connectivity-independent by design',
         description:
-          '"Coffee receipts from last quarter under $50." "Invoices from suppliers we haven\'t paid." "Anything from Costco this month." Plain English, instant answers, with the original document one tap away.',
-        icon: 'tabler:search',
+          'Capture, structure, search, ask — all of it runs end-to-end with no signal. Cellular dead zones, basement stockrooms, in-flight, on a barge, in a cellular-blocked secure facility. The agent works there. Most cloud-only platforms simply don\'t.',
+        icon: 'tabler:wifi-off',
       },
       {
-        title: 'Ask, get an answer — with sources',
+        title: 'Sovereignty by physics, not policy',
         description:
-          'Spend by category. Compare quarter to quarter. Top vendors by location. Outstanding invoices over 30 days. Every answer cites the underlying documents, so finance can verify in a tap.',
-        icon: 'tabler:message-chatbot',
+          'Your scans don\'t leak through the LLM because the LLM lives on the device. There is no checkbox, no DPA addendum, no "trust us with your prompts." The data doesn\'t leave the perimeter because there\'s nowhere for it to go. Healthcare, finance, defense, legal — postures that fail cloud-LLM review pass on-device by default.',
+        icon: 'tabler:shield-lock',
       },
       {
-        title: 'Voice notes that count',
+        title: 'No model vendor lock-in',
         description:
-          'Drivers and technicians dictate expenses on the go: "Spent forty-five at the gas station, fleet card." It becomes a structured expense, attached to the right job, ready for reimbursement.',
-        icon: 'tabler:microphone',
+          'KEEPEM runs on open-weight models. If a frontier vendor flipped a pricing switch tomorrow, doubled token costs, deprecated the model you depend on, or got blocked in your jurisdiction, KEEPEM keeps running unchanged. You don\'t inherit anyone else\'s commercial risk.',
+        icon: 'tabler:lock-open',
       },
       {
-        title: 'Built for teams',
+        title: 'Frontier-quality, in your pocket',
         description:
-          'Roles, locations, cost centers. Manager-level dashboards. Approval routing. Audit trails for every scan, every edit, every export. Compliance-ready out of the box.',
-        icon: 'tabler:users-group',
+          "On-device models in 2026 hit parity with last year's cloud frontier on the document-understanding tasks that matter for this business. The is-on-device-good-enough question is settled. The new question is — why are you still paying cloud rates for a workflow the phone can already run?",
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Predictable, capped TCO',
+        description:
+          'A token-metered cloud agent has unbounded cost — usage spikes become invoice spikes. KEEPEM\'s cost ceiling is the device fleet you already operate. Procurement signs once; the agent runs forever.',
+        icon: 'tabler:chart-arrows',
+      },
+      {
+        title: 'Your competitors can\'t catch up by writing a check',
+        description:
+          'Anyone can wire up GPT or Gemini Pro behind a chat box. Building a true on-device agentic loop — capture, classify, plan, act, observe, synthesize — entirely in 4 GB of phone RAM is a multi-year engineering moat. KEEPEM is on the other side of that moat.',
+        icon: 'tabler:rocket',
       },
     ]}
   />
@@ -512,34 +660,54 @@ const metadata = {
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
+        title: 'Is this really an autonomous agent, or another chat wrapper?',
+        description:
+          'Autonomous. KEEPEM\'s agent plans, calls tools against your document corpus, observes the results, decides the next step, and synthesizes a final answer with sources — across multiple iterations, with cross-turn memory. A chat wrapper has none of this. Ask a current vendor if their "agent" can run a five-step workflow with no human turns; the answer tells you which paradigm they\'re in.',
+      },
+      {
+        title: 'How does pricing work in a Service-as-Software model?',
+        description:
+          'We offer three structures and will recommend the right one in discovery: (1) outcome-based — priced per workflow closed (invoices reconciled, anomalies caught, expense reports filed); (2) volume-based — flat per scan or per active device; (3) enterprise license — flat unlimited fee with white-label rights. None of them charge per AI query because our marginal AI cost is zero, and that math should flow through to you.',
+      },
+      {
+        title: 'Why on-device instead of just calling GPT or Gemini?',
+        description:
+          'Three reasons that compound: (1) Cost — at retail volume, a per-token cloud agent is your second-largest line item; on-device is a flat zero. (2) Sovereignty — your documents physically can\'t leak through the LLM because the LLM is on the phone. (3) Reliability — no API outage, no rate limit, no jurisdictional block, no model deprecation surprise. The cloud-only competitors are one Anthropic outage away from a bad week.',
+      },
+      {
+        title: 'Does the on-device agent really hold its own against frontier cloud models?',
+        description:
+          'On the document-understanding tasks that drive this business — vendor extraction, line-item parsing, anomaly recognition, plain-English Q&A over a structured corpus — open-weight on-device models in 2026 hit parity with last year\'s cloud frontier. For the rare query that genuinely needs a frontier model, the Ultra tier routes through cloud Gemini. You decide which queries go where.',
+      },
+      {
         title: 'Does it really work offline?',
         description:
-          'Yes. The capture experience — scan, structure, search, ask — runs end-to-end on the phone with no network. When the device gets a connection, the vault syncs to your cloud automatically. Stores in poor-connectivity locations are a primary use case, not an edge case.',
+          'Yes. Capture, structure, search, ask, summarize, reconcile — all of it runs end-to-end on the phone with no network. When the device gets a connection, the vault syncs to your cloud. Stores in poor-connectivity locations and field crews in basements / vehicles / remote sites are a primary use case, not an edge case.',
       },
       {
-        title: 'How fast can we go from pilot to production?',
+        title: 'How fast from pilot to production?',
         description:
-          'A typical retail pilot is live in one week (single store, one POS connector, one accounting integration). A multi-location rollout with custom integrations is four to eight weeks depending on the stack.',
+          'A retail pilot is live in one week (one store, one POS connector, one accounting integration). Multi-location rollouts with custom integrations are four to eight weeks. The Service-as-Software promise is real — your AP queue starts closing on day one, not after a six-month implementation.',
       },
       {
-        title: 'Can it integrate with our specific POS / ERP / accounting tool?',
+        title: 'Can the agent run our specific workflows?',
         description:
-          'We ship native connectors for the major ones (Square, Toast, Lightspeed, QuickBooks, Xero, NetSuite, SAP, Dynamics). For everything else there\'s a clean REST API and webhooks — most custom integrations are a one-week build.',
+          'Yes. We ship pre-built skills (vendor reconciliation, period close, anomaly hunting, compliance lookups). For workflows specific to your business, you write a skill once — natural language plus the tools we expose — and the agent runs it forever. Your operations team owns the agent\'s job description, not us.',
+      },
+      {
+        title: 'Can it integrate with our POS / ERP / accounting tool?',
+        description:
+          'Native connectors for the majors: Square, Toast, Lightspeed, Clover, Shopify POS, QuickBooks, Xero, NetSuite, SAP, Dynamics, Oracle. Everything else: clean REST API + webhooks. Most custom integrations are a one-week build.',
       },
       {
         title: 'Who owns the data?',
         description:
-          'You do. In SaaS, your tenant is yours; you can export the full corpus at any time, and we delete on request within 30 days. In Sovereign and Hybrid deployments, the cloud half lives in your perimeter — we never see the data.',
+          'You do. SaaS: your tenant is yours, full export anytime, deleted on request within 30 days. Sovereign / Hybrid: the cloud half lives in your perimeter — we never see the data. On-device data is yours by physics.',
       },
       {
-        title: 'How does pricing work?',
+        title: 'White-label for our own product?',
         description:
-          'Three options: per-seat (good for small teams), per-scan (good for high-volume operations), and enterprise license (flat fee, unlimited usage, white-label rights). We\'ll size the right one in the discovery call.',
-      },
-      {
-        title: 'What about white-labeling for our own product?',
-        description:
-          'Full white-label is available — your brand on the app store, your domain on the dashboard, your logos and colors in the UI. We provide the engine and the SLA; you own the customer.',
+          'Full white-label is available — your brand on the app stores, your domain on the dashboard, your colors and logos in the UI. We provide the engine and the SLA; you own the customer relationship.',
       },
     ]}
   />
@@ -944,6 +1112,93 @@ const metadata = {
   .dash-deep-trow-muted span:last-child {
     color: rgba(255,255,255,0.5);
     font-weight: 400;
+  }
+
+  /* ==================================================================
+     PARADIGM comparison — old vs new contract
+     ================================================================== */
+  .paradigm-comparison {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
+  .paradigm-card {
+    flex: 1;
+    border-radius: 0.85rem;
+    padding: 1.25rem 1.4rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.4);
+  }
+  .paradigm-old {
+    background: linear-gradient(160deg, #1c1c1c 0%, #0f0f0f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    opacity: 0.85;
+  }
+  .paradigm-new {
+    background: linear-gradient(160deg, #2a0a0a 0%, #160505 100%);
+    border: 1px solid rgba(229, 57, 53, 0.35);
+    box-shadow:
+      0 16px 32px -12px rgba(0, 0, 0, 0.4),
+      0 0 40px -16px rgba(229, 57, 53, 0.5);
+  }
+  .paradigm-eyebrow {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+  .paradigm-new .paradigm-eyebrow { color: #e53935; }
+  .paradigm-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .paradigm-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 0;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.95;
+  }
+  .paradigm-card ul strong {
+    color: #fff;
+    font-weight: 600;
+  }
+  .paradigm-new ul strong {
+    color: #ffb1ad;
+  }
+  .paradigm-arrow {
+    align-self: center;
+    color: #e53935;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+    text-shadow: 0 0 16px rgba(229, 57, 53, 0.6);
+    animation: arrowSlide 2.4s ease-in-out infinite;
+  }
+  @keyframes arrowSlide {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(6px); }
+  }
+  @media (max-width: 640px) {
+    .paradigm-comparison { flex-direction: column; }
+    .paradigm-arrow {
+      transform: rotate(90deg);
+      align-self: center;
+    }
+    @keyframes arrowSlide {
+      0%, 100% { transform: rotate(90deg) translateX(0); }
+      50%      { transform: rotate(90deg) translateX(6px); }
+    }
   }
 
   /* Shared pulse animation -------------------------------------------- */
