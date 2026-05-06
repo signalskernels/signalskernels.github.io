@@ -1,0 +1,1002 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'KEEPEM for Business — Capture in the Field. Decide in the Dashboard.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- =====================================================================
+       HERO — split visual: phone (capture) + dashboard (decide).
+       Drop-in points for real assets:
+         · public/keepem-phone-demo.gif      → replaces .phone-screen-placeholder
+         · public/keepem-dashboard.png|gif   → replaces .dashboard-screen-placeholder
+       Capture today with `flutter test integration_test/screenshots_test.dart`
+       (integration_test) or `fastlane screengrab`.
+       ===================================================================== -->
+
+  <Hero
+    tagline="KEEPEM for Business · The Agentic Document Platform"
+    title="Capture in the field. <span class='text-accent'>Decide</span> in the dashboard."
+    subtitle="A document AI that lives on your team's phones and on your cloud — at the same time. Receipts, invoices, IDs, contracts, delivery slips: captured the moment they print, understood without manual tagging, synced to your back office in real time. Plug it into your point of sale, your accounting stack, your ERP, your BI — or run the whole thing in your own perimeter."
+    actions={[
+      { variant: 'primary', text: 'Book a Demo', href: '/contact', icon: 'tabler:mail' },
+      { text: 'See How It Works', href: '#duality' },
+    ]}
+  >
+    <Fragment slot="image">
+      <div class="hero-split-wrapper">
+        <!-- Phone capture surface --------------------------------------- -->
+        <div class="phone-mock">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <!-- DROP-IN: replace this placeholder with
+                 <img src="/keepem-phone-demo.gif" alt="KEEPEM scan flow" /> -->
+            <div class="phone-screen-placeholder">
+              <div class="placeholder-pulse"></div>
+              <p class="placeholder-line-1">Phone capture demo</p>
+              <p class="placeholder-line-2"><code>public/keepem-phone-demo.gif</code></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connection line — capture → cloud --------------------------- -->
+        <div class="hero-bridge" aria-hidden="true">
+          <span class="hero-bridge-pulse"></span>
+        </div>
+
+        <!-- Dashboard decision surface ---------------------------------- -->
+        <div class="dashboard-mock">
+          <div class="dashboard-chrome">
+            <span class="dashboard-dot dashboard-dot-r"></span>
+            <span class="dashboard-dot dashboard-dot-y"></span>
+            <span class="dashboard-dot dashboard-dot-g"></span>
+            <span class="dashboard-url">app.keepem.io / dashboard</span>
+          </div>
+          <div class="dashboard-screen">
+            <!-- DROP-IN: replace this placeholder with
+                 <img src="/keepem-dashboard.png" alt="KEEPEM dashboard" /> -->
+            <div class="dashboard-screen-placeholder">
+              <div class="dash-grid">
+                <div class="dash-card dash-card-tall">
+                  <span class="dash-eyebrow">Spend · this month</span>
+                  <span class="dash-figure">$184,720</span>
+                  <span class="dash-trend">▲ 12% vs Apr</span>
+                  <div class="dash-spark"></div>
+                </div>
+                <div class="dash-card">
+                  <span class="dash-eyebrow">Captures today</span>
+                  <span class="dash-figure-sm">2,431</span>
+                </div>
+                <div class="dash-card">
+                  <span class="dash-eyebrow">Anomalies</span>
+                  <span class="dash-figure-sm dash-alert">7</span>
+                </div>
+                <div class="dash-card dash-card-wide">
+                  <span class="dash-eyebrow">By location</span>
+                  <div class="dash-bars">
+                    <span style="--h: 80%"></span>
+                    <span style="--h: 55%"></span>
+                    <span style="--h: 92%"></span>
+                    <span style="--h: 41%"></span>
+                    <span style="--h: 70%"></span>
+                    <span style="--h: 33%"></span>
+                  </div>
+                </div>
+              </div>
+              <p class="placeholder-line-2 dash-caption">Replace with <code>public/keepem-dashboard.png</code></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Stats — outcome metrics, not implementation ********************** -->
+
+  <Stats
+    stats={[
+      { amount: 'Real-time', title: 'Capture to ledger sync', icon: 'tabler:bolt' },
+      { amount: 'Offline-first', title: 'Works the moment a receipt prints', icon: 'tabler:wifi-off' },
+      { amount: 'Your data', title: 'Stays in your perimeter', icon: 'tabler:shield-lock' },
+      { amount: '1 hour', title: 'From pilot kickoff to first dashboard', icon: 'tabler:clock-bolt' },
+    ]}
+  />
+
+  <!-- Duality — on-device + cloud as one platform ********************* -->
+
+  <Content
+    id="duality"
+    isReversed
+    tagline="Two Surfaces · One Platform"
+    title="On-Device Where It Matters. Cloud Where It Pays."
+    items={[
+      {
+        title: 'Capture lives on the phone.',
+        description:
+          'Cashiers, drivers, technicians, and managers capture documents in seconds — even with no signal, even in the back of a warehouse. Camera, voice, photo library, or a connected POS printer feed: it all flows into the same vault on the device.',
+      },
+      {
+        title: 'Decisions live in the cloud.',
+        description:
+          'When the device gets a connection, structured data syncs to your dashboard: spend by vendor, by location, by category, by manager. Anomaly alerts. Approval workflows. Drill-down to the original scan in one click. Your finance team finally sees the field in real time.',
+      },
+      {
+        title: 'You choose the boundary.',
+        description:
+          'Sensitive documents stay on the phone and never round-trip to the cloud. Operational documents sync the moment the network is up. The split is policy-driven — set it once, audit it anytime.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Local Where Privacy Matters. Connected Where Scale Pays.
+      </h3>
+      Most document AI products force a choice: cloud-only (fast scale, weak privacy) or device-only (private but isolated). KEEPEM was built so you don't have to choose.
+    </Fragment>
+
+    <Fragment slot="image">
+      <!-- DROP-IN: a side-by-side flow diagram or animated render of the
+           hybrid architecture. For a quick win, capture an integration_test
+           that runs a scan + opens the dashboard, screenshot both. -->
+      <div class="duality-illustration">
+        <div class="duality-side duality-device">
+          <span class="duality-icon">📱</span>
+          <h4>On-Device</h4>
+          <ul>
+            <li>Offline-first capture</li>
+            <li>Private by default</li>
+            <li>Zero per-scan cost</li>
+            <li>Biometric vault</li>
+          </ul>
+        </div>
+        <div class="duality-link" aria-hidden="true">
+          <span class="duality-link-pulse"></span>
+        </div>
+        <div class="duality-side duality-cloud">
+          <span class="duality-icon">☁️</span>
+          <h4>In the Cloud</h4>
+          <ul>
+            <li>Team dashboards</li>
+            <li>POS / ERP integrations</li>
+            <li>Approvals &amp; alerts</li>
+            <li>Audit trail &amp; export</li>
+          </ul>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Capabilities — in user language ********************************* -->
+
+  <Features
+    id="capabilities"
+    tagline="What Your Team Gets"
+    title="From Paper Pile to Real-Time Insight"
+    subtitle="The day-to-day promise: nobody on your team types data from a receipt ever again, and finance never waits for a manager to upload a folder of photos."
+    items={[
+      {
+        title: 'Capture without thinking',
+        description:
+          'Open the app, point at the document, done. Multi-page scans, camera or gallery import, voice notes for expenses without a paper trail. The app does the work — your team keeps moving.',
+        icon: 'tabler:scan',
+      },
+      {
+        title: 'Understood automatically',
+        description:
+          'Vendor, date, totals, tax, line items, payment terms, expiry dates — extracted the moment the document is captured. No tags to pick, no folders to file into. Wrong field? One tap to fix.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Search like you talk',
+        description:
+          '"Coffee receipts from last quarter under $50." "Invoices from suppliers we haven\'t paid." "Anything from Costco this month." Plain English, instant answers, with the original document one tap away.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Ask, get an answer — with sources',
+        description:
+          'Spend by category. Compare quarter to quarter. Top vendors by location. Outstanding invoices over 30 days. Every answer cites the underlying documents, so finance can verify in a tap.',
+        icon: 'tabler:message-chatbot',
+      },
+      {
+        title: 'Voice notes that count',
+        description:
+          'Drivers and technicians dictate expenses on the go: "Spent forty-five at the gas station, fleet card." It becomes a structured expense, attached to the right job, ready for reimbursement.',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'Built for teams',
+        description:
+          'Roles, locations, cost centers. Manager-level dashboards. Approval routing. Audit trails for every scan, every edit, every export. Compliance-ready out of the box.',
+        icon: 'tabler:users-group',
+      },
+    ]}
+  />
+
+  <!-- Use Cases — B2B verticals **************************************** -->
+
+  <Content
+    tagline="Built For"
+    title="Industries Where Paper Is Money"
+    items={[
+      {
+        title: 'Retail & Multi-Location',
+        description:
+          'Vendor invoices captured at every store and rolled up to HQ overnight. Reconcile against POS automatically — duplicate billings flagged before they\'re paid, price-creep surfaced before it eats margin.',
+      },
+      {
+        title: 'Restaurants & Hospitality',
+        description:
+          'Supplier deliveries scanned at the back door. Daily food cost rolls into the GM\'s morning briefing. Multi-unit operators see chain-wide trends without weekly spreadsheet work.',
+      },
+      {
+        title: 'Field Services & Construction',
+        description:
+          'Job-site receipts, equipment bills, permit photos — captured by techs, attached to the right job, ready for invoicing the same day. No more shoebox-of-receipts at month-end.',
+      },
+      {
+        title: 'Logistics & Distribution',
+        description:
+          'Proof of delivery, BOLs, customs paperwork. Captured at the dock, structured automatically, available to billing and customer service in seconds — not the day-after-tomorrow.',
+      },
+      {
+        title: 'Healthcare & Clinics',
+        description:
+          'Intake forms, insurance cards, clinical referrals — captured at the desk, structured for the EMR, never sent to a third-party cloud. Sensitive documents stay on the device by policy.',
+      },
+      {
+        title: 'Professional Services',
+        description:
+          'Client expense reports, vendor invoices, contract scans. Auto-coded to projects and clients. Billable expenses surface for the partner-in-charge before the client meeting, not after.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Anywhere a Document Becomes Cash
+      </h3>
+      Wherever your business turns paper into revenue, recovery, or compliance — KEEPEM closes the gap between the moment of truth and the system of record.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Integrations Showcase ******************************************* -->
+
+  <Features2
+    title="Plugs Into the Stack You Already Run"
+    subtitle="A document platform is only as useful as the systems it feeds. KEEPEM ships with native connectors for the back-office tools your team is already using — and a clean API for the ones you've built yourself."
+    tagline="Integrations"
+    columns={2}
+    items={[
+      {
+        title: 'Point of Sale',
+        description:
+          'Square, Toast, Lightspeed, Clover, Shopify POS. Receipts captured at the register reconcile against vendor invoices automatically — overcharges and duplicate payments surface before money leaves the account.',
+        icon: 'tabler:cash-register',
+      },
+      {
+        title: 'Accounting & ERP',
+        description:
+          'QuickBooks, Xero, NetSuite, SAP, Microsoft Dynamics, Oracle. Structured expenses post directly to the right account, cost center, and tax code — no more manual data entry, no more month-end scramble.',
+        icon: 'tabler:calculator',
+      },
+      {
+        title: 'BI & Data Warehouse',
+        description:
+          'Snowflake, BigQuery, Redshift, Looker, Tableau, Power BI. Document data lands in your warehouse next to your sales and ops data — so the questions finance can\'t answer today become a chart by Monday.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Storage & Document Systems',
+        description:
+          'Google Drive, OneDrive, iCloud Business, S3, SharePoint, Box. Scans archive into your existing folder structure — searchable, indexed, and tied back to the structured record in KEEPEM.',
+        icon: 'tabler:cloud-upload',
+      },
+      {
+        title: 'Webhooks & REST API',
+        description:
+          'Every event — scan completed, anomaly flagged, approval requested — fires a webhook your systems can act on. The full corpus is queryable through a clean REST API for your own dashboards and pipelines.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: 'Single Sign-On & Identity',
+        description:
+          'Okta, Azure AD, Google Workspace, OneLogin. SCIM provisioning, role mapping, audit-grade access logs. Onboard a new store, location, or business unit in minutes — not a procurement cycle.',
+        icon: 'tabler:key',
+      },
+    ]}
+  />
+
+  <!-- Steps — the lifecycle ******************************************* -->
+
+  <Steps
+    title="From the Counter to the Boardroom — in Seconds"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Capture</span>',
+        description:
+          'A cashier rings up a delivery. The driver hands over a paper invoice. The cashier scans it on the store iPhone — three seconds, no typing. The vault is encrypted, biometric-locked, and works whether or not the store has a connection.',
+        icon: 'tabler:capture',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Understand</span>',
+        description:
+          'Vendor, line items, totals, tax, payment terms, due date — all extracted on the phone, before anything leaves the building. The cashier sees the structured record immediately and can fix anything that looks off.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Sync</span>',
+        description:
+          'When the network is up, structured data flows to your cloud — your KEEPEM tenant or your own. Anomalies are flagged automatically: duplicate invoice numbers, price spikes versus the last delivery, totals that don\'t sum.',
+        icon: 'tabler:cloud-share',
+      },
+      {
+        title: 'Step 4: <span class="font-medium">Decide</span>',
+        description:
+          'The dashboard updates in real time. Finance sees today\'s spend by store before noon. The CFO asks "how does this Tuesday compare to last Tuesday?" and gets an answer with sources — not a Slack thread, not a PDF.',
+        icon: 'tabler:chart-dots',
+      },
+    ]}
+  />
+
+  <!-- Dashboard deep dive — second screenshot drop-in ***************** -->
+
+  <Content
+    isReversed
+    tagline="The Web App"
+    title="A Back Office That Actually Sees the Field"
+    items={[
+      {
+        title: 'Live spend boards',
+        description:
+          'Total, by category, by vendor, by location, by manager. Drill into any number to see the actual scans behind it. Filters that finance writes themselves — no analyst ticket required.',
+      },
+      {
+        title: 'Anomaly alerts',
+        description:
+          'Duplicate invoice numbers. Price increases over a threshold. Vendors that suddenly bill from a new account. Totals that don\'t sum. Routed to the right manager the moment they\'re detected.',
+      },
+      {
+        title: 'Approval workflows',
+        description:
+          'Threshold-based routing, multi-step approvals, delegate-when-out-of-office. Approve from email, approve from mobile, approve from the dashboard. Every action audited.',
+      },
+      {
+        title: 'Export anywhere',
+        description:
+          'CSV, Excel, JSON, parquet. Scheduled drops to S3, GCS, or your data warehouse. One-click reconciliation packs for your accountant or your auditor.',
+      },
+    ]}
+  >
+    <Fragment slot="image">
+      <!-- DROP-IN: full dashboard screenshot.
+           public/keepem-dashboard-full.png — capture from the web app. -->
+      <div class="dashboard-deep-mock">
+        <div class="dashboard-chrome">
+          <span class="dashboard-dot dashboard-dot-r"></span>
+          <span class="dashboard-dot dashboard-dot-y"></span>
+          <span class="dashboard-dot dashboard-dot-g"></span>
+          <span class="dashboard-url">app.keepem.io / spend</span>
+        </div>
+        <div class="dashboard-deep-screen">
+          <div class="dash-deep-header">
+            <span>Spend Overview</span>
+            <span class="dash-deep-range">Last 30 days</span>
+          </div>
+          <div class="dash-deep-row">
+            <div class="dash-deep-stat">
+              <span class="dash-eyebrow">Total</span>
+              <span class="dash-figure">$1.84M</span>
+            </div>
+            <div class="dash-deep-stat">
+              <span class="dash-eyebrow">vs Prev</span>
+              <span class="dash-figure dash-alert">+9.4%</span>
+            </div>
+            <div class="dash-deep-stat">
+              <span class="dash-eyebrow">Vendors</span>
+              <span class="dash-figure">312</span>
+            </div>
+            <div class="dash-deep-stat">
+              <span class="dash-eyebrow">Flagged</span>
+              <span class="dash-figure dash-alert">14</span>
+            </div>
+          </div>
+          <div class="dash-deep-chart">
+            <div class="dash-deep-line"></div>
+            <div class="dash-deep-line dash-deep-line-2"></div>
+          </div>
+          <div class="dash-deep-table">
+            <div class="dash-deep-trow"><span>Sysco · Atlanta-3</span><span class="dash-alert">$48,210</span></div>
+            <div class="dash-deep-trow"><span>US Foods · Dallas-1</span><span>$36,720</span></div>
+            <div class="dash-deep-trow"><span>Performance · Phoenix-2</span><span>$22,455</span></div>
+            <div class="dash-deep-trow dash-deep-trow-muted"><span>+ 309 more</span><span>—</span></div>
+          </div>
+          <p class="placeholder-line-2 dash-caption">Replace with <code>public/keepem-dashboard-full.png</code></p>
+        </div>
+      </div>
+    </Fragment>
+  </Content>
+
+  <!-- Deployment options — biggest B2B unlock ************************** -->
+
+  <Features2
+    title="Deploy It Your Way"
+    subtitle="Every business has a different tolerance for cloud, a different compliance posture, and a different rate card. KEEPEM ships in four shapes — pick one, change your mind later."
+    tagline="Deployment"
+    columns={2}
+    items={[
+      {
+        title: 'SaaS — fastest path',
+        description:
+          'We host. Your team is live in a day. Per-seat or per-scan pricing. Fit for SMB and mid-market teams that want zero infrastructure overhead.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Sovereign — your perimeter',
+        description:
+          'KEEPEM\'s cloud component runs in your VPC, your private cloud, or your on-premise data center. Required for healthcare, finance, government, and regulated industries.',
+        icon: 'tabler:building-fortress',
+      },
+      {
+        title: 'Hybrid — capture local, sync where you choose',
+        description:
+          'Phones run KEEPEM out of the box; the cloud half points at infrastructure you own. Common pattern for multi-region operators with country-specific data residency rules.',
+        icon: 'tabler:arrows-shuffle',
+      },
+      {
+        title: 'White-label — your brand',
+        description:
+          'Ship KEEPEM as your own product. Your colors, your logo, your domain, your store listing. We handle the engine; you own the customer relationship.',
+        icon: 'tabler:tag',
+      },
+    ]}
+  />
+
+  <!-- Trust & Compliance — in business language *********************** -->
+
+  <Features2
+    title="Trust You Can Show an Auditor"
+    subtitle="The hard parts of running a document platform — encryption, biometrics, audit trails, access control — are baked in, not bolted on. We won't put your compliance team through a procurement nightmare."
+    tagline="Security & Compliance"
+    columns={2}
+    items={[
+      {
+        title: 'Your data, your perimeter',
+        description:
+          'On-device by default; cloud-sync only for the documents and fields your policy permits. Sensitive captures (IDs, medical, HR) can be flagged to never leave the phone.',
+        icon: 'tabler:shield-lock',
+      },
+      {
+        title: 'Encrypted at rest, end-to-end',
+        description:
+          'The vault on every phone is encrypted, biometric-locked, and tied to the device\'s secure enclave. Cloud-side encryption keys can be customer-managed (BYOK) or HSM-backed.',
+        icon: 'tabler:lock-square',
+      },
+      {
+        title: 'Full audit trail',
+        description:
+          'Every capture, edit, export, and approval is logged with user, timestamp, and IP. Audit-ready exports for SOC 2, HIPAA, PCI, and regional regulations.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'No data harvesting, ever',
+        description:
+          'We don\'t train models on your documents. We don\'t sell anonymized aggregates. Your scans are your scans — written into our terms, not just our marketing page.',
+        icon: 'tabler:eye-off',
+      },
+    ]}
+  />
+
+  <!-- FAQs ********************************************************* -->
+
+  <FAQs
+    title="The Questions Buyers Actually Ask"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Does it really work offline?',
+        description:
+          'Yes. The capture experience — scan, structure, search, ask — runs end-to-end on the phone with no network. When the device gets a connection, the vault syncs to your cloud automatically. Stores in poor-connectivity locations are a primary use case, not an edge case.',
+      },
+      {
+        title: 'How fast can we go from pilot to production?',
+        description:
+          'A typical retail pilot is live in one week (single store, one POS connector, one accounting integration). A multi-location rollout with custom integrations is four to eight weeks depending on the stack.',
+      },
+      {
+        title: 'Can it integrate with our specific POS / ERP / accounting tool?',
+        description:
+          'We ship native connectors for the major ones (Square, Toast, Lightspeed, QuickBooks, Xero, NetSuite, SAP, Dynamics). For everything else there\'s a clean REST API and webhooks — most custom integrations are a one-week build.',
+      },
+      {
+        title: 'Who owns the data?',
+        description:
+          'You do. In SaaS, your tenant is yours; you can export the full corpus at any time, and we delete on request within 30 days. In Sovereign and Hybrid deployments, the cloud half lives in your perimeter — we never see the data.',
+      },
+      {
+        title: 'How does pricing work?',
+        description:
+          'Three options: per-seat (good for small teams), per-scan (good for high-volume operations), and enterprise license (flat fee, unlimited usage, white-label rights). We\'ll size the right one in the discovery call.',
+      },
+      {
+        title: 'What about white-labeling for our own product?',
+        description:
+          'Full white-label is available — your brand on the app store, your domain on the dashboard, your logos and colors in the UI. We provide the engine and the SLA; you own the customer.',
+      },
+    ]}
+  />
+
+  <!-- CTA ********************************************************** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a Discovery Call',
+        href: '/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    title="Bring an Agent to Your Operations"
+    subtitle="Tell us where paper meets process in your business. We'll show you what one week with KEEPEM looks like — on your phones, in your dashboard, against your real documents."
+  />
+</Layout>
+
+<style>
+  /* ==================================================================
+     HERO — phone + dashboard split
+     ================================================================== */
+  .hero-split-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+  }
+
+  /* Phone -------------------------------------------------------------- */
+  .phone-mock {
+    position: relative;
+    width: 240px;
+    aspect-ratio: 9 / 19.5;
+    background: #0a0a0a;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    box-shadow:
+      0 0 0 2px #1a1a1a,
+      0 24px 48px -12px rgba(0, 0, 0, 0.5),
+      0 0 60px -16px rgba(229, 57, 53, 0.4);
+    flex-shrink: 0;
+  }
+  .phone-notch {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 1rem;
+    background: #0a0a0a;
+    border-bottom-left-radius: 0.85rem;
+    border-bottom-right-radius: 0.85rem;
+    z-index: 2;
+  }
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.55rem;
+    overflow: hidden;
+    background: linear-gradient(160deg, #111 0%, #1d0a0a 50%, #0a0a0a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .phone-screen :global(img),
+  .phone-screen :global(video) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .phone-screen-placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .placeholder-pulse {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(229, 57, 53, 0.6) 0%, rgba(229, 57, 53, 0) 70%);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .placeholder-line-1 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  .placeholder-line-2 {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+  }
+  .placeholder-line-2 code,
+  code {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.25rem;
+    font-size: 0.65rem;
+  }
+
+  /* Bridge between phone & dashboard ---------------------------------- */
+  .hero-bridge {
+    position: relative;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(229, 57, 53, 0.1) 0%, rgba(229, 57, 53, 0.7) 50%, rgba(229, 57, 53, 0.1) 100%);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .hero-bridge-pulse {
+    position: absolute;
+    top: 0;
+    left: -20%;
+    width: 30%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    animation: bridge 2.4s linear infinite;
+  }
+  @keyframes bridge {
+    0% { left: -20%; }
+    100% { left: 110%; }
+  }
+
+  /* Dashboard --------------------------------------------------------- */
+  .dashboard-mock {
+    width: 460px;
+    max-width: 90vw;
+    background: #0d0d0d;
+    border-radius: 0.85rem;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px #1a1a1a,
+      0 24px 48px -12px rgba(0, 0, 0, 0.5),
+      0 0 60px -16px rgba(229, 57, 53, 0.25);
+    flex-shrink: 0;
+  }
+  .dashboard-chrome {
+    background: #161616;
+    padding: 0.55rem 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid #222;
+  }
+  .dashboard-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dashboard-dot-r { background: #ff5f57; }
+  .dashboard-dot-y { background: #febc2e; }
+  .dashboard-dot-g { background: #28c840; }
+  .dashboard-url {
+    margin-left: 0.6rem;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+    font-family: ui-monospace, SFMono-Regular, monospace;
+  }
+  .dashboard-screen {
+    background: linear-gradient(160deg, #0f0f10 0%, #150a0a 100%);
+    padding: 1rem;
+    min-height: 280px;
+    position: relative;
+  }
+  .dashboard-screen :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  .dashboard-screen-placeholder {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .dash-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.6rem;
+  }
+  .dash-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.5rem;
+    padding: 0.7rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .dash-card-tall { grid-row: span 2; }
+  .dash-card-wide { grid-column: span 2; }
+  .dash-eyebrow {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .dash-figure {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+  .dash-figure-sm {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .dash-trend {
+    font-size: 0.7rem;
+    color: #e53935;
+    font-weight: 600;
+  }
+  .dash-alert { color: #e53935; }
+  .dash-spark {
+    height: 32px;
+    margin-top: auto;
+    background: linear-gradient(180deg, rgba(229, 57, 53, 0.6) 0%, rgba(229, 57, 53, 0) 100%);
+    clip-path: polygon(0 80%, 12% 60%, 25% 70%, 40% 35%, 55% 50%, 70% 25%, 85% 40%, 100% 15%, 100% 100%, 0 100%);
+  }
+  .dash-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.35rem;
+    height: 50px;
+    margin-top: 0.3rem;
+  }
+  .dash-bars span {
+    flex: 1;
+    height: var(--h);
+    background: linear-gradient(180deg, #e53935 0%, #7a1d1c 100%);
+    border-radius: 0.2rem 0.2rem 0 0;
+  }
+  .dash-caption {
+    margin-top: 0.8rem;
+    text-align: right;
+  }
+
+  /* ==================================================================
+     DUALITY illustration
+     ================================================================== */
+  .duality-illustration {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a0a0a 100%);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    color: #fff;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4);
+  }
+  .duality-side {
+    flex: 1;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .duality-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .duality-side h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    color: #fff;
+  }
+  .duality-side ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.8;
+  }
+  .duality-link {
+    width: 4px;
+    background: linear-gradient(180deg, rgba(229,57,53,0.1), rgba(229,57,53,0.7), rgba(229,57,53,0.1));
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0.5rem;
+  }
+  .duality-link-pulse {
+    position: absolute;
+    top: -25%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: rgba(255,255,255,0.9);
+    animation: dualityPulse 2.4s linear infinite;
+  }
+  @keyframes dualityPulse {
+    0% { top: -30%; }
+    100% { top: 110%; }
+  }
+
+  /* ==================================================================
+     DEEP dashboard mock (second screenshot drop-in)
+     ================================================================== */
+  .dashboard-deep-mock {
+    background: #0d0d0d;
+    border-radius: 0.85rem;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px #1a1a1a,
+      0 24px 48px -12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+  }
+  .dashboard-deep-screen {
+    background: linear-gradient(160deg, #0f0f10 0%, #150a0a 100%);
+    padding: 1.25rem;
+    color: rgba(255,255,255,0.85);
+    min-height: 360px;
+    position: relative;
+  }
+  .dash-deep-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .dash-deep-range {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+  }
+  .dash-deep-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .dash-deep-stat {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .dash-deep-chart {
+    background: rgba(255,255,255,0.03);
+    border-radius: 0.5rem;
+    height: 120px;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .dash-deep-line {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e53935 50%, transparent);
+    transform-origin: left;
+    clip-path: polygon(0 50%, 10% 30%, 25% 60%, 40% 20%, 55% 50%, 70% 10%, 85% 40%, 100% 20%, 100% 100%, 0 100%);
+    background: linear-gradient(180deg, rgba(229,57,53,0.7) 0%, rgba(229,57,53,0.05) 100%);
+  }
+  .dash-deep-line-2 {
+    bottom: 30%;
+    opacity: 0.5;
+    background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.02) 100%);
+    clip-path: polygon(0 70%, 15% 50%, 30% 65%, 45% 35%, 60% 55%, 75% 30%, 90% 50%, 100% 35%, 100% 100%, 0 100%);
+  }
+  .dash-deep-table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .dash-deep-trow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.55rem 0.7rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 0.4rem;
+    font-size: 0.85rem;
+  }
+  .dash-deep-trow span:last-child {
+    font-weight: 600;
+    color: #fff;
+  }
+  .dash-deep-trow-muted {
+    opacity: 0.5;
+    font-style: italic;
+  }
+  .dash-deep-trow-muted span:last-child {
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+  }
+
+  /* Shared pulse animation -------------------------------------------- */
+  @keyframes pulse {
+    0%, 100% { transform: scale(0.85); opacity: 0.6; }
+    50%      { transform: scale(1.15); opacity: 1; }
+  }
+
+  /* Responsive --------------------------------------------------------- */
+  @media (max-width: 768px) {
+    .hero-split-wrapper {
+      flex-direction: column;
+    }
+    .hero-bridge {
+      width: 4px;
+      height: 40px;
+      background: linear-gradient(180deg, rgba(229,57,53,0.1) 0%, rgba(229,57,53,0.7) 50%, rgba(229,57,53,0.1) 100%);
+    }
+    .hero-bridge-pulse {
+      top: -20%;
+      left: 0;
+      width: 100%;
+      height: 25%;
+      animation: bridgeVert 2.4s linear infinite;
+    }
+    @keyframes bridgeVert {
+      0% { top: -25%; }
+      100% { top: 110%; }
+    }
+    .duality-illustration {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .duality-link {
+      width: 60%;
+      height: 4px;
+      margin: 0.5rem auto;
+      background: linear-gradient(90deg, rgba(229,57,53,0.1), rgba(229,57,53,0.7), rgba(229,57,53,0.1));
+    }
+    .duality-link-pulse {
+      top: 0;
+      left: -25%;
+      width: 30%;
+      height: 100%;
+      animation: dualityPulseH 2.4s linear infinite;
+    }
+    @keyframes dualityPulseH {
+      0% { left: -30%; }
+      100% { left: 110%; }
+    }
+    .dashboard-mock { width: 100%; }
+    .dash-grid { grid-template-columns: 1fr 1fr; }
+    .dash-card-tall { grid-row: auto; }
+    .dash-card-wide { grid-column: span 2; }
+  }
+</style>

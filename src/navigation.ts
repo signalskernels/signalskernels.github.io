@@ -20,6 +20,15 @@ export const headerData = {
       ],
     },
     {
+      text: 'Products',
+      links: [
+        {
+          text: 'KEEPEM — Agentic Vault',
+          href: getPermalink('/keepem'),
+        },
+      ],
+    },
+    {
       text: 'Services',
       href: getPermalink('/services'),
     },
@@ -43,6 +52,12 @@ export const footerData = {
         { text: 'AI for Government', href: getPermalink('/ai-for-government') },
         { text: 'AI for Security', href: getPermalink('/ai-for-security') },
         { text: 'AI for Education', href: getPermalink('/ai-for-education') },
+      ],
+    },
+    {
+      title: 'Products',
+      links: [
+        { text: 'KEEPEM — Agentic Vault', href: getPermalink('/keepem') },
       ],
     },
     {
