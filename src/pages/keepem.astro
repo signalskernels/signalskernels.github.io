@@ -247,6 +247,99 @@ const metadata = {
     ]}
   />
 
+  <!-- Agentic Search — the search bar is a planner ******************* -->
+
+  <Content
+    id="agentic-search"
+    isReversed
+    tagline="Agentic Search"
+    title="The Search Bar That <span class='text-accent'>Thinks</span>."
+    items={[
+      {
+        title: 'From query to plan.',
+        description:
+          'Ask "how did Atlanta-3 do versus Phoenix-2 last quarter, and which vendors moved the most?" The agent breaks the question into the steps a human analyst would take — pull the right window, filter by location, aggregate by vendor, compare deltas, surface the movers — without you spelling out the recipe.',
+      },
+      {
+        title: 'Multi-strategy retrieval.',
+        description:
+          'When the first search misses, the agent doesn\'t shrug. It tries synonyms, expands brand names, falls back through retrieval layers, reranks by where the match landed (a vendor name beats a stray OCR hit). Misspellings, casing gaps, and "we call that a different name internally" stop being a dead end.',
+      },
+      {
+        title: 'Auditable reasoning.',
+        description:
+          "Every answer shows its work: which documents were read, which queries were run, which steps were dead ends. Hover any number and the supporting scans surface. Finance can verify in a tap; an auditor can reconstruct the entire reasoning path from the run log.",
+      },
+      {
+        title: 'Cross-turn memory.',
+        description:
+          '"And the month before?" "What about Costco?" "How does that compare to Q1?" Follow-ups resolve against authoritative scope the agent already established — vendor, period, category, location. You\'re not re-typing context for the LLM. You\'re having a conversation.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Not Keyword Search. Not RAG. An Analyst at the Search Bar.
+      </h3>
+      Keyword search retrieves documents. RAG retrieves and summarizes. KEEPEM does something neither does: it reasons across multiple steps, picks its own tools, and shows you its work — the way a careful analyst would.
+    </Fragment>
+
+    <Fragment slot="image">
+      <!-- DROP-IN: animated GIF of the live thinking panel.
+           Capture via tool/capture_demo_gif.sh in the keepem repo. -->
+      <div class="thinking-panel-mock">
+        <div class="tp-question">
+          <span class="tp-prompt">›</span>
+          <span class="tp-text">How did Atlanta-3 do vs Phoenix-2 last quarter?</span>
+        </div>
+
+        <div class="tp-thinking">
+          <span class="tp-eyebrow">Thinking · 4 steps</span>
+          <p class="tp-reasoning">
+            Two locations, one window. Plan: pull last quarter for both stores,
+            aggregate by vendor for each, compute deltas, surface top movers.
+          </p>
+        </div>
+
+        <div class="tp-steps">
+          <div class="tp-step tp-step-done">
+            <span class="tp-step-icon">✓</span>
+            <span class="tp-step-label">filter — store=Atlanta-3, period=Q1 2026</span>
+          </div>
+          <div class="tp-step tp-step-done">
+            <span class="tp-step-icon">✓</span>
+            <span class="tp-step-label">filter — store=Phoenix-2, period=Q1 2026</span>
+          </div>
+          <div class="tp-step tp-step-done">
+            <span class="tp-step-icon">✓</span>
+            <span class="tp-step-label">group_by — vendor, sum=total</span>
+          </div>
+          <div class="tp-step tp-step-active">
+            <span class="tp-step-icon tp-spinner"></span>
+            <span class="tp-step-label">compare_periods — deltas, top movers</span>
+          </div>
+        </div>
+
+        <div class="tp-answer">
+          <p>
+            Atlanta-3 spent <strong>$48.2k</strong>, Phoenix-2 <strong>$36.7k</strong>.
+            Sysco moved <strong>+22%</strong> at Atlanta — the dominant delta.
+          </p>
+          <div class="tp-citations">
+            <span class="tp-cite">[1] INV-4821 · Sysco</span>
+            <span class="tp-cite">[2] INV-4842 · Sysco</span>
+            <span class="tp-cite">[3] INV-4901 · Sysco</span>
+            <span class="tp-cite tp-cite-more">+ 14 more</span>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
   <!-- Duality — on-device + cloud as one platform ********************* -->
 
   <Content
@@ -1199,6 +1292,150 @@ const metadata = {
       0%, 100% { transform: rotate(90deg) translateX(0); }
       50%      { transform: rotate(90deg) translateX(6px); }
     }
+  }
+
+  /* ==================================================================
+     THINKING PANEL mock — the live agentic-search visualisation
+     ================================================================== */
+  .thinking-panel-mock {
+    background: linear-gradient(160deg, #0f0f10 0%, #150a0a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.85rem;
+    padding: 1.25rem;
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow:
+      0 24px 48px -12px rgba(0, 0, 0, 0.5),
+      0 0 60px -16px rgba(229, 57, 53, 0.25);
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+  .tp-question {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.6rem 0.8rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .tp-prompt {
+    color: #e53935;
+    font-weight: 700;
+  }
+  .tp-text {
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+
+  .tp-thinking {
+    border-left: 2px solid #e53935;
+    padding: 0.4rem 0.8rem;
+    margin: 0 0 0.9rem 0.4rem;
+    background: rgba(229, 57, 53, 0.04);
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+  .tp-eyebrow {
+    font-size: 0.65rem;
+    color: #e53935;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .tp-reasoning {
+    margin: 0;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+  }
+
+  .tp-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .tp-step {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.45rem 0.7rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+  }
+  .tp-step-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .tp-step-done {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .tp-step-done .tp-step-icon {
+    background: rgba(40, 200, 64, 0.18);
+    color: #28c840;
+  }
+  .tp-step-active {
+    background: rgba(229, 57, 53, 0.08);
+    color: #fff;
+  }
+  .tp-step-active .tp-step-icon {
+    background: rgba(229, 57, 53, 0.2);
+    border: 2px solid #e53935;
+    border-top-color: transparent;
+    animation: tpSpin 0.9s linear infinite;
+  }
+  .tp-spinner { font-size: 0; }
+  @keyframes tpSpin {
+    to { transform: rotate(360deg); }
+  }
+  .tp-step-label {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem;
+  }
+
+  .tp-answer {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(229, 57, 53, 0.25);
+    border-radius: 0.5rem;
+    padding: 0.8rem 0.9rem;
+  }
+  .tp-answer p {
+    margin: 0 0 0.55rem 0;
+    font-size: 0.88rem;
+    color: #fff;
+  }
+  .tp-answer strong {
+    color: #ffb1ad;
+    font-weight: 700;
+  }
+  .tp-citations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .tp-cite {
+    font-size: 0.7rem;
+    padding: 0.18rem 0.5rem;
+    background: rgba(229, 57, 53, 0.12);
+    border: 1px solid rgba(229, 57, 53, 0.3);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: ui-monospace, SFMono-Regular, monospace;
+  }
+  .tp-cite-more {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.55);
   }
 
   /* Shared pulse animation -------------------------------------------- */
