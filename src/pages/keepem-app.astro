@@ -1,0 +1,1056 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'KEEPEM for Consumers: Your Personal AI Vault, on Your Phone',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HERO — phone-first consumer framing -->
+
+  <Hero
+    tagline="KEEPEM for Consumers · A Personal AI Vault"
+    title="Your receipts, warranties, IDs, and bills. <span class='text-accent'>Found before you ask.</span>"
+    subtitle="KEEPEM is a personal AI agent that lives on your phone. It reads every receipt, warranty card, tax form, and household bill the moment you snap it. It files them. It finds them. It answers questions about them in plain English. Nothing leaves the device unless you say so. No cloud subscription clock ticking on every query. No company training a model on your life. Your vault is yours."
+    actions={[
+      { variant: 'primary', text: 'Get it on the App Store', href: '#download', icon: 'tabler:brand-apple' },
+      { text: 'Get it on Google Play', href: '#download', icon: 'tabler:brand-google-play' },
+    ]}
+  >
+    <Fragment slot="image">
+      <div class="consumer-hero-wrapper">
+        <div class="phone-mock">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <img src="/keepem-phone-demo.jpg" alt="KEEPEM home screen — your captured documents, organized by the agent" />
+          </div>
+        </div>
+
+        <div class="consumer-hero-side">
+          <div class="consumer-callout">
+            <span class="callout-eyebrow">You · last Tuesday</span>
+            <p class="callout-text">"Did I keep the receipt for the headphones I returned?"</p>
+          </div>
+          <div class="consumer-bridge" aria-hidden="true">
+            <span class="consumer-bridge-pulse"></span>
+          </div>
+          <div class="consumer-answer">
+            <span class="callout-eyebrow">KEEPEM · 0.4s on device</span>
+            <p class="callout-text">
+              Yes. <strong>Best Buy · Mar 12 · $189.00</strong>. Returned Mar 19; refund posted to Visa ending 4421.
+            </p>
+            <div class="consumer-cite">📄 receipt-2026-03-12.jpg</div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  </Hero>
+
+  <!-- Stats — consumer outcome metrics -->
+
+  <Stats
+    stats={[
+      { amount: '0 bytes', title: 'Documents sent to anyone else\'s cloud', icon: 'tabler:cloud-off' },
+      { amount: 'On-device', title: 'The AI lives on your phone, not on a server', icon: 'tabler:device-mobile' },
+      { amount: 'Offline', title: 'Works on a plane, in a basement, off-grid', icon: 'tabler:wifi-off' },
+      { amount: 'Yours', title: 'Your vault is yours — exportable, deletable, sovereign', icon: 'tabler:shield-lock' },
+    ]}
+  />
+
+  <!-- Paradigm shift — from filing to finding -->
+
+  <Content
+    id="paradigm"
+    tagline="The Shift"
+    title="From <span class='text-accent'>I'll file it later</span> to <span class='text-accent'>it's already filed</span>"
+    items={[
+      {
+        title: 'The shoebox era.',
+        description:
+          'Receipts in a drawer. Warranties in a folder. Tax docs in an email thread. Important papers in a binder. You know it\'s there somewhere — until the moment you need it, and then it\'s nowhere.',
+      },
+      {
+        title: 'The cloud-AI era.',
+        description:
+          'You started photographing things. You uploaded them somewhere. A subscription clock started ticking on every query. Your most personal documents went to someone else\'s server to be searched, summarized — and indexed by a model you don\'t control.',
+      },
+      {
+        title: 'The on-device agent era.',
+        description:
+          'Snap. The agent reads it the moment the shutter closes. Vendor, amount, date, category, tax flag — captured on your phone, by your phone. Ask anything later, in plain English. The agent already organized it. No subscription clock. No upload. No leak.',
+      },
+      {
+        title: 'You don\'t pay per question.',
+        description:
+          'KEEPEM\'s agent runs on the phone you already own. Ask it ten questions or ten thousand. The bill doesn\'t move. There is no per-token meter, because there is no token meter. The math finally favors you.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        The Agent Files It. You Just Ask.
+      </h3>
+      A personal vault is only useful if you can find anything in it. KEEPEM is the first vault that organizes itself, then answers questions about its contents in plain English, on the device that holds it.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="consumer-compare">
+        <div class="consumer-compare-card consumer-compare-old">
+          <span class="paradigm-eyebrow">Before</span>
+          <h4>Shoebox &amp; Drawer</h4>
+          <ul>
+            <li>Photos buried in <strong>camera roll</strong>.</li>
+            <li>Warranties in a <strong>kitchen drawer</strong>.</li>
+            <li>Tax docs in <strong>email search</strong>.</li>
+            <li>"Where did I put…" every <strong>April</strong>.</li>
+          </ul>
+        </div>
+        <div class="consumer-compare-arrow" aria-hidden="true">↓</div>
+        <div class="consumer-compare-card consumer-compare-new">
+          <span class="paradigm-eyebrow">With KEEPEM</span>
+          <h4>An Agent in Your Pocket</h4>
+          <ul>
+            <li>Captured in <strong>seconds</strong>.</li>
+            <li>Filed by the <strong>agent</strong>.</li>
+            <li>Found in <strong>plain English</strong>.</li>
+            <li>Nothing leaves the <strong>device</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Skills — consumer-grade workflows -->
+
+  <Features
+    id="skills"
+    tagline="What the Agent Does"
+    title="A Personal Assistant for Your Paper Life"
+    subtitle="Every capability below is something you used to do by hand — or skip and regret later. KEEPEM owns it. The moment you snap a document, the agent reads, classifies, and files. The moment you ask, the agent finds and answers."
+    columns={3}
+    items={[
+      {
+        title: 'Receipts that find themselves',
+        description:
+          'Snap the receipt. The agent extracts vendor, total, date, payment method, and category. It\'s in the vault before you put the phone in your pocket. Ask for it three months later in plain English.',
+        icon: 'tabler:receipt',
+      },
+      {
+        title: 'Warranties on tap',
+        description:
+          'Photograph the warranty card or the manual. The agent extracts brand, model, purchase date, and expiry. The day the dishwasher fails, you have the proof of purchase one search away.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Tax season in ten minutes',
+        description:
+          '"Pull every business expense from last year" or "show every charitable donation receipt." The agent compiles, totals, and exports. The shoebox-on-the-CPA\'s-desk era is over.',
+        icon: 'tabler:report-money',
+      },
+      {
+        title: 'Bills, on a timeline',
+        description:
+          'Utility bills, subscriptions, insurance premiums. The agent watches month over month and surfaces the increases. "Why is my electric bill higher than April?" gets a real answer with the scans behind it.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'IDs and important papers',
+        description:
+          'Passport, driver\'s license, insurance cards, vehicle title, birth certificates. Captured once, encrypted, biometric-locked. Tagged "never sync." They live on the phone and nowhere else, ever.',
+        icon: 'tabler:id-badge',
+      },
+      {
+        title: 'Expense splits without the math',
+        description:
+          '"Split the Costco run with Sam — what did I pay for that\'s on his half?" The agent picks the items, totals them, and shows the receipt. Settle up in one tap.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Plain-English search across everything',
+        description:
+          '"Coffee receipts from January under $10." "Every Amazon return last quarter." "What did I spend at vets this year?" Plain language, every document a tap away, no tagging required.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Voice capture on the go',
+        description:
+          '"I paid forty bucks for gas at Shell on the way to mom\'s." The agent extracts vendor, amount, category, and journal entry. Recorded before you pull out of the lot.',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'Family vault, shared safely',
+        description:
+          'Share specific folders with a spouse or parent. Each person\'s phone holds its copy; nothing routes through anyone else\'s account. The vault stays sovereign even when it\'s shared.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <!-- Agentic Search — consumer version -->
+
+  <Content
+    id="agentic-search"
+    isReversed
+    tagline="The Agent Inside"
+    title="Not a Chatbot. <span class='text-accent'>An Analyst at the Search Bar.</span>"
+    items={[
+      {
+        title: 'From question to plan.',
+        description:
+          'Ask "how much did I spend on the dog last year?" and the agent breaks it into the steps a careful person would take: pull the year, filter to vet visits, food, grooming, and meds, total each, and show the receipts. You don\'t spell out the recipe.',
+      },
+      {
+        title: 'It tries harder than search.',
+        description:
+          'When the first try misses, the agent doesn\'t shrug. It expands brand names, tries synonyms, falls back through retrieval layers, reranks. Misspellings and "we call that something else at home" stop being a dead end.',
+      },
+      {
+        title: 'Sources, every time.',
+        description:
+          'Every answer shows its work. Tap a number, see the receipt. Tap a vendor, see every transaction. No hand-waving, no hallucinated totals — your CPA, your spouse, and you can all verify in a tap.',
+      },
+      {
+        title: 'Cross-turn memory.',
+        description:
+          '"And January?" "What about at Costco specifically?" "How does that compare to last year?" The agent already knows the vendor, category, and window you established. You\'re having a conversation, not re-typing.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Plain English In. Receipts Out.
+      </h3>
+      Keyword search retrieves files. Cloud chatbots send your private documents to a server. KEEPEM does something neither does: it reasons across your vault, in multiple steps, on your phone, and shows you exactly which scans it read.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="thinking-panel-mock">
+        <div class="tp-question">
+          <span class="tp-prompt">›</span>
+          <span class="tp-text">How much did I spend on the dog last year?</span>
+        </div>
+
+        <div class="tp-thinking">
+          <span class="tp-eyebrow">Thinking · 4 steps</span>
+          <p class="tp-reasoning">
+            One pet, one year. Plan: pull receipts tagged or matched to pet-related vendors,
+            categorize (vet, food, grooming, meds), sum and surface biggest line items.
+          </p>
+        </div>
+
+        <div class="tp-steps">
+          <div class="tp-step tp-step-done">
+            <span class="tp-step-icon">✓</span>
+            <span class="tp-step-label">filter · period=2025, category=pet</span>
+          </div>
+          <div class="tp-step tp-step-done">
+            <span class="tp-step-icon">✓</span>
+            <span class="tp-step-label">group_by · vendor_type, sum=total</span>
+          </div>
+          <div class="tp-step tp-step-done">
+            <span class="tp-step-icon">✓</span>
+            <span class="tp-step-label">match · "Banfield", "Chewy", "PetSmart"</span>
+          </div>
+          <div class="tp-step tp-step-active">
+            <span class="tp-step-icon tp-spinner"></span>
+            <span class="tp-step-label">rank · top expenses, surface receipts</span>
+          </div>
+        </div>
+
+        <div class="tp-answer">
+          <p>
+            <strong>$2,184.30</strong> total. Vet visits <strong>$1,220</strong>, food
+            <strong>$612</strong>, grooming <strong>$240</strong>, meds <strong>$112</strong>.
+          </p>
+          <div class="tp-citations">
+            <span class="tp-cite">[1] Banfield · Apr</span>
+            <span class="tp-cite">[2] Chewy · monthly</span>
+            <span class="tp-cite">[3] PetSmart · Aug</span>
+            <span class="tp-cite tp-cite-more">+ 27 more</span>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Privacy section — on-device by design -->
+
+  <Features2
+    id="privacy"
+    tagline="Privacy by Physics"
+    title="Your Documents Don't Leave the Phone. Not by Policy. By Design."
+    subtitle="Every other AI app you've used asks you to trust a cloud. KEEPEM doesn't ask, because there is nothing to trust — the model runs on your device, the vault lives on your device, the answers come from your device. The architecture is the promise."
+    columns={2}
+    items={[
+      {
+        title: 'The AI lives on your phone',
+        description:
+          'KEEPEM\'s agent is a model that ships inside the app. It reads, classifies, and answers on the CPU and GPU in your pocket. There is no API call, no remote inference, no third-party AI vendor reading your scans.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Zero per-query meter',
+        description:
+          'No cloud AI subscription clock ticks every time you ask a question. Ask ten or ten thousand — the bill is the same. You\'re not renting tokens from anyone.',
+        icon: 'tabler:coin-off',
+      },
+      {
+        title: 'Offline-first capture',
+        description:
+          'Snap a receipt on a plane, in a basement, at a cabin. The agent reads and files immediately. Sync happens later, on your terms, only if you turn it on.',
+        icon: 'tabler:wifi-off',
+      },
+      {
+        title: 'Biometric vault',
+        description:
+          'The vault is encrypted on disk, tied to your device\'s secure enclave, and locked behind Face ID or fingerprint. Lose the phone — the vault stays locked. Erase remotely if you want.',
+        icon: 'tabler:lock-square',
+      },
+      {
+        title: 'No model is trained on your data',
+        description:
+          'We don\'t collect your scans. We can\'t — they\'re not on our servers. There is no anonymized aggregate, no telemetry pipeline carrying document content. Your vault is data we never see.',
+        icon: 'tabler:eye-off',
+      },
+      {
+        title: 'Sovereign, exportable, deletable',
+        description:
+          'Export the vault to your own backup at any time. Delete the app and the vault goes with it. There is no shadow copy in our cloud to chase, because we never had a copy to begin with.',
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  />
+
+  <!-- Use cases — household scenarios -->
+
+  <Content
+    tagline="Built For"
+    title="Moments You Used to Dread"
+    items={[
+      {
+        title: 'Tax season, without the shoebox',
+        description:
+          'Every receipt, every donation, every business expense already captured and categorized. Export the year to your CPA or your tax software in one tap. The week of stress turns into ten minutes on a Sunday.',
+      },
+      {
+        title: 'The warranty claim',
+        description:
+          'The dryer dies six months out of warranty — or is it? Snap a search, the receipt and warranty card surface together. Most people lose the proof. Now you don\'t.',
+      },
+      {
+        title: 'The end-of-month "where did the money go?"',
+        description:
+          '"Why was this month $400 over budget?" The agent breaks it down by category, by vendor, by week. Each number drills to the underlying receipts. The mystery dies.',
+      },
+      {
+        title: 'Splitting bills with roommates or partners',
+        description:
+          'Costco, the gas, the takeout. The agent picks each side\'s items, totals them, and shows the receipt. Settling up turns from a passive-aggressive group chat into a single, sourced number.',
+      },
+      {
+        title: 'Caring for an aging parent',
+        description:
+          'Medical bills, pharmacy receipts, insurance EOBs. Captured by you, organized for you, retrievable by you. When the next claim, audit, or referral needs proof, the proof is already filed.',
+      },
+      {
+        title: 'Kids\' school, sports, and medical',
+        description:
+          'Permission slips. Vaccination records. Sports reimbursements. Field-trip receipts. Captured at the kitchen counter, available the moment the school office asks. No more digging through emails.',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        For Everything You Wish You Hadn't Lost.
+      </h3>
+      The paper trail of a life is bigger than anyone thinks. KEEPEM closes the gap between the moment you held the document and the moment you needed it again.
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="usecase-stream">
+        <div class="stream-row">
+          <span class="stream-vertical stream-vertical-retail">RECEIPT</span>
+          <span class="stream-doc">Best Buy · Mar 12 · $189.00</span>
+          <span class="stream-status stream-status-done">Filed</span>
+        </div>
+        <div class="stream-row">
+          <span class="stream-vertical stream-vertical-hospitality">WARRANTY</span>
+          <span class="stream-doc">LG dishwasher · expires Aug 2027</span>
+          <span class="stream-status stream-status-done">Filed</span>
+        </div>
+        <div class="stream-row">
+          <span class="stream-vertical stream-vertical-field">VET</span>
+          <span class="stream-doc">Banfield · Cooper · annual checkup</span>
+          <span class="stream-status stream-status-done">Filed</span>
+        </div>
+        <div class="stream-row">
+          <span class="stream-vertical stream-vertical-logistics">UTILITY</span>
+          <span class="stream-doc">PG&amp;E · April · up 12% vs Mar</span>
+          <span class="stream-status stream-status-flag">Flagged</span>
+        </div>
+        <div class="stream-row">
+          <span class="stream-vertical stream-vertical-health">MEDICAL</span>
+          <span class="stream-doc">Mom's pharmacy · 4 refills · this month</span>
+          <span class="stream-status stream-status-local">On-device</span>
+        </div>
+        <div class="stream-row">
+          <span class="stream-vertical stream-vertical-pro">SCHOOL</span>
+          <span class="stream-doc">Field trip slip · due Friday</span>
+          <span class="stream-status stream-status-active">Reminder set</span>
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps — the lifecycle from capture to answer -->
+
+  <Steps
+    title="Snap. Forget. Find."
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Snap</span>',
+        description:
+          'Open the app, point at the document, tap. Camera, voice, photo library, or share-sheet from any app on your phone — every entry point lands in the same vault. Three seconds, no typing.',
+        icon: 'tabler:capture',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">The agent reads</span>',
+        description:
+          'On the phone, before you put it down: vendor, amount, date, category, expiry, tax flag. Extracted and filed. You see the structured record immediately and can correct anything that looks off.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Ask anything</span>',
+        description:
+          'Six months later, three years later: "did I keep the receipt for the headphones?" or "how much did I spend on dog food last year?" Plain English, in, sourced answer out.',
+        icon: 'tabler:message-question',
+      },
+      {
+        title: 'Step 4: <span class="font-medium">Export, share, or forget</span>',
+        description:
+          'Hand the year to your CPA. Share the warranty with your spouse. Delete the entire vault when you want. The data is yours — to use, to move, or to walk away from.',
+        icon: 'tabler:share',
+      },
+    ]}
+  />
+
+  <!-- Pricing — Plus / Pro / Ultra -->
+
+  <Pricing
+    id="pricing"
+    title="Three Tiers. You Own the Vault on All of Them."
+    subtitle="The free tier is real software, not a trial. Paid tiers unlock a more capable agent and the cloud-frontier option for the hardest queries — without taking your data off the phone for the on-device tiers."
+    tagline="Pricing"
+    prices={[
+      {
+        title: 'KEEPEM Plus',
+        subtitle: 'For everyday personal use',
+        price: '0',
+        period: 'per month · launch promo',
+        items: [
+          { description: 'On-device AI agent (KEEPEM-Plus-Model)' },
+          { description: 'Snap, classify, file — unlimited' },
+          { description: 'Plain-English search across your vault' },
+          { description: 'Biometric vault, encrypted on disk' },
+          { description: 'Works fully offline' },
+          { description: 'Free through June 30, 2026' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get the app',
+          href: '#download',
+        },
+      },
+      {
+        title: 'KEEPEM Pro',
+        subtitle: 'For households and power users',
+        price: '0',
+        period: 'per month · launch promo',
+        items: [
+          { description: 'Everything in Plus' },
+          { description: 'More capable on-device AI (KEEPEM-Pro-Model)' },
+          { description: 'Custom workflows (e.g. monthly recap, tax pre-pack)' },
+          { description: 'Cross-turn memory and follow-ups' },
+          { description: 'Family-shared folders (each phone holds its copy)' },
+          { description: 'Free through June 30, 2026' },
+        ],
+        hasRibbon: true,
+        ribbonTitle: 'most popular',
+        callToAction: {
+          target: '_blank',
+          text: 'Get the app',
+          href: '#download',
+        },
+      },
+      {
+        title: 'KEEPEM Ultra',
+        subtitle: 'For the hardest queries',
+        price: '14.99',
+        period: 'per month',
+        items: [
+          { description: 'Everything in Pro' },
+          { description: 'Cloud frontier model routing for the hardest queries' },
+          { description: 'You choose which queries leave the device' },
+          { description: 'Long-document reasoning (multi-page contracts, EOBs)' },
+          { description: 'Priority support' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Upgrade to Ultra',
+          href: '#download',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQs -->
+
+  <FAQs
+    title="The Questions People Actually Ask"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Where is my data stored?',
+        description:
+          'On your phone, in an encrypted vault tied to your device\'s secure enclave and locked behind Face ID or fingerprint. The Plus and Pro AI runs on the device too — your scans never leave it. The Ultra tier optionally routes a specific query to a cloud frontier model when you ask it to, and only that query.',
+      },
+      {
+        title: 'Do you train AI on my receipts?',
+        description:
+          'No, and we couldn\'t even if we wanted to — your scans aren\'t on our servers. There is no telemetry pipeline shipping document content out. Read the privacy policy: it\'s short, specific, and matches the architecture.',
+      },
+      {
+        title: 'Does it really work offline?',
+        description:
+          'Yes. Capture, classify, file, search, and answer all run on the phone with no network. Sync (if you turn it on) waits for a connection. Cellular dead zones, planes, and basements are first-class scenarios, not edge cases.',
+      },
+      {
+        title: 'What is the on-device AI good at — and where does Ultra help?',
+        description:
+          'The on-device agent (Plus and Pro tiers) handles vendor extraction, line-item parsing, categorization, plain-English Q&A, and multi-step search across your vault. The Ultra tier adds an opt-in cloud frontier model for the harder cases — multi-page contracts, dense medical EOBs, or queries that span hundreds of documents at once. You decide query by query.',
+      },
+      {
+        title: 'How does the launch promo work?',
+        description:
+          'KEEPEM Plus and KEEPEM Pro are free through June 30, 2026, while we launch on the App Store and Google Play. KEEPEM Ultra is a paid subscription from day one because routing to a cloud frontier model has a real per-query cost we don\'t want to hide.',
+      },
+      {
+        title: 'What happens if I delete the app?',
+        description:
+          'The vault goes with it. There is no shadow copy on our servers to chase. Export to your own backup before you delete if you want to keep the data — that\'s a one-tap operation.',
+      },
+      {
+        title: 'Can I share with my spouse or family?',
+        description:
+          'Yes. Pro and Ultra support family-shared folders. Each person\'s phone holds its own copy of the shared folder; nothing routes through anyone else\'s account or our cloud. The vault stays sovereign even when it\'s shared.',
+      },
+      {
+        title: 'Why not just use ChatGPT or Gemini for this?',
+        description:
+          'Three reasons. (1) Privacy: every prompt and document sent to a cloud AI ends up on someone else\'s server. KEEPEM never sends them. (2) Cost: a per-query meter never stops ticking; on-device is flat. (3) Reliability: no outage, rate limit, or jurisdictional block stops the agent on your phone.',
+      },
+      {
+        title: 'Is there an Android version?',
+        description:
+          'Yes. KEEPEM ships on both iOS and Android. The agent runs on-device on both platforms.',
+      },
+      {
+        title: 'How do I contact support?',
+        description:
+          'Tap "Send Feedback" inside the app, or email us from the Contact page. We respond within one business day. There is no scripted call-center loop — this is a small team that reads every message.',
+      },
+    ]}
+  />
+
+  <!-- Download CTA -->
+
+  <CallToAction
+    id="download"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Download on the App Store',
+        href: '#',
+        icon: 'tabler:brand-apple',
+      },
+      {
+        text: 'Get it on Google Play',
+        href: '#',
+        icon: 'tabler:brand-google-play',
+      },
+    ]}
+    title="Bring Your Paper Life into Your Pocket"
+  >
+    <Fragment slot="subtitle">
+      KEEPEM ships on iOS and Android. The agent runs on your phone. Your vault is yours. By downloading you agree to the
+      <a href="/terms" class="text-accent underline">Terms</a> and the
+      <a href="/keepem-app-privacy" class="text-accent underline">KEEPEM Privacy Policy</a>.
+    </Fragment>
+  </CallToAction>
+</Layout>
+
+<style>
+  /* HERO — consumer split (phone + Q/A) */
+
+  .consumer-hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+  }
+
+  .phone-mock {
+    position: relative;
+    width: 240px;
+    aspect-ratio: 9 / 19.5;
+    background: #0a0a0a;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    box-shadow:
+      0 0 0 2px #1a1a1a,
+      0 24px 48px -12px rgba(0, 0, 0, 0.5),
+      0 0 60px -16px rgba(229, 57, 53, 0.4);
+    flex-shrink: 0;
+  }
+  .phone-notch {
+    position: absolute;
+    top: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 1rem;
+    background: #0a0a0a;
+    border-bottom-left-radius: 0.85rem;
+    border-bottom-right-radius: 0.85rem;
+    z-index: 2;
+  }
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.55rem;
+    overflow: hidden;
+    background: linear-gradient(160deg, #111 0%, #1d0a0a 50%, #0a0a0a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .phone-screen :global(img),
+  .phone-screen :global(video) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .consumer-hero-side {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    width: 360px;
+    max-width: 90vw;
+  }
+
+  .consumer-callout,
+  .consumer-answer {
+    background: linear-gradient(160deg, #0f0f10 0%, #150a0a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.85rem;
+    padding: 0.9rem 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow:
+      0 16px 32px -12px rgba(0, 0, 0, 0.45),
+      0 0 40px -18px rgba(229, 57, 53, 0.35);
+  }
+
+  .consumer-answer {
+    border-color: rgba(229, 57, 53, 0.35);
+  }
+
+  .callout-eyebrow {
+    display: block;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .consumer-answer .callout-eyebrow {
+    color: #e53935;
+  }
+
+  .callout-text {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #fff;
+    line-height: 1.45;
+  }
+
+  .callout-text strong {
+    color: #ffb1ad;
+    font-weight: 700;
+  }
+
+  .consumer-cite {
+    margin-top: 0.55rem;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.35rem;
+    display: inline-block;
+  }
+
+  .consumer-bridge {
+    align-self: center;
+    width: 4px;
+    height: 28px;
+    background: linear-gradient(180deg, rgba(229, 57, 53, 0.1) 0%, rgba(229, 57, 53, 0.7) 50%, rgba(229, 57, 53, 0.1) 100%);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .consumer-bridge-pulse {
+    position: absolute;
+    top: -25%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.9);
+    animation: consumerBridge 2.4s linear infinite;
+  }
+  @keyframes consumerBridge {
+    0% { top: -25%; }
+    100% { top: 110%; }
+  }
+
+  /* PARADIGM compare */
+
+  .consumer-compare {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+    width: 100%;
+  }
+  .consumer-compare-card {
+    border-radius: 0.85rem;
+    padding: 1.5rem 1.6rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    box-shadow: 0 16px 32px -12px rgba(0, 0, 0, 0.4);
+  }
+  .consumer-compare-old {
+    background: linear-gradient(160deg, #1c1c1c 0%, #0f0f0f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    opacity: 0.85;
+  }
+  .consumer-compare-new {
+    background: linear-gradient(160deg, #2a0a0a 0%, #160505 100%);
+    border: 1px solid rgba(229, 57, 53, 0.35);
+    box-shadow:
+      0 16px 32px -12px rgba(0, 0, 0, 0.4),
+      0 0 40px -16px rgba(229, 57, 53, 0.5);
+  }
+  .paradigm-eyebrow {
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+  .consumer-compare-new .paradigm-eyebrow { color: #e53935; }
+  .consumer-compare-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .consumer-compare-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.4rem 0 0;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.95;
+  }
+  .consumer-compare-card ul strong {
+    color: #fff;
+    font-weight: 600;
+  }
+  .consumer-compare-new ul strong {
+    color: #ffb1ad;
+  }
+  .consumer-compare-arrow {
+    align-self: center;
+    color: #e53935;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+    text-shadow: 0 0 16px rgba(229, 57, 53, 0.6);
+    animation: arrowSlideDown 2.4s ease-in-out infinite;
+  }
+  @keyframes arrowSlideDown {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(5px); }
+  }
+
+  /* THINKING PANEL — agentic search visualisation */
+
+  .thinking-panel-mock {
+    background: linear-gradient(160deg, #0f0f10 0%, #150a0a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.85rem;
+    padding: 1.25rem;
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow:
+      0 24px 48px -12px rgba(0, 0, 0, 0.5),
+      0 0 60px -16px rgba(229, 57, 53, 0.25);
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+  .tp-question {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.6rem 0.8rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .tp-prompt { color: #e53935; font-weight: 700; }
+  .tp-text { color: #fff; font-size: 0.92rem; font-weight: 500; }
+
+  .tp-thinking {
+    border-left: 2px solid #e53935;
+    padding: 0.4rem 0.8rem;
+    margin: 0 0 0.9rem 0.4rem;
+    background: rgba(229, 57, 53, 0.04);
+    border-radius: 0 0.4rem 0.4rem 0;
+  }
+  .tp-eyebrow {
+    font-size: 0.65rem;
+    color: #e53935;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .tp-reasoning {
+    margin: 0;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+  }
+
+  .tp-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .tp-step {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.45rem 0.7rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+  }
+  .tp-step-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .tp-step-done { color: rgba(255, 255, 255, 0.85); }
+  .tp-step-done .tp-step-icon {
+    background: rgba(40, 200, 64, 0.18);
+    color: #28c840;
+  }
+  .tp-step-active {
+    background: rgba(229, 57, 53, 0.08);
+    color: #fff;
+  }
+  .tp-step-active .tp-step-icon {
+    background: rgba(229, 57, 53, 0.2);
+    border: 2px solid #e53935;
+    border-top-color: transparent;
+    animation: tpSpin 0.9s linear infinite;
+  }
+  .tp-spinner { font-size: 0; }
+  @keyframes tpSpin {
+    to { transform: rotate(360deg); }
+  }
+  .tp-step-label {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem;
+  }
+
+  .tp-answer {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(229, 57, 53, 0.25);
+    border-radius: 0.5rem;
+    padding: 0.8rem 0.9rem;
+  }
+  .tp-answer p {
+    margin: 0 0 0.55rem 0;
+    font-size: 0.88rem;
+    color: #fff;
+  }
+  .tp-answer strong {
+    color: #ffb1ad;
+    font-weight: 700;
+  }
+  .tp-citations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .tp-cite {
+    font-size: 0.7rem;
+    padding: 0.18rem 0.5rem;
+    background: rgba(229, 57, 53, 0.12);
+    border: 1px solid rgba(229, 57, 53, 0.3);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: ui-monospace, SFMono-Regular, monospace;
+  }
+  .tp-cite-more {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  /* USE CASE stream */
+
+  .usecase-stream {
+    background: #0d0d0d;
+    border-radius: 0.85rem;
+    padding: 1rem 1.1rem 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow:
+      0 0 0 1px #1a1a1a,
+      0 24px 48px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  .stream-row {
+    display: grid;
+    grid-template-columns: 84px 1fr auto;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.55rem 0.7rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.45rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+  }
+  .stream-vertical {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    padding: 0.22rem 0.4rem;
+    border-radius: 0.3rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .stream-vertical-retail      { color: #ffb1ad; border-color: rgba(229,57,53,0.25); }
+  .stream-vertical-hospitality { color: #ffd6a4; border-color: rgba(255,170,80,0.22); }
+  .stream-vertical-field       { color: #c5d8ff; border-color: rgba(120,160,255,0.22); }
+  .stream-vertical-logistics   { color: #ffe098; border-color: rgba(255,200,90,0.22); }
+  .stream-vertical-health      { color: #b9f0c5; border-color: rgba(110,210,140,0.22); }
+  .stream-vertical-pro         { color: #d8c0ff; border-color: rgba(170,130,255,0.22); }
+
+  .stream-doc {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .stream-status {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .stream-status-done {
+    background: rgba(40, 200, 64, 0.15);
+    color: #6fdc88;
+    border: 1px solid rgba(40, 200, 64, 0.3);
+  }
+  .stream-status-active {
+    background: rgba(229, 57, 53, 0.12);
+    color: #ffb1ad;
+    border: 1px solid rgba(229, 57, 53, 0.35);
+    animation: streamPulse 1.4s ease-in-out infinite;
+  }
+  .stream-status-flag {
+    background: rgba(255, 188, 46, 0.12);
+    color: #ffd57a;
+    border: 1px solid rgba(255, 188, 46, 0.3);
+  }
+  .stream-status-local {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  @keyframes streamPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.35; }
+  }
+
+  /* Responsive */
+
+  @media (max-width: 768px) {
+    .consumer-hero-wrapper {
+      flex-direction: column;
+    }
+    .consumer-hero-side {
+      width: 100%;
+    }
+  }
+</style>

@@ -23,8 +23,12 @@ export const headerData = {
       text: 'Products',
       links: [
         {
-          text: 'KEEPEM — Agentic Vault',
+          text: 'KEEPEM for B2B',
           href: getPermalink('/keepem'),
+        },
+        {
+          text: 'KEEPEM for Consumers',
+          href: getPermalink('/keepem-app'),
         },
       ],
     },
@@ -57,7 +61,8 @@ export const footerData = {
     {
       title: 'Products',
       links: [
-        { text: 'KEEPEM — Agentic Vault', href: getPermalink('/keepem') },
+        { text: 'KEEPEM for B2B', href: getPermalink('/keepem') },
+        { text: 'KEEPEM for Consumers', href: getPermalink('/keepem-app') },
       ],
     },
     {
