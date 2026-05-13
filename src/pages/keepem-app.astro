@@ -21,7 +21,7 @@ const metadata = {
   <Hero
     tagline="KEEPEM for Consumers · A Personal AI Vault"
     title="Your receipts, warranties, IDs, and bills. <span class='text-accent'>Found before you ask.</span>"
-    subtitle="KEEPEM is a personal AI agent that lives on your phone. It reads every receipt, warranty card, tax form, and household bill the moment you snap it. It files them. It finds them. It answers questions about them in plain English. Nothing leaves the device unless you say so. No cloud subscription clock ticking on every query. No company training a model on your life. Your vault is yours."
+    subtitle="KEEPEM is a personal AI agent that lives on your phone. It reads every receipt, warranty card, tax form, and household bill the moment you snap it. It files them. It finds them. It answers questions about them in plain English. The everyday agent runs on-device with no metered cloud bill; KEEPEM Ultra adds an opt-in route to a frontier cloud model for the queries that truly need it — query by query, your call. No company training a model on your life. Your vault is yours."
     actions={[
       { variant: 'primary', text: 'Get it on the App Store', href: '#download', icon: 'tabler:brand-apple' },
       { text: 'Get it on Google Play', href: '#download', icon: 'tabler:brand-google-play' },
@@ -39,7 +39,7 @@ const metadata = {
         <div class="consumer-hero-side">
           <div class="consumer-callout">
             <span class="callout-eyebrow">You · last Tuesday</span>
-            <p class="callout-text">"Did I keep the receipt for the headphones I returned?"</p>
+            <p class="callout-text">"Did I keep the receipt for the drill I returned?"</p>
           </div>
           <div class="consumer-bridge" aria-hidden="true">
             <span class="consumer-bridge-pulse"></span>
@@ -47,7 +47,7 @@ const metadata = {
           <div class="consumer-answer">
             <span class="callout-eyebrow">KEEPEM · 0.4s on device</span>
             <p class="callout-text">
-              Yes. <strong>Best Buy · Mar 12 · $189.00</strong>. Returned Mar 19; refund posted to Visa ending 4421.
+              Yes. <strong>Home Depot · Mar 12 · $189.00</strong>. Returned Mar 19; refund posted to Visa ending 4421.
             </p>
             <div class="consumer-cite">📄 receipt-2026-03-12.jpg</div>
           </div>
@@ -60,9 +60,9 @@ const metadata = {
 
   <Stats
     stats={[
-      { amount: '0 bytes', title: 'Documents sent to anyone else\'s cloud', icon: 'tabler:cloud-off' },
-      { amount: 'On-device', title: 'The AI lives on your phone, not on a server', icon: 'tabler:device-mobile' },
-      { amount: 'Offline', title: 'Works on a plane, in a basement, off-grid', icon: 'tabler:wifi-off' },
+      { amount: 'On-device', title: 'The everyday AI agent runs on your phone, not a server', icon: 'tabler:device-mobile' },
+      { amount: 'Opt-in', title: 'Cloud routing only when you ask — Ultra, query by query', icon: 'tabler:cloud-check' },
+      { amount: 'Offline', title: 'Capture and answer work on a plane, in a basement, off-grid', icon: 'tabler:wifi-off' },
       { amount: 'Yours', title: 'Your vault is yours — exportable, deletable, sovereign', icon: 'tabler:shield-lock' },
     ]}
   />
@@ -82,17 +82,17 @@ const metadata = {
       {
         title: 'The cloud-AI era.',
         description:
-          'You started photographing things. You uploaded them somewhere. A subscription clock started ticking on every query. Your most personal documents went to someone else\'s server to be searched, summarized — and indexed by a model you don\'t control.',
+          'You started photographing things. You uploaded them somewhere. A meter started clicking on every question, easy ones included. Your most personal documents went to someone else\'s server to be searched, summarized — and indexed by a model you don\'t control.',
       },
       {
         title: 'The on-device agent era.',
         description:
-          'Snap. The agent reads it the moment the shutter closes. Vendor, amount, date, category, tax flag — captured on your phone, by your phone. Ask anything later, in plain English. The agent already organized it. No subscription clock. No upload. No leak.',
+          'Snap. The agent reads it the moment the shutter closes. Vendor, amount, date, category, tax flag — captured on your phone, by your phone. Ask anything later, in plain English. The everyday work runs locally. When a query truly needs frontier reasoning, KEEPEM Ultra routes it to the cloud only when you opt in — never by default.',
       },
       {
-        title: 'You don\'t pay per question.',
+        title: 'You decide which questions leave the device.',
         description:
-          'KEEPEM\'s agent runs on the phone you already own. Ask it ten questions or ten thousand. The bill doesn\'t move. There is no per-token meter, because there is no token meter. The math finally favors you.',
+          'KEEPEM\'s everyday agent runs on the phone you already own. Ask the on-device tier ten questions or ten thousand and the bill doesn\'t move. KEEPEM Ultra adds an opt-in cloud route for the hardest queries — metered, but reserved for when you ask for it. The math finally favors you, and you stay in control of the boundary.',
       },
     ]}
   >
@@ -234,7 +234,7 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Plain English In. Receipts Out.
       </h3>
-      Keyword search retrieves files. Cloud chatbots send your private documents to a server. KEEPEM does something neither does: it reasons across your vault, in multiple steps, on your phone, and shows you exactly which scans it read.
+      Keyword search retrieves files. Cloud chatbots send every prompt and document to a server by default. KEEPEM does something neither does: the everyday agent reasons across your vault in multiple steps on the device, and the cloud frontier model is opt-in for the queries that truly need it — with sources shown either way.
     </Fragment>
 
     <Fragment slot="image">
@@ -295,21 +295,21 @@ const metadata = {
 
   <Features2
     id="privacy"
-    tagline="Privacy by Physics"
-    title="Your Documents Don't Leave the Phone. Not by Policy. By Design."
-    subtitle="Every other AI app you've used asks you to trust a cloud. KEEPEM doesn't ask, because there is nothing to trust — the model runs on your device, the vault lives on your device, the answers come from your device. The architecture is the promise."
+    tagline="Privacy by Design"
+    title="On-Device by Default. The Cloud Is Yours to Opt Into."
+    subtitle="Every other AI app you've used assumes the cloud. KEEPEM flips the default — the everyday agent runs on the device that holds your vault, so nothing has to leave to get a useful answer. When you do want a frontier-grade model on a hard query, the KEEPEM Ultra tier routes that specific question to the cloud, only after you say so. The boundary is yours to draw."
     columns={2}
     items={[
       {
-        title: 'The AI lives on your phone',
+        title: 'The everyday AI lives on your phone',
         description:
-          'KEEPEM\'s agent is a model that ships inside the app. It reads, classifies, and answers on the CPU and GPU in your pocket. There is no API call, no remote inference, no third-party AI vendor reading your scans.',
+          'KEEPEM\'s default agent (Plus and Pro) is a model that ships inside the app. It reads, classifies, and answers on the CPU and GPU in your pocket — no API call, no remote inference, no third party reading your scans.',
         icon: 'tabler:cpu',
       },
       {
-        title: 'Zero per-query meter',
+        title: 'Flat on the everyday. Metered only when you say so.',
         description:
-          'No cloud AI subscription clock ticks every time you ask a question. Ask ten or ten thousand — the bill is the same. You\'re not renting tokens from anyone.',
+          'Ask the on-device tier ten questions or ten thousand and the bill doesn\'t move. KEEPEM Ultra adds an opt-in cloud route for the hardest queries — you see a prompt before any data leaves the device, and you decide query by query.',
         icon: 'tabler:coin-off',
       },
       {
@@ -388,7 +388,7 @@ const metadata = {
       <div class="usecase-stream">
         <div class="stream-row">
           <span class="stream-vertical stream-vertical-retail">RECEIPT</span>
-          <span class="stream-doc">Best Buy · Mar 12 · $189.00</span>
+          <span class="stream-doc">Home Depot · Mar 12 · $189.00</span>
           <span class="stream-status stream-status-done">Filed</span>
         </div>
         <div class="stream-row">
@@ -444,7 +444,7 @@ const metadata = {
       {
         title: 'Step 3: <span class="font-medium">Ask anything</span>',
         description:
-          'Six months later, three years later: "did I keep the receipt for the headphones?" or "how much did I spend on dog food last year?" Plain English, in, sourced answer out.',
+          'Six months later, three years later: "did I keep the receipt for the drill?" or "how much did I spend on dog food last year?" Plain English, in, sourced answer out.',
         icon: 'tabler:message-question',
       },
       {
@@ -570,7 +570,7 @@ const metadata = {
       {
         title: 'Why not just use ChatGPT or Gemini for this?',
         description:
-          'Three reasons. (1) Privacy: every prompt and document sent to a cloud AI ends up on someone else\'s server. KEEPEM never sends them. (2) Cost: a per-query meter never stops ticking; on-device is flat. (3) Reliability: no outage, rate limit, or jurisdictional block stops the agent on your phone.',
+          'Three reasons. (1) Privacy: a general cloud chatbot sends every prompt and document to a server by default. KEEPEM doesn\'t — the everyday agent runs on the device, and the Ultra cloud route is opt-in per query. (2) Cost: a per-query meter on a cloud-only app never stops ticking; KEEPEM\'s on-device tiers are flat, with Ultra metered only for the queries you decide to send. (3) Reliability: outages, rate limits, and jurisdictional blocks don\'t stop the agent on your phone.',
       },
       {
         title: 'Is there an Android version?',
