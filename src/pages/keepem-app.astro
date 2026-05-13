@@ -460,22 +460,39 @@ const metadata = {
 
   <Pricing
     id="pricing"
-    title="Three Tiers. You Own the Vault on All of Them."
-    subtitle="The free tier is real software, not a trial. Paid tiers unlock a more capable agent and the cloud-frontier option for the hardest queries — without taking your data off the phone for the on-device tiers."
+    title="Four Tiers. You Own the Vault on All of Them."
+    subtitle="Basic is free forever — instant OCR for receipts you just want digitized. Plus and Pro unlock a real on-device AI agent. Ultra adds a cloud frontier model for the hardest queries, sold as prepaid bundles so you never get a surprise monthly bill."
     tagline="Pricing"
     prices={[
       {
-        title: 'KEEPEM Plus',
-        subtitle: 'For everyday personal use',
+        title: 'KEEPEM Basic',
+        subtitle: 'Free forever · OCR-only',
         price: '0',
-        period: 'per month · launch promo',
+        period: 'forever',
         items: [
-          { description: 'On-device AI agent (KEEPEM-Plus-Model)' },
-          { description: 'Snap, classify, file — unlimited' },
-          { description: 'Plain-English search across your vault' },
+          { description: 'Instant on-device OCR for receipts and documents' },
           { description: 'Biometric vault, encrypted on disk' },
+          { description: 'Plain text search across captured documents' },
           { description: 'Works fully offline' },
-          { description: 'Free through June 30, 2026' },
+          { description: 'Runs on any phone, no AI agent required' },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get the app',
+          href: '#download',
+        },
+      },
+      {
+        title: 'KEEPEM Plus',
+        subtitle: 'On-device AI agent',
+        price: '0',
+        period: 'free thru Jun 30, 2026 · paid after',
+        items: [
+          { description: 'Everything in Basic' },
+          { description: 'On-device AI agent (KEEPEM-Plus-Model)' },
+          { description: 'Plain-English search across your vault' },
+          { description: 'Auto-classification, categories, expiry dates' },
+          { description: 'Works fully offline' },
         ],
         callToAction: {
           target: '_blank',
@@ -485,16 +502,15 @@ const metadata = {
       },
       {
         title: 'KEEPEM Pro',
-        subtitle: 'For households and power users',
+        subtitle: 'More capable on-device AI',
         price: '0',
-        period: 'per month · launch promo',
+        period: 'free thru Jun 30, 2026 · paid after',
         items: [
           { description: 'Everything in Plus' },
           { description: 'More capable on-device AI (KEEPEM-Pro-Model)' },
           { description: 'Custom workflows (e.g. monthly recap, tax pre-pack)' },
           { description: 'Cross-turn memory and follow-ups' },
           { description: 'Family-shared folders (each phone holds its copy)' },
-          { description: 'Free through June 30, 2026' },
         ],
         hasRibbon: true,
         ribbonTitle: 'most popular',
@@ -506,19 +522,20 @@ const metadata = {
       },
       {
         title: 'KEEPEM Ultra',
-        subtitle: 'For the hardest queries',
-        price: '14.99',
-        period: 'per month',
+        subtitle: 'Pay-as-you-go cloud frontier',
+        price: '9.99',
+        period: 'starter bundle · prepaid Ultra queries',
         items: [
           { description: 'Everything in Pro' },
-          { description: 'Cloud frontier model routing for the hardest queries' },
+          { description: 'Prepaid bundles — no monthly subscription, no auto-renew' },
+          { description: 'Cloud frontier model for the hardest queries' },
           { description: 'You choose which queries leave the device' },
+          { description: 'Bundles top up in-app whenever you want' },
           { description: 'Long-document reasoning (multi-page contracts, EOBs)' },
-          { description: 'Priority support' },
         ],
         callToAction: {
           target: '_blank',
-          text: 'Upgrade to Ultra',
+          text: 'Get an Ultra bundle',
           href: '#download',
         },
       },
@@ -535,27 +552,32 @@ const metadata = {
       {
         title: 'Where is my data stored?',
         description:
-          'On your phone, in an encrypted vault tied to your device\'s secure enclave and locked behind Face ID or fingerprint. The Plus and Pro AI runs on the device too — your scans never leave it. The Ultra tier optionally routes a specific query to a cloud frontier model when you ask it to, and only that query.',
+          'On your phone, in an encrypted vault tied to your device\'s secure enclave and locked behind Face ID or fingerprint. The Basic, Plus, and Pro tiers all process documents on-device — your scans never leave the phone. The Ultra tier optionally routes a specific query to a cloud frontier model when you ask it to, and only that query.',
       },
       {
         title: 'Do you train AI on my receipts?',
         description:
-          'No, and we couldn\'t even if we wanted to — your scans aren\'t on our servers. There is no telemetry pipeline shipping document content out. Read the privacy policy: it\'s short, specific, and matches the architecture.',
+          'No. On Basic, Plus, and Pro we can\'t even if we wanted to — your scans aren\'t on our servers. On Ultra, the third-party frontier-model provider runs inference under enterprise terms that prohibit training on customer content. Read the privacy policy: it\'s specific and matches the architecture.',
       },
       {
         title: 'Does it really work offline?',
         description:
-          'Yes. Capture, classify, file, search, and answer all run on the phone with no network. Sync (if you turn it on) waits for a connection. Cellular dead zones, planes, and basements are first-class scenarios, not edge cases.',
+          'Yes — on Basic, Plus, and Pro, capture, classify, file, search, and answer all run on the phone with no network. The Ultra cloud route is the one thing that requires connectivity, and it\'s opt-in. Cellular dead zones, planes, and basements are first-class scenarios on every other tier.',
       },
       {
-        title: 'What is the on-device AI good at — and where does Ultra help?',
+        title: 'What\'s the difference between Basic, Plus, Pro, and Ultra?',
         description:
-          'The on-device agent (Plus and Pro tiers) handles vendor extraction, line-item parsing, categorization, plain-English Q&A, and multi-step search across your vault. The Ultra tier adds an opt-in cloud frontier model for the harder cases — multi-page contracts, dense medical EOBs, or queries that span hundreds of documents at once. You decide query by query.',
+          'Basic is free forever — instant OCR for receipts you just want digitized, no AI agent. Plus and Pro add the on-device AI agent: Plus uses KEEPEM-Plus-Model for everyday parsing and search; Pro uses the more capable KEEPEM-Pro-Model for richer reasoning, custom workflows, and follow-up conversations. Ultra layers a cloud frontier model on top for the hardest queries, sold as prepaid bundles.',
+      },
+      {
+        title: 'How does Ultra pricing work?',
+        description:
+          'Ultra is **not** a monthly subscription. It\'s a prepaid bundle of cloud-frontier queries — you buy a bundle (starter is $9.99), use it whenever a query genuinely needs the frontier model, and top up when you want. No auto-renew, no surprise monthly charge, no risk of an open meter. You only pay for what you actually use.',
       },
       {
         title: 'How does the launch promo work?',
         description:
-          'KEEPEM Plus and KEEPEM Pro are free through June 30, 2026, while we launch on the App Store and Google Play. KEEPEM Ultra is a paid subscription from day one because routing to a cloud frontier model has a real per-query cost we don\'t want to hide.',
+          'KEEPEM Basic is free forever. KEEPEM Plus and KEEPEM Pro are free through June 30, 2026, while we launch on the App Store and Google Play; after that they become paid subscriptions. KEEPEM Ultra is a prepaid bundle from day one — buy a bundle when you want frontier-grade reasoning, and you only pay for the queries you actually use.',
       },
       {
         title: 'What happens if I delete the app?',
@@ -570,7 +592,7 @@ const metadata = {
       {
         title: 'Why not just use ChatGPT or Gemini for this?',
         description:
-          'Three reasons. (1) Privacy: a general cloud chatbot sends every prompt and document to a server by default. KEEPEM doesn\'t — the everyday agent runs on the device, and the Ultra cloud route is opt-in per query. (2) Cost: a per-query meter on a cloud-only app never stops ticking; KEEPEM\'s on-device tiers are flat, with Ultra metered only for the queries you decide to send. (3) Reliability: outages, rate limits, and jurisdictional blocks don\'t stop the agent on your phone.',
+          'Three reasons. (1) Privacy: a general cloud chatbot sends every prompt and document to a server by default. KEEPEM doesn\'t — the on-device tiers (Basic / Plus / Pro) keep everything on the device, and Ultra\'s cloud route is opt-in per query. (2) Cost: a cloud-only app meters every prompt on an open monthly bill; KEEPEM\'s on-device tiers are flat, and Ultra is prepaid bundles — you can\'t accidentally rack up a surprise charge. (3) Reliability: outages, rate limits, and jurisdictional blocks don\'t stop the on-device agent.',
       },
       {
         title: 'Is there an Android version?',
