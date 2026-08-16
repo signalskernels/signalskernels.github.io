@@ -87,10 +87,10 @@ KEEPEM requests the following device permissions, used only as described:
 
 - **Camera:** to capture documents you choose to add to your vault. Images are processed on the device.
 - **Photo library:** to import existing photos of documents you choose. Same on-device processing.
-- **Microphone:** for voice notes, transcribed on the device by the platform speech recognizer.
+- **Microphone:** while you dictate text notes. The platform speech recognizer handles transcription; KEEPEM stores the transcript and does not retain a recording of the dictated audio.
 - **Biometric (Face ID / Touch ID / fingerprint):** to unlock the encrypted vault.
 - **Notifications:** for model-download progress and any reminders you set. You can disable this.
-- **Internet:** to download the on-device AI model once, verify purchases with Apple or Google, and — only if you opt in — back up or share to your own cloud account.
+- **Internet:** to download the on-device AI model once, verify Android purchases with Google Play, and — only if you opt in — back up or share to your own cloud account.
 
 You can revoke any of these permissions in your device's settings at any time.
 
