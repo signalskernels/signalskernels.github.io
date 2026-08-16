@@ -3,7 +3,7 @@ title: 'KEEPEM App Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: May 31, 2026
+_Last updated_: August 15, 2026
 
 This Privacy Policy describes how the **KEEPEM** mobile application ("KEEPEM," "the App," "we," "us," "our") handles information. KEEPEM is published by **Signals Kernels AI LLC** ("the Company").
 
@@ -15,8 +15,8 @@ KEEPEM is a **local-first, on-device** document vault. The Basic, Plus, and Pro 
 - **We operate no servers that receive or store your documents,** and we cannot read your vault.
 - **We use no analytics or crash-reporting SDKs.** No third-party analytics, no Crashlytics, no Sentry. Diagnostic logs for failed steps are stored locally and shown only to you, in the App.
 - **We do not train any model on your documents.** The on-device tiers run locally; we never receive your content.
-- **Optional backup and sharing go to _your own_ cloud account** (your Google Drive or iCloud), encrypted on your device before they upload. We are not the backup destination and cannot read the contents.
-- **The only information that leaves your device** is what you explicitly opt into (backup or sharing to your own account) plus purchase confirmations from Apple or Google.
+- **Optional backup and sharing go to _your own Google Drive_,** encrypted on your device before upload. We are not the backup destination and cannot read the vault contents.
+- **Paid access is verified server-side.** The Android App sends an opaque Google Play purchase token and product identifier to our Cloudflare-hosted verification endpoint, which checks status and expiry with Google Play. No document content is included.
 - **You can export your vault and delete the App to delete the vault.** There is no shadow copy on our servers.
 
 > A future **"Ultra"** tier may add opt-in cloud processing for complex queries. **Ultra is not active in this release.** If it ships, this policy will be updated first, the feature will be opt-in per query, and the third-party model provider will be disclosed before any content can leave your device.
@@ -26,25 +26,27 @@ KEEPEM is a **local-first, on-device** document vault. The Basic, Plus, and Pro 
 When you use KEEPEM, the following information is created and stored **locally on your device**:
 
 - **Documents you capture:** photos of receipts, warranties, IDs, bills, tax forms, and any other documents you scan into the App.
-- **Structured data extracted on the device:** vendor, amount, date, category, line items, expiry dates, and similar fields. On **Basic** this is produced by on-device OCR. On **Plus** and **Pro** it is produced by the on-device AI agent (the KEEPEM-Plus-Model or KEEPEM-Pro-Model bundled inside the App).
+- **Structured data extracted on the device:** vendor, amount, date, category, line items, expiry dates, and similar fields. On **Basic** this is produced by on-device OCR. On **Plus** and **Pro** it is produced by a public Gemma model downloaded during setup and run locally.
 - **Your queries and the agent's answers** to questions asked of your vault.
 - **App settings, preferences, and folder structure.**
 
-This data is stored in an encrypted vault on your device, protected by a key derived from your PIN/pattern (PBKDF2-HMAC-SHA256, 600,000 iterations) or a random key in the device secure enclave (biometric mode), with the database encrypted via SQLCipher and files via AES-256-GCM. **We do not have access to this data.** It is not transmitted to our servers and is not transmitted to any third party, except in the optional, user-initiated backup/sharing scenarios in Section 2.
+This data is stored in an encrypted vault on your device, protected by a key derived from your PIN (PBKDF2-HMAC-SHA256, 600,000 iterations) or a random key protected by the device Keystore (biometric mode), with the database encrypted via SQLCipher and files via AES-256-GCM. **We do not have access to this data.** It is not transmitted to our servers and is not transmitted to any third party, except in the optional, user-initiated backup/sharing scenarios in Section 2.
 
 If you uninstall the App, the on-device vault is deleted with it.
 
 ## 2. Information KEEPEM Sends Off Your Device
 
-KEEPEM sends nothing off your device except the items below, all of which you control.
+KEEPEM sends nothing off your device except the limited items below.
 
-### 2.1 Purchase Status (Apple and Google)
+### 2.1 Google Play Subscription Verification
 
-If you subscribe to a paid tier — **Plus** or **Pro** (each offered with a free trial, then an auto-renewing monthly or annual price) — the purchase is processed by **Apple (App Store)** or **Google (Google Play)** under their respective terms. We receive confirmation of the purchase from Apple or Google so the App can unlock the corresponding tier. We do **not** receive your payment card details. Refunds, cancellations, and billing disputes are handled by Apple or Google.
+If you subscribe to **Plus** or **Pro** on Android, Google Play processes the purchase under its terms. The App sends the Google Play product identifier, store source, and opaque purchase token to a Signals Kernels endpoint hosted on Cloudflare Workers. That endpoint asks the Google Play Android Publisher API whether the subscription is authentic, active, and when it expires. It processes the token transiently and does not store it in an application database or associate it with a KEEPEM account. Cloudflare and Google may process standard network and service logs under their own terms.
+
+No receipt images, OCR text, extracted document fields, voice notes, prompts, or AI responses are included. We do **not** receive your payment card details. Refunds, cancellations, and billing disputes are handled by Google Play.
 
 ### 2.2 Optional Cloud Backup and Sharing (to your own account)
 
-Cloud backup and cloud sharing are **off by default**. If you enable them, the App connects to **your own** cloud storage account to back up your vault or share specific documents with people you choose. We do not operate the backup destination — your cloud storage provider does, under their own terms and privacy policy. Backups are encrypted on your device before they upload, so your cloud provider cannot read their contents.
+Cloud backup and cloud sharing are **off by default**. If you enable them, the Android App connects to **your own Google Drive** account to back up your vault or share specific documents with people you choose. We do not operate the backup destination — Google does, under its own terms and privacy policy. Backups are encrypted on your device before they upload.
 
 #### 2.2.1 Google Drive Integration
 
@@ -62,11 +64,11 @@ If you connect a Google account, KEEPEM uses Google Drive in two narrowly scoped
 
 KEEPEM's use of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the **Limited Use** requirements.
 
-**Retention and deletion.** Drive data persists in your Google account for as long as you keep it there. You can revoke Google Drive access in the App (**Settings → Backup → Disconnect**), which deletes the app-data folder KEEPEM created; revoke KEEPEM's access entirely at [myaccount.google.com/permissions](https://myaccount.google.com/permissions); or delete individual shared files directly in Drive. Uninstalling the App does **not** automatically delete Drive content.
+**Retention and deletion.** Drive data persists in your Google account for as long as you keep it there. Disconnecting in **Settings → Backup** stops future KEEPEM backup and signs the App out; it does **not** delete an existing backup. You can revoke KEEPEM's access at [myaccount.google.com/permissions](https://myaccount.google.com/permissions) and remove KEEPEM data or shared files from your Google Drive account. Uninstalling the App does **not** automatically delete Drive content.
 
-#### 2.2.2 iCloud Drive (iOS)
+#### 2.2.2 iCloud
 
-If you enable iCloud backup on iOS, KEEPEM backs up your encrypted vault to your own iCloud account. The vault is encrypted with a key derived on your device; we cannot read its contents. Apple operates iCloud under its own terms. You can disable iCloud backup in the App's settings or in iOS Settings.
+iCloud backup is not active in the Android release covered by this update. The policy will be revised before an iOS backup implementation ships.
 
 ### 2.3 Support Communications
 
@@ -99,7 +101,7 @@ You can revoke any of these permissions in your device's settings at any time.
 - **On-device data** is retained on your device until you delete it in the App or uninstall the App.
 - **We retain no analytics or crash data**, because we collect none.
 - **Purchase receipts** are retained by Apple or Google under their own policies; we keep only the entitlement state needed to unlock your tier.
-- **Backups in your own Google Drive / iCloud** persist until you delete them; you control them in your own account.
+- **Backups in your own Google Drive** persist until you delete them; you control them in your own account.
 - **Support communications** are retained for as long as needed to resolve your inquiry and a reasonable period thereafter.
 
 ## 6. Your Rights and Choices
@@ -114,20 +116,20 @@ KEEPEM is not directed to children under 13 (or under 16 in the EEA / UK, where 
 
 ## 8. Security
 
-The on-device vault is encrypted at rest and protected by your PIN/pattern or biometric authentication. Optional backups are encrypted on your device before upload and transmitted over TLS to your own cloud account. KEEPEM uses standard AES-256 cryptography (declared as mass-market exempt in the applicable store submission).
+The on-device vault is encrypted at rest and protected by your PIN or optional biometric authentication. Optional backups are encrypted on your device before upload and transmitted over TLS to your own Google Drive account. KEEPEM uses standard AES-256 cryptography (declared as mass-market exempt in the applicable store submission).
 
 No security measure is perfect. If you suspect your device has been compromised, lock or wipe it through your device's "Find My" features; the vault is bound to the device and cannot be unlocked elsewhere.
 
 ## 9. International Users
 
-KEEPEM is operated from the United States. The contents of your vault remain on your device wherever you are. The limited data we receive (support correspondence, purchase confirmations) is processed in the United States.
+KEEPEM is operated from the United States. The contents of your vault remain on your device wherever you are. Support correspondence is processed in the United States. Subscription verification may be processed by Cloudflare and Google in regions where they operate.
 
 ## 10. Third Parties
 
 The following third parties are involved in operating the App:
 
-- **Apple, Inc.** — App Store distribution, in-app purchase processing for iOS users, optional iCloud backup.
-- **Google LLC** — Google Play distribution, in-app purchase processing for Android users, and optional Google Drive integration scoped to KEEPEM's app-data folder and files you explicitly share with KEEPEM (see Section 2.2.1).
+- **Google LLC** — Google Play distribution and subscription status, plus optional Google Drive integration scoped to KEEPEM's app-data folder and files you explicitly share with KEEPEM (see Section 2.2.1).
+- **Cloudflare, Inc.** — hosts the stateless subscription-verification endpoint. It receives the opaque Play token and product ID but no document content.
 - **Hugging Face** — the on-device AI model weights are downloaded once from Hugging Face's CDN. Only standard HTTP metadata (IP, User-Agent) is observed during that download; no personal data is sent.
 
 We use **no** analytics provider and **no** crash-reporting provider. We update this list when the third parties change.
