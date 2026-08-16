@@ -3,7 +3,7 @@ title: 'KEEPEM App Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: August 15, 2026
+_Last updated_: August 16, 2026
 
 This Privacy Policy describes how the **KEEPEM** mobile application ("KEEPEM," "the App," "we," "us," "our") handles information. KEEPEM is published by **Signals Kernels AI LLC** ("the Company").
 
@@ -16,7 +16,7 @@ KEEPEM is a **local-first, on-device** document vault. The Basic, Plus, and Pro 
 - **We use no analytics or crash-reporting SDKs.** No third-party analytics, no Crashlytics, no Sentry. Diagnostic logs for failed steps are stored locally and shown only to you, in the App.
 - **We do not train any model on your documents.** The on-device tiers run locally; we never receive your content.
 - **Optional backup and sharing go to _your own Google Drive_,** encrypted on your device before upload. We are not the backup destination and cannot read the vault contents.
-- **Paid access is verified server-side.** The Android App sends an opaque Google Play purchase token and product identifier to our Cloudflare-hosted verification endpoint, which checks status and expiry with Google Play. No document content is included.
+- **Paid access is verified server-side.** The Android App sends an opaque Google Play purchase token and product identifier to our Firebase-hosted verification endpoint, which checks status and expiry with Google Play. No document content is included.
 - **You can export your vault and delete the App to delete the vault.** There is no shadow copy on our servers.
 
 ## 1. Information KEEPEM Processes On Your Device
@@ -38,7 +38,7 @@ KEEPEM sends nothing off your device except the limited items below.
 
 ### 2.1 Google Play Subscription Verification
 
-If you subscribe to **Plus** or **Pro** on Android, Google Play processes the purchase under its terms. The App sends the Google Play product identifier, store source, and opaque purchase token to a Signals Kernels endpoint hosted on Cloudflare Workers. That endpoint asks the Google Play Android Publisher API whether the subscription is authentic, active, and when it expires. It processes the token transiently and does not store it in an application database or associate it with a KEEPEM account. Cloudflare and Google may process standard network and service logs under their own terms.
+If you subscribe to **Plus** or **Pro** on Android, Google Play processes the purchase under its terms. The App sends the Google Play product identifier, store source, and opaque purchase token to a Signals Kernels endpoint hosted on Firebase Functions. That endpoint asks the Google Play Android Publisher API whether the subscription is authentic, active, and when it expires. It processes the token transiently and does not store it in an application database or associate it with a KEEPEM account. Google may process standard network and service logs under its own terms.
 
 No receipt images, OCR text, extracted document fields, voice notes, prompts, or AI responses are included. We do **not** receive your payment card details. Refunds, cancellations, and billing disputes are handled by Google Play.
 
@@ -120,14 +120,13 @@ No security measure is perfect. If you suspect your device has been compromised,
 
 ## 9. International Users
 
-KEEPEM is operated from the United States. The contents of your vault remain on your device wherever you are. Support correspondence is processed in the United States. Subscription verification may be processed by Cloudflare and Google in regions where they operate.
+KEEPEM is operated from the United States. The contents of your vault remain on your device wherever you are. Support correspondence is processed in the United States. Subscription verification may be processed by Google in regions where it operates.
 
 ## 10. Third Parties
 
 The following third parties are involved in operating the App:
 
-- **Google LLC** — Google Play distribution and subscription status, plus optional Google Drive integration scoped to KEEPEM's app-data folder and files you explicitly share with KEEPEM (see Section 2.2.1).
-- **Cloudflare, Inc.** — hosts the stateless subscription-verification endpoint. It receives the opaque Play token and product ID but no document content.
+- **Google LLC** — hosts the stateless Firebase subscription-verification endpoint, provides Google Play distribution and subscription status, and provides the optional Google Drive integration scoped to KEEPEM's app-data folder and files you explicitly share with KEEPEM (see Section 2.2.1). The verification function receives the opaque Play token and product ID but no document content.
 - **Hugging Face** — the on-device AI model weights are downloaded once from Hugging Face's CDN. Only standard HTTP metadata (IP, User-Agent) is observed during that download; no personal data is sent.
 
 We use **no** analytics provider and **no** crash-reporting provider. We update this list when the third parties change.
