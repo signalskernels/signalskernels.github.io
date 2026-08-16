@@ -19,8 +19,6 @@ KEEPEM is a **local-first, on-device** document vault. The Basic, Plus, and Pro 
 - **Paid access is verified server-side.** The Android App sends an opaque Google Play purchase token and product identifier to our Cloudflare-hosted verification endpoint, which checks status and expiry with Google Play. No document content is included.
 - **You can export your vault and delete the App to delete the vault.** There is no shadow copy on our servers.
 
-> A future **"Ultra"** tier may add opt-in cloud processing for complex queries. **Ultra is not active in this release.** If it ships, this policy will be updated first, the feature will be opt-in per query, and the third-party model provider will be disclosed before any content can leave your device.
-
 ## 1. Information KEEPEM Processes On Your Device
 
 When you use KEEPEM, the following information is created and stored **locally on your device**:
@@ -30,7 +28,7 @@ When you use KEEPEM, the following information is created and stored **locally o
 - **Your queries and the agent's answers** to questions asked of your vault.
 - **App settings, preferences, and folder structure.**
 
-This data is stored in an encrypted vault on your device, protected by a key derived from your PIN (PBKDF2-HMAC-SHA256, 600,000 iterations) or a random key protected by the device Keystore (biometric mode), with the database encrypted via SQLCipher and files via AES-256-GCM. **We do not have access to this data.** It is not transmitted to our servers and is not transmitted to any third party, except in the optional, user-initiated backup/sharing scenarios in Section 2.
+This data is stored in an encrypted vault on your device. A random vault key is wrapped by a PIN-derived key (PBKDF2-HMAC-SHA256, 600,000 iterations) and may also be protected by the device Keystore when biometric unlock is enabled. The database uses SQLCipher and files use AES-256-GCM. **We do not have access to this data.** It is not transmitted to our servers and is not transmitted to any third party, except in the optional, user-initiated backup/sharing scenarios in Section 2.
 
 If you uninstall the App, the on-device vault is deleted with it.
 
