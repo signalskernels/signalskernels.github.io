@@ -21,10 +21,9 @@ const metadata = {
   <Hero
     tagline="KEEPEM for Consumers · A Personal AI Vault"
     title="Your receipts, warranties, IDs, and bills. <span class='text-accent'>Found before you ask.</span>"
-    subtitle="KEEPEM is a personal AI agent that lives on your phone. It reads every receipt, warranty card, tax form, and household bill the moment you snap it. It files them. It finds them. It answers questions about them in plain English. The everyday agent runs on-device with no metered cloud bill; KEEPEM Ultra adds an opt-in route to a frontier cloud model for the queries that truly need it — query by query, your call. No company training a model on your life. Your vault is yours."
+    subtitle="KEEPEM is a personal AI agent that lives on your phone. It reads every receipt, warranty card, tax form, and household bill the moment you snap it. It files them. It finds them. It answers questions about them in plain English. The agent runs on the device itself — no metered cloud bill, no server on the other end reading your scans. No company training a model on your life. Your vault is yours."
     actions={[
-      { variant: 'primary', text: 'Get it on the App Store', href: '#download', icon: 'tabler:brand-apple' },
-      { text: 'Get it on Google Play', href: '#download', icon: 'tabler:brand-google-play' },
+      { variant: 'primary', text: 'Get it on Google Play', href: '#download', icon: 'tabler:brand-google-play' },
     ]}
   >
     <Fragment slot="image">
@@ -60,8 +59,8 @@ const metadata = {
 
   <Stats
     stats={[
-      { amount: 'On-device', title: 'The everyday AI agent runs on your phone, not a server', icon: 'tabler:device-mobile' },
-      { amount: 'Opt-in', title: 'Cloud routing only when you ask — Ultra, query by query', icon: 'tabler:cloud-check' },
+      { amount: 'On-device', title: 'The AI agent runs on your phone, not on a server', icon: 'tabler:device-mobile' },
+      { amount: 'Flat', title: 'Ask ten questions or ten thousand — the bill never moves', icon: 'tabler:coin-off' },
       { amount: 'Offline', title: 'Capture and answer work on a plane, in a basement, off-grid', icon: 'tabler:wifi-off' },
       { amount: 'Yours', title: 'Your vault is yours — exportable, deletable, sovereign', icon: 'tabler:shield-lock' },
     ]}
@@ -87,12 +86,12 @@ const metadata = {
       {
         title: 'The on-device agent era.',
         description:
-          'Snap. The agent reads it the moment the shutter closes. Vendor, amount, date, category, tax flag — captured on your phone, by your phone. Ask anything later, in plain English. The everyday work runs locally. When a query truly needs frontier reasoning, KEEPEM Ultra routes it to the cloud only when you opt in — never by default.',
+          'Snap. The agent reads it the moment the shutter closes. Vendor, amount, date, category, tax flag — captured on your phone, by your phone. Ask anything later, in plain English. All of it runs locally, on the device that holds the vault. Nothing is uploaded to be read, because there is nowhere to upload it to.',
       },
       {
-        title: 'You decide which questions leave the device.',
+        title: 'Nothing has to leave the device.',
         description:
-          'KEEPEM\'s everyday agent runs on the phone you already own. Ask the on-device tier ten questions or ten thousand and the bill doesn\'t move. KEEPEM Ultra adds an opt-in cloud route for the hardest queries — metered, but reserved for when you ask for it. The math finally favors you, and you stay in control of the boundary.',
+          'KEEPEM\'s agent runs on the phone you already own. Ask it ten questions or ten thousand and the bill doesn\'t move — there is no token meter, because there is no server answering. The math finally favors you, and the boundary never moves either.',
       },
     ]}
   >
@@ -192,9 +191,9 @@ const metadata = {
         icon: 'tabler:microphone',
       },
       {
-        title: 'Family vault, shared safely',
+        title: 'Sharing that stays yours',
         description:
-          'Share specific folders with a spouse or parent. Each person\'s phone holds its copy; nothing routes through anyone else\'s account. The vault stays sovereign even when it\'s shared.',
+          'Send one document to a spouse, a parent, or an accountant as a link from your own Google Drive — one tap, one file, only when you ask for it. The rest of the vault never moves, and nothing routes through a KEEPEM account, because there isn\'t one.',
         icon: 'tabler:users',
       },
     ]}
@@ -234,7 +233,7 @@ const metadata = {
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Plain English In. Receipts Out.
       </h3>
-      Keyword search retrieves files. Cloud chatbots send every prompt and document to a server by default. KEEPEM does something neither does: the everyday agent reasons across your vault in multiple steps on the device, and the cloud frontier model is opt-in for the queries that truly need it — with sources shown either way.
+      Keyword search retrieves files. Cloud chatbots send every prompt and document to a server by default. KEEPEM does something neither does: the agent reasons across your vault in multiple steps, on the device, and shows you the receipt behind every number it gives you.
     </Fragment>
 
     <Fragment slot="image">
@@ -296,20 +295,20 @@ const metadata = {
   <Features2
     id="privacy"
     tagline="Privacy by Design"
-    title="On-Device by Default. The Cloud Is Yours to Opt Into."
-    subtitle="Every other AI app you've used assumes the cloud. KEEPEM flips the default — the everyday agent runs on the device that holds your vault, so nothing has to leave to get a useful answer. When you do want a frontier-grade model on a hard query, the KEEPEM Ultra tier routes that specific question to the cloud, only after you say so. The boundary is yours to draw."
+    title="On-Device by Design. The Only Cloud Involved Is Yours."
+    subtitle="Every other AI app you've used assumes the cloud. KEEPEM doesn't have one — the agent runs on the device that holds your vault, so nothing leaves to get a useful answer. There is no KEEPEM server your documents could be sent to. If you switch on backup or sharing, they go to your own Google Drive, encrypted on the phone before anything uploads."
     columns={2}
     items={[
       {
-        title: 'The everyday AI lives on your phone',
+        title: 'The AI lives on your phone',
         description:
-          'KEEPEM\'s default agent (Plus and Pro) is a model that ships inside the app. It reads, classifies, and answers on the CPU and GPU in your pocket — no API call, no remote inference, no third party reading your scans.',
+          'KEEPEM\'s agent (Plus and Pro) is a model that ships inside the app. It reads, classifies, and answers on the CPU and GPU in your pocket — no API call, no remote inference, no third party reading your scans.',
         icon: 'tabler:cpu',
       },
       {
-        title: 'Flat on the everyday. Metered only when you say so.',
+        title: 'Flat, however much you ask.',
         description:
-          'Ask the on-device tier ten questions or ten thousand and the bill doesn\'t move. KEEPEM Ultra adds an opt-in cloud route for the hardest queries — you see a prompt before any data leaves the device, and you decide query by query.',
+          'Ask ten questions or ten thousand and the bill doesn\'t move. There is no per-query charge and no token meter to run up, because the model answering you is the one already sitting on your phone.',
         icon: 'tabler:coin-off',
       },
       {
@@ -456,12 +455,12 @@ const metadata = {
     ]}
   />
 
-  <!-- Pricing — Plus / Pro / Ultra -->
+  <!-- Pricing — Basic / Plus / Pro -->
 
   <Pricing
     id="pricing"
-    title="Four Tiers. You Own the Vault on All of Them."
-    subtitle="Basic is free forever — instant OCR for receipts you just want digitized. Plus and Pro unlock a real on-device AI agent. Ultra adds a cloud frontier model for the hardest queries, sold as prepaid bundles so you never get a surprise monthly bill."
+    title="Three Tiers. You Own the Vault on All of Them."
+    subtitle="Basic is free forever — instant OCR for receipts you just want digitized. Plus and Pro unlock a real on-device AI agent, both with a one-week free trial. Every tier runs on the phone, so no tier meters your questions."
     tagline="Pricing"
     prices={[
       {
@@ -485,13 +484,15 @@ const metadata = {
       {
         title: 'KEEPEM Plus',
         subtitle: 'On-device AI agent',
-        price: '0',
-        period: 'free thru Jun 30, 2026 · paid after',
+        price: '1.99',
+        period: 'per month · or $19.99 a year · 1-week free trial',
         items: [
           { description: 'Everything in Basic' },
           { description: 'On-device AI agent (KEEPEM-Plus-Model)' },
           { description: 'Plain-English search across your vault' },
           { description: 'Auto-classification, categories, expiry dates' },
+          { description: 'Cross-turn memory and follow-up questions' },
+          { description: 'PDF reports, composed and exported on-device' },
           { description: 'Works fully offline' },
         ],
         callToAction: {
@@ -503,39 +504,20 @@ const metadata = {
       {
         title: 'KEEPEM Pro',
         subtitle: 'More capable on-device AI',
-        price: '0',
-        period: 'free thru Jun 30, 2026 · paid after',
+        price: '4.99',
+        period: 'per month · or $49.99 a year · 1-week free trial',
         items: [
           { description: 'Everything in Plus' },
           { description: 'More capable on-device AI (KEEPEM-Pro-Model)' },
-          { description: 'Custom workflows (e.g. monthly recap, tax pre-pack)' },
-          { description: 'Cross-turn memory and follow-ups' },
-          { description: 'Family-shared folders (each phone holds its copy)' },
+          { description: 'Richer reasoning on long or messy documents' },
+          { description: 'Fuller summaries of what each document says' },
+          { description: 'Best on phones with 8 GB of memory or more' },
         ],
         hasRibbon: true,
         ribbonTitle: 'most popular',
         callToAction: {
           target: '_blank',
           text: 'Get the app',
-          href: '#download',
-        },
-      },
-      {
-        title: 'KEEPEM Ultra',
-        subtitle: 'Pay-as-you-go cloud frontier',
-        price: '9.99',
-        period: 'starter bundle · prepaid Ultra queries',
-        items: [
-          { description: 'Everything in Pro' },
-          { description: 'Prepaid bundles — no monthly subscription, no auto-renew' },
-          { description: 'Cloud frontier model for the hardest queries' },
-          { description: 'You choose which queries leave the device' },
-          { description: 'Bundles top up in-app whenever you want' },
-          { description: 'Long-document reasoning (multi-page contracts, EOBs)' },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Get an Ultra bundle',
           href: '#download',
         },
       },
@@ -552,32 +534,32 @@ const metadata = {
       {
         title: 'Where is my data stored?',
         description:
-          'On your phone, in an encrypted vault tied to your device\'s secure enclave and locked behind Face ID or fingerprint. The Basic, Plus, and Pro tiers all process documents on-device — your scans never leave the phone. The Ultra tier optionally routes a specific query to a cloud frontier model when you ask it to, and only that query.',
+          'On your phone, in an encrypted vault tied to your device\'s secure enclave and locked behind Face ID or fingerprint. Every tier — Basic, Plus, and Pro — processes documents on-device, so your scans never leave the phone. There is no KEEPEM cloud for them to be sent to. Backup and sharing are the only exceptions, they are off until you switch them on, and they go to your own Google Drive, encrypted on the phone first.',
       },
       {
         title: 'Do you train AI on my receipts?',
         description:
-          'No. On Basic, Plus, and Pro we can\'t even if we wanted to — your scans aren\'t on our servers. On Ultra, the third-party frontier-model provider runs inference under enterprise terms that prohibit training on customer content. Read the privacy policy: it\'s specific and matches the architecture.',
+          'No — we can\'t, even if we wanted to. Your scans aren\'t on our servers, and the model that reads them ships inside the app and runs on your phone. There is no telemetry pipeline carrying document content and no anonymized aggregate. Read the privacy policy: it\'s specific and matches the architecture.',
       },
       {
         title: 'Does it really work offline?',
         description:
-          'Yes — on Basic, Plus, and Pro, capture, classify, file, search, and answer all run on the phone with no network. The Ultra cloud route is the one thing that requires connectivity, and it\'s opt-in. Cellular dead zones, planes, and basements are first-class scenarios on every other tier.',
+          'Yes. Capture, classify, file, search, and answer all run on the phone with no network, on every tier. Cellular dead zones, planes, and basements are first-class scenarios, not edge cases. The app reaches the network to download the AI model once and to check your subscription with Google Play — never to read a document.',
       },
       {
-        title: 'What\'s the difference between Basic, Plus, Pro, and Ultra?',
+        title: 'What\'s the difference between Basic, Plus, and Pro?',
         description:
-          'Basic is free forever — instant OCR for receipts you just want digitized, no AI agent. Plus and Pro add the on-device AI agent: Plus uses KEEPEM-Plus-Model for everyday parsing and search; Pro uses the more capable KEEPEM-Pro-Model for richer reasoning, custom workflows, and follow-up conversations. Ultra layers a cloud frontier model on top for the hardest queries, sold as prepaid bundles.',
+          'Basic is free forever — instant OCR for receipts you just want digitized, no AI agent. Plus and Pro add the on-device AI agent: Plus uses KEEPEM-Plus-Model for everyday parsing, search, and follow-up questions; Pro uses the more capable KEEPEM-Pro-Model for richer reasoning and fuller summaries on long or messy documents. All three run entirely on the phone.',
       },
       {
-        title: 'How does Ultra pricing work?',
+        title: 'What does it cost?',
         description:
-          'Ultra is **not** a monthly subscription. It\'s a prepaid bundle of cloud-frontier queries — you buy a bundle (starter is $9.99), use it whenever a query genuinely needs the frontier model, and top up when you want. No auto-renew, no surprise monthly charge, no risk of an open meter. You only pay for what you actually use.',
+          'Basic is free forever. Plus is $1.99 a month or $19.99 a year; Pro is $4.99 a month or $49.99 a year. Both are ordinary Google Play subscriptions — manage or cancel them in Play, same as any other. Nothing is metered on top: the price is the price no matter how much you ask the agent.',
       },
       {
-        title: 'How does the launch promo work?',
+        title: 'Is there a free trial?',
         description:
-          'KEEPEM Basic is free forever. KEEPEM Plus and KEEPEM Pro are free through June 30, 2026, while we launch on the App Store and Google Play; after that they become paid subscriptions. KEEPEM Ultra is a prepaid bundle from day one — buy a bundle when you want frontier-grade reasoning, and you only pay for the queries you actually use.',
+          'Yes. Plus and Pro both start with a one-week free trial for eligible new subscribers, run by Google Play. Cancel inside the trial window in Play and you\'re not charged — the app drops back to Basic and your vault stays exactly where it is, on your phone.',
       },
       {
         title: 'What happens if I delete the app?',
@@ -585,19 +567,19 @@ const metadata = {
           'The vault goes with it. There is no shadow copy on our servers to chase. Export to your own backup before you delete if you want to keep the data — that\'s a one-tap operation.',
       },
       {
-        title: 'Can I share with my spouse or family?',
+        title: 'Can I share a document with my spouse or my accountant?',
         description:
-          'Yes. Pro and Ultra support family-shared folders. Each person\'s phone holds its own copy of the shared folder; nothing routes through anyone else\'s account or our cloud. The vault stays sovereign even when it\'s shared.',
+          'Yes — one document at a time, as a link from your own Google Drive, and only when you tap Share. You can also export a PDF report and send it however you like. What you don\'t get is a shared KEEPEM account in the middle, because there is no KEEPEM account. The rest of the vault stays on your phone.',
       },
       {
         title: 'Why not just use ChatGPT or Gemini for this?',
         description:
-          'Three reasons. (1) Privacy: a general cloud chatbot sends every prompt and document to a server by default. KEEPEM doesn\'t — the on-device tiers (Basic / Plus / Pro) keep everything on the device, and Ultra\'s cloud route is opt-in per query. (2) Cost: a cloud-only app meters every prompt on an open monthly bill; KEEPEM\'s on-device tiers are flat, and Ultra is prepaid bundles — you can\'t accidentally rack up a surprise charge. (3) Reliability: outages, rate limits, and jurisdictional blocks don\'t stop the on-device agent.',
+          'Three reasons. (1) Privacy: a general cloud chatbot sends every prompt and document to a server by default. KEEPEM doesn\'t — every tier keeps your documents on the device. (2) Cost: a cloud-only app meters every prompt on an open monthly bill; KEEPEM is a flat subscription you can\'t accidentally run up. (3) Reliability: outages, rate limits, and jurisdictional blocks don\'t stop an agent that\'s already on your phone.',
       },
       {
-        title: 'Is there an Android version?',
+        title: 'Is there an iPhone version?',
         description:
-          'Yes. KEEPEM ships on both iOS and Android. The agent runs on-device on both platforms.',
+          'Not yet. KEEPEM is on Google Play for Android today. The on-device agent is the whole product, and we won\'t ship an iPhone build until it runs there as well as it does on Android — a Basic-only iOS release isn\'t KEEPEM.',
       },
       {
         title: 'How do I contact support?',
@@ -614,20 +596,17 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Download on the App Store',
-        href: '#',
-        icon: 'tabler:brand-apple',
-      },
-      {
         text: 'Get it on Google Play',
-        href: '#',
+        href: 'https://play.google.com/store/apps/details?id=com.signalskernels.keepemapp',
+        target: '_blank',
         icon: 'tabler:brand-google-play',
       },
     ]}
     title="Bring Your Paper Life into Your Pocket"
   >
     <Fragment slot="subtitle">
-      KEEPEM ships on iOS and Android. The agent runs on your phone. Your vault is yours. By downloading you agree to the
+      KEEPEM is on Android today; the iPhone build comes once the on-device agent runs there as well. The agent runs on
+      your phone. Your vault is yours. By downloading you agree to the
       <a href="/terms" class="text-accent underline">Terms</a> and the
       <a href="/keepem-app-privacy" class="text-accent underline">KEEPEM Privacy Policy</a>.
     </Fragment>
