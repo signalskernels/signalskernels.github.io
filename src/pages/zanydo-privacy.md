@@ -177,6 +177,6 @@ notice in the parent area before the new behaviour takes effect.
 Questions about this policy or the app's privacy practices:
 **Signals Kernels AI LLC**
 
-Email: [support@signalskernels.com](mailto:support@signalskernels.com)
+Email: [contact@signalskernels.com](mailto:contact@signalskernels.com)
 
 Public policy: [signalskernels.com/zanydo-privacy/](https://signalskernels.com/zanydo-privacy/)
