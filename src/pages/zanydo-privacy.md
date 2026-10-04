@@ -105,6 +105,14 @@ Hugging Face's own privacy policy governs what that service logs about
 requests it receives; we have no access to, and receive nothing from, those
 logs.
 
+The parent area also includes a full copy of this policy for offline reading.
+If a parent chooses to open the public policy, the phone's browser opens
+`signalskernels.com`; Zanydo does not fetch that page or send any pictures,
+drawings or game progress. The browser and website hosting providers receive
+the ordinary web request information, such as the IP address, requested page
+and browser headers, under their own privacy practices. The public page needs
+internet access; the policy inside Zanydo does not.
+
 ## 5. What is stored on your device
 
 All of the following lives only in the app's private storage on your phone and
