@@ -1,0 +1,139 @@
+---
+export interface Props {
+  frontmatter: {
+    title?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+const title = frontmatter?.title ?? 'Privacy Policy — Zanydo';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      name="description"
+      content="How Zanydo handles pictures, drawings, game progress, offline speech and parent-started model downloads."
+    />
+    <link rel="canonical" href="https://signalskernels.com/zanydo-privacy/" />
+    <title>{title}</title>
+    <style is:inline>
+      :root {
+        color-scheme: light;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          sans-serif;
+        color: #182a35;
+        background: #f4f8fa;
+        line-height: 1.65;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      main {
+        max-width: 54rem;
+        margin: 2rem auto;
+        padding: 2rem 3rem;
+        background: #fff;
+        border: 1px solid #dce5ea;
+        border-radius: 1rem;
+        overflow-wrap: anywhere;
+      }
+      h1,
+      h2 {
+        line-height: 1.25;
+        color: #123d4d;
+      }
+      h1 {
+        margin-top: 0;
+        font-size: clamp(1.7rem, 5vw, 2.5rem);
+      }
+      h2 {
+        margin: 2rem 0 0.8rem;
+        font-size: 1.4rem;
+      }
+      p,
+      ul,
+      ol {
+        margin: 0.8rem 0;
+      }
+      li + li {
+        margin-top: 0.5rem;
+      }
+      a {
+        color: #075b78;
+        text-underline-offset: 0.18em;
+      }
+      a:focus-visible {
+        outline: 3px solid #075b78;
+        outline-offset: 3px;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid #dce5ea;
+        margin: 1.8rem 0;
+      }
+      .overflow-x-auto {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+      th,
+      td {
+        border: 1px solid #dce5ea;
+        padding: 0.7rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #eef5f8;
+      }
+      @media (max-width: 600px) {
+        main {
+          margin: 0;
+          padding: 1.5rem 1rem;
+          border: 0;
+          border-radius: 0;
+        }
+        ul,
+        ol {
+          padding-left: 1.4rem;
+        }
+        th,
+        td {
+          padding: 0.45rem;
+        }
+      }
+      @media print {
+        :root {
+          background: #fff;
+        }
+        main {
+          max-width: none;
+          margin: 0;
+          padding: 0;
+          border: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main aria-labelledby="policy-title">
+      <h1 id="policy-title">{title}</h1>
+      <slot />
+    </main>
+  </body>
+</html>
