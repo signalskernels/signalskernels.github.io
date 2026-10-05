@@ -21,7 +21,7 @@ const title = frontmatter?.title ?? 'Privacy Policy — Zanydo';
     <meta name="referrer" content="no-referrer" />
     <meta
       name="description"
-      content="How Zanydo handles pictures, drawings, game progress, offline speech and parent-started model downloads."
+      content="How Zanydo handles pictures, drawings, game progress, offline speech, parent-started downloads and subscription verification."
     />
     <link rel="canonical" href="https://signalskernels.com/zanydo-privacy/" />
     <title>{title}</title>
@@ -142,14 +142,7 @@ const title = frontmatter?.title ?? 'Privacy Policy — Zanydo';
   </head>
   <body>
     <main aria-labelledby="policy-title">
-      <img
-        class="app-logo"
-        src="/images/zanydo-logo.png"
-        alt="Zanydo"
-        width="1178"
-        height="479"
-        decoding="async"
-      />
+      <img class="app-logo" src="/images/zanydo-logo.png" alt="Zanydo" width="1178" height="479" decoding="async" />
       <h1 id="policy-title">{title}</h1>
       <slot />
     </main>
