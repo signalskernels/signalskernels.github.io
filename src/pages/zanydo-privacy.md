@@ -120,12 +120,12 @@ browser action does not send child content or progress from Zanydo.
 
 ## 5. What is stored on the phone
 
-| Data                                            | Purpose                                                                                |
-| ----------------------------------------------- | -------------------------------------------------------------------------------------- |
-| Household settings                              | Starting level, session choices, timer preference and setup state                      |
-| Game progress                                   | Levels, stars, mosaic tiles, recent sessions and recent challenge IDs                  |
-| Model choice and files                          | Downloaded picture models, bundled speech model and local cache, processing preference |
-| Signed subscription receipt and time checkpoint | Verify the paid term locally and prevent ordinary clock rollback from extending it     |
+| Data | Purpose |
+|---|---|
+| Household settings | Starting level, session choices, timer preference and setup state |
+| Game progress | Levels, stars, mosaic tiles, recent sessions and recent challenge IDs |
+| Model choice and files | Downloaded picture models, bundled speech model and local cache, processing preference |
+| Signed subscription receipt and time checkpoint | Verify the paid term locally and prevent ordinary clock rollback from extending it |
 
 These items are stored in app-private storage. Uninstalling removes local app
 data. The saved receipt contains an encrypted purchase proof; the app cannot decrypt
@@ -148,20 +148,17 @@ and we will investigate and delete information under our control.
 
 ## 7. Permissions
 
-| Permission                 | Purpose                                                                          |
-| -------------------------- | -------------------------------------------------------------------------------- |
-| Camera                     | Capture the single frame used for a camera-game round                            |
-| Internet                   | Parent-started model downloads and purchase verification                         |
-| Google Play Billing        | Parent-only subscription checkout, restore and management                        |
-| App-private storage        | Local settings, game progress, models and signed access receipt                  |
-| Android foreground service | Keep a loaded picture model ready while the app is temporarily in the background |
+| Permission | Purpose |
+|---|---|
+| Camera | Capture the single frame used for a camera-game round |
+| Internet | Parent-started model downloads and purchase verification |
+| Google Play Billing | Parent-only subscription checkout, restore and management |
+| App-private storage | Local settings, game progress, models and signed access receipt |
 
-The foreground service runs only while a model is loaded and shows a silent
-Zanydo is ready to play notification. Losing subscription access unloads the
-model and stops the service. Swiping the app away closes it and frees the model.
-The service does not collect or send data. On Android 13 and later its
-notification appears in the active-apps list unless notifications are enabled
-in phone settings.
+Zanydo does not run a foreground service to keep its AI model loaded in the
+background. Android can reclaim the cached app process. When you return, a
+model that was released reloads from its saved file without another download.
+Losing subscription access unloads the model.
 
 The app does not request photo-library, contacts, location, microphone,
 advertising-identifier or notification permission.
