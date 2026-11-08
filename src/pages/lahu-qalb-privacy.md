@@ -12,8 +12,8 @@ Lahu Qalb is a set of narrated, animated Arabic picture books for young children
 ## The Short Version
 
 - **We collect nothing.** The App has no accounts, no sign-in, no ads, no analytics and no crash-reporting tools.
-- **The App cannot go online.** It does not have Android's internet permission, so nothing can leave the phone through the App.
-- **Reading progress stays on the phone.** The App remembers which "What would you do?" cards your child has finished, so it can mark them. Uninstalling the App deletes it.
+- **The App cannot go online.** It does not have Android's internet permission, so the App itself cannot send anything off the phone.
+- **Reading progress stays on the phone.** The App remembers which "What would you do?" cards your child has finished, so it can mark them. Uninstalling the App deletes it from the phone. If your phone backs up its apps to your Google account, that backup may include this list (see Section 1).
 - **There are no links, purchases or sharing** inside the App.
 
 ## 1. Information Stored On Your Device
@@ -22,8 +22,9 @@ The App stores one kind of information, **only on your device**: for each story,
 
 - **What it contains:** short internal card identifiers. It contains no name, age, voice, picture, location or anything else about your child.
 - **Where it is kept:** the App's private storage on the phone. Other apps cannot read it.
-- **Who receives it:** no one. It is never sent to us or to anyone else.
-- **How to delete it:** uninstall the App, or clear the App's storage in your phone's settings.
+- **Who receives it:** no one. The App never sends it to us or to anyone else.
+- **Your phone's backup:** if Android's backup to your Google account is turned on, Android may include this list in that backup, as it does for most apps, and put it back if you reinstall the App. The backup is kept in your own Google account under Google's terms. We cannot see it.
+- **How to delete it:** uninstall the App, or clear the App's storage in your phone's settings. To delete a backed-up copy as well, manage your backups in your Google account.
 
 ## 2. Information Sent Off Your Device
 
@@ -50,7 +51,7 @@ The App's Android package includes two permissions that come with the software l
 
 ## 5. Children's Privacy
 
-Lahu Qalb is made for children, and it is designed so that no child's personal information is collected at all. It is built to meet the U.S. Children's Online Privacy Protection Act (COPPA), the GDPR's rules for children's data and the Google Play Families Policy by collecting no personal information.
+Lahu Qalb is made for children, and it is designed so that no child's personal information is collected at all. It is designed to comply with the U.S. Children's Online Privacy Protection Act (COPPA), the GDPR's rules for children's data and the Google Play Families Policy by collecting no personal information.
 
 If you believe the App has somehow collected information about your child, contact us at the address below. We will investigate and delete anything under our control.
 
